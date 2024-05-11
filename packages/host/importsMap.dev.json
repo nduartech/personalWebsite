@@ -1,0 +1,6 @@
+{
+  "imports": {
+    "solid-js": "https://esm.sh/solid-js",
+    "@nathanld/software-eng": "http://localhost:3000/spa.js"
+  }
+}

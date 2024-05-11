@@ -1,0 +1,12 @@
+{
+  "name": "@nathanld/monorepo",
+  "packageManager": "yarn@4.2.2",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build-se": "yarn workspace @nathanld/software-eng build",
+    "serve-se": "yarn workspace @nathanld/software-eng serve",
+    "start-host": "yarn workspace @nathanld/host start"
+  }
+}
