@@ -14,7 +14,7 @@ export default defineConfig({
     solidPlugin(),
     vitePluginSingleSpa({
       type: 'mife',
-      serverPort: 3000,
+      serverPort: 3001,
       spaEntryPoints: [resolve(__dirname, "src/spa.tsx")],
       cssStrategy: "multiMife"
     }),
