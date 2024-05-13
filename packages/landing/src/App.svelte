@@ -3,7 +3,7 @@
 </script>
 
 <div
-  class="w-full h-full flex flex-col justify-center items-center">
+  class="w-full min-h-fit lg:max-h-screen flex flex-col justify-center items-center">
   <div class="flex flex-col justify-start md:mt-20 lg:mt-32 sm:portrait:h-screen sm:landscape:h-fit md:landscape:h-screen w-full items-center">
     <div class="w-full px-5 flex flex-row justify-center items-center" >
       <div class="flex flex-col md:flex-row lg:flex-col w-full justify-center items-center space-x-5 my-5 lg:space-x-0 lg:space-y-2 text-center">
@@ -13,7 +13,7 @@
         <p class="text-3xl md:text-4xl dark:text-regal-blue-100 text-regal-blue-50 my-2 text-center">Hi, I'm Nathan.</p>
       </div>
     </div>
-    <div class="w-10/12 flex flex-row justify-center items-center py-5 bg-[rgba(_35,_188,_255,_0.1)] backdrop-filter backdrop-blur rounded-[10px] dark:bg-[rgba(_1,_45,_80,_0.5)]" >
+    <div class="w-10/12 flex flex-row justify-center items-center py-5 bg-[rgba(_35,_188,_255,_0.1)] backdrop-filter backdrop-blur rounded-[10px] dark:bg-[rgba(_1,_45,_80,_0.5)] mb-5" >
       <div class="space-y-4 lg:space-y-0 lg:space-x-10 w-11/12 flex flex-col lg:flex-row justify-center items-center">
         <a class="h-full w-full" href="/software-engineer"><button type="button"
                 class="softwareEng bg-regal-blue-200
@@ -42,5 +42,4 @@
       </div>
     </div>
   </div>
-  <div class="flex lg:hidden h-[40px] w-full"></div>
 </div>

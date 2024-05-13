@@ -15,8 +15,8 @@ export default defineConfig({
       imo: true,
       importMaps: {
         type: 'overridable-importmap',
-        dev: '../importsMap.dev.json',
-        build: "../importsMap.prod.json",
+        dev: './importsMap.dev.json',
+        build: "./importsMap.prod.json",
       }
     }),
   ],
@@ -27,5 +27,14 @@ export default defineConfig({
     port: 7300,
     open: false,
   },
+  build: {
+    target: 'esnext',
+    rollupOptions: {
+      external: ["landing","software-eng"],
+      output: {
+        format: "esm",
+      },
+    },
+  }
 
 });

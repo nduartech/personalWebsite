@@ -1,8 +1,8 @@
 {
   "imports": {
     "solid-js": "https://esm.sh/solid-js",
-    "@nathanld/software-eng": "http://localhost:3001/spa.js",
+    "software-eng": "http://localhost:3001/spa.js",
     "svelte": "https://esm.sh/svelte@4.2.16",
-    "@nathanld/landing": "http://localhost:4173/bundle.js"
+    "landing": "http://localhost:4173/bundle.js"
   }
 }

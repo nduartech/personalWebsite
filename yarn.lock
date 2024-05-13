@@ -537,8 +537,10 @@ __metadata:
     "@previewjs/cli": "npm:^1.28.1"
     "@types/node": "npm:^20.12.7"
     autoprefixer: "npm:^10.4.17"
+    landing: "workspace:^"
     postcss: "npm:^8.4.33"
     single-spa: "npm:^6.0.1"
+    software-eng: "workspace:^"
     solid-devtools: "npm:^0.30.1"
     solid-js: "npm:^1.8.11"
     tailwind: "npm:^4.0.0"
@@ -547,25 +549,6 @@ __metadata:
     vite: "npm:^5.0.11"
     vite-plugin-single-spa: "npm:^0.7.0"
     vite-plugin-solid: "npm:^2.8.2"
-  languageName: unknown
-  linkType: soft
-
-"@nathanld/landing@workspace:packages/landing":
-  version: 0.0.0-use.local
-  resolution: "@nathanld/landing@workspace:packages/landing"
-  dependencies:
-    "@sveltejs/vite-plugin-svelte": "npm:^3.0.2"
-    "@tsconfig/svelte": "npm:^5.0.2"
-    autoprefixer: "npm:^10.4.19"
-    postcss: "npm:^8.4.38"
-    single-spa-svelte: "npm:^2.1.1"
-    svelte: "npm:^4.2.12"
-    svelte-check: "npm:^3.6.7"
-    tailwindcss: "npm:^3.4.3"
-    tslib: "npm:^2.6.2"
-    typescript: "npm:^5.2.2"
-    vite: "npm:^5.2.0"
-    vite-plugin-css-injected-by-js: "npm:^3.5.1"
   languageName: unknown
   linkType: soft
 
@@ -581,27 +564,6 @@ __metadata:
   checksum: 10c0/9909c05d6e550a0ef43444cd976a2866d9dc38224d518a20a8a1ef205f70a3e5ae91e8aa2391b04b45ec86d4163a64a09afe08bfe0548d7f1d0bfdbc5c89a52d
   languageName: node
   linkType: hard
-
-"@nathanld/software-eng@workspace:packages/software-eng":
-  version: 0.0.0-use.local
-  resolution: "@nathanld/software-eng@workspace:packages/software-eng"
-  dependencies:
-    "@nathanld/single-spa-solid": "npm:^0.1.8"
-    "@previewjs/cli": "npm:^1.28.1"
-    "@types/node": "npm:^20.12.7"
-    autoprefixer: "npm:^10.4.17"
-    postcss: "npm:^8.4.33"
-    solid-devtools: "npm:^0.30.1"
-    solid-js: "npm:^1.8.11"
-    tailwind: "npm:^4.0.0"
-    tailwindcss: "npm:^3.4.1"
-    typescript: "npm:^5.3.3"
-    vite: "npm:^5.0.11"
-    vite-plugin-css-injected-by-js: "npm:^3.5.0"
-    vite-plugin-single-spa: "npm:^0.7.0"
-    vite-plugin-solid: "npm:^2.8.2"
-  languageName: unknown
-  linkType: soft
 
 "@nodelib/fs.scandir@npm:2.1.5":
   version: 2.1.5
@@ -3233,6 +3195,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"landing@workspace:^, landing@workspace:packages/landing":
+  version: 0.0.0-use.local
+  resolution: "landing@workspace:packages/landing"
+  dependencies:
+    "@sveltejs/vite-plugin-svelte": "npm:^3.0.2"
+    "@tsconfig/svelte": "npm:^5.0.2"
+    autoprefixer: "npm:^10.4.19"
+    postcss: "npm:^8.4.38"
+    single-spa-svelte: "npm:^2.1.1"
+    svelte: "npm:^4.2.12"
+    svelte-check: "npm:^3.6.7"
+    tailwindcss: "npm:^3.4.3"
+    tslib: "npm:^2.6.2"
+    typescript: "npm:^5.2.2"
+    vite: "npm:^5.2.0"
+    vite-plugin-css-injected-by-js: "npm:^3.5.1"
+  languageName: unknown
+  linkType: soft
+
 "lilconfig@npm:^2.1.0":
   version: 2.1.0
   resolution: "lilconfig@npm:2.1.0"
@@ -4567,6 +4548,27 @@ __metadata:
   checksum: 10c0/d54a52bf9325165770b674a67241143a3d8b4e4c8884560c4e0e078aace2a728dffc7f70150660f51b85797c4e1a3b82f9b7aa25e0a0ceae1a243365da5c51a7
   languageName: node
   linkType: hard
+
+"software-eng@workspace:^, software-eng@workspace:packages/software-eng":
+  version: 0.0.0-use.local
+  resolution: "software-eng@workspace:packages/software-eng"
+  dependencies:
+    "@nathanld/single-spa-solid": "npm:^0.1.8"
+    "@previewjs/cli": "npm:^1.28.1"
+    "@types/node": "npm:^20.12.7"
+    autoprefixer: "npm:^10.4.17"
+    postcss: "npm:^8.4.33"
+    solid-devtools: "npm:^0.30.1"
+    solid-js: "npm:^1.8.11"
+    tailwind: "npm:^4.0.0"
+    tailwindcss: "npm:^3.4.1"
+    typescript: "npm:^5.3.3"
+    vite: "npm:^5.0.11"
+    vite-plugin-css-injected-by-js: "npm:^3.5.0"
+    vite-plugin-single-spa: "npm:^0.7.0"
+    vite-plugin-solid: "npm:^2.8.2"
+  languageName: unknown
+  linkType: soft
 
 "solid-devtools@npm:^0.30.1":
   version: 0.30.1

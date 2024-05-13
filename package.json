@@ -5,11 +5,11 @@
     "packages/*"
   ],
   "scripts": {
-    "dev-l": "yarn workspace @nathanld/landing dev",
-    "build-l": "yarn workspace @nathanld/landing build",
-    "serve-l": "yarn workspace @nathanld/landing preview",
-    "build-se": "yarn workspace @nathanld/software-eng build",
-    "serve-se": "yarn workspace @nathanld/software-eng serve",
+    "dev-l": "yarn workspace landing dev",
+    "build-l": "yarn workspace landing build",
+    "serve-l": "yarn workspace landing preview",
+    "build-se": "yarn workspace software-eng build",
+    "serve-se": "yarn workspace software-eng serve",
     "start-host": "yarn workspace @nathanld/host start"
   }
 }

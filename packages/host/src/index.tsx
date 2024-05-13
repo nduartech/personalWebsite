@@ -2,13 +2,13 @@
 import './index.css';
 import 'solid-devtools';
 import {LifeCycles, registerApplication, start} from 'single-spa';
-import { bootstrap, mount, unmount } from '@nathanld/software-eng';
-import { bootstrap as landingBootstrap, mount as landingMount, unmount as landingUnmount } from '@nathanld/landing';
+import { bootstrap, mount, unmount } from 'software-eng';
+import { bootstrap as landingBootstrap, mount as landingMount, unmount as landingUnmount } from 'landing';
 import {render} from "solid-js/web";
 import Theme from "./components/Theme";
 
 registerApplication({
-  name: '@nathanld/software-eng',
+  name: 'software-eng',
   app: () => new Promise<LifeCycles>(resolve=>resolve({
     bootstrap,
     mount,
@@ -18,7 +18,7 @@ registerApplication({
 });
 
 registerApplication({
-  name: '@nathanld/landing',
+  name: 'landing',
   app: () => new Promise<LifeCycles>(resolve=>resolve({
     bootstrap:landingBootstrap,
     mount: landingMount,
