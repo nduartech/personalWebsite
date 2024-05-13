@@ -20,6 +20,13 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
+      - name: Yarn PnP Setup
+        uses: Araxeus/setup-yarn-pnp-action@v1
+        with:
+          node-version: 20
+      - name: Build
+        run: yarn && yarn build
+        shell: bash
 
   deploy:
     environment:
