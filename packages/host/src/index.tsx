@@ -14,7 +14,7 @@ registerApplication({
     mount,
     unmount
   })).then(),
-  activeWhen: ["#software-engineer"]
+  activeWhen: ["/software-engineer"]
 });
 
 registerApplication({
@@ -24,7 +24,7 @@ registerApplication({
     mount: landingMount,
     unmount: landingUnmount
   })).then(),
-  activeWhen: [(location)=>location.pathname.match(/^\/?$/) !== null]
+  activeWhen: [(location)=>location.pathname === "/"]
 });
 
 start();

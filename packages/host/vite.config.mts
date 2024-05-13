@@ -4,7 +4,6 @@ import devtools from 'solid-devtools/vite';
 import vitePluginSingleSpa from 'vite-plugin-single-spa';
 
 export default defineConfig({
-  base: 'https://nduartech.github.io/',
   plugins: [
     devtools({
       /* features options - all disabled by default */

@@ -11,7 +11,7 @@
     "serve-se": "yarn workspace software-eng serve",
     "build-h": "yarn workspace @nathanld/host build",
     "serve-h": "yarn workspace @nathanld/host serve",
-    "build": "concurrently \"yarn workspace landing regBuild\" \"yarn workspace software-eng regBuild\" \"yarn workspace @nathanld/host regBuild\"",
+    "build": "concurrently \"yarn workspace landing regBuild\" \"yarn workspace software-eng regBuild\" && yarn workspace @nathanld/host regBuild",
     "preview": "concurrently \"yarn build-l\" \"yarn serve-l\" \"yarn build-se\" \"yarn serve-se\" \"yarn build-h\" \"yarn serve-h\" --names \"landing,software-eng,host\" --prefix \"[{name}]\" --prefix-colors blue,green,red"
   }
 }
