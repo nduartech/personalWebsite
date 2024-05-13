@@ -15,7 +15,7 @@
     </div>
     <div class="w-10/12 flex flex-row justify-center items-center py-5 bg-[rgba(_35,_188,_255,_0.1)] backdrop-filter backdrop-blur rounded-[10px] dark:bg-[rgba(_1,_45,_80,_0.5)] mb-5" >
       <div class="space-y-4 lg:space-y-0 lg:space-x-10 w-11/12 flex flex-col lg:flex-row justify-center items-center">
-        <a class="h-full w-full" href="/software-engineer"><button type="button"
+        <a class="h-full w-full" href=""><button type="button"
                 class="softwareEng bg-regal-blue-200
                 hover:bg-yellow-600
                 dark:bg-regal-blue-600
