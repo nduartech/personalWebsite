@@ -32,8 +32,8 @@ jobs:
         shell: bash
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Get files
-        run: ls ./packages/host/dist
+      - name: 404 Redirect
+        run: cp ./packages/host/404.html .packages/host/dist
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
