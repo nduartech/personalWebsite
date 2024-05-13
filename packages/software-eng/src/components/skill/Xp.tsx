@@ -113,7 +113,7 @@ function Xp(props: any) {
                 </div>
               </a>
               <div class="flex flex-row justify-center items-center cursor-pointer"
-                   onClick={() => fetch('https://nduartech.tiiny.site/dist/assets/resume-Cj28BdVG.pdf').then(resp => resp.blob()).then(blob => {
+                   onClick={() => fetch('https://nduartech.tiiny.site/dist/resume.pdf').then(resp => resp.blob()).then(blob => {
                      const url = URL.createObjectURL(blob);
                      const a = document.createElement("a");
                      a.style.display = "none";
