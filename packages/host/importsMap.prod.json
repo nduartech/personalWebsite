@@ -1,0 +1,8 @@
+{
+  "imports": {
+    "solid-js": "https://esm.sh/solid-js",
+    "software-eng": "https://nduartech.tiiny.site/dist/spa.js",
+    "svelte": "https://esm.sh/svelte@4.2.16",
+    "landing": "https://nduartech.tiiny.site/dist/bundle.js"
+  }
+}
