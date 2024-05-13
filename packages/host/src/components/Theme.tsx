@@ -154,7 +154,7 @@ function Theme(props:any) {
     return (
         <div class="absolute top-0 right-0 z-50">
             <div
-                class="dayNight z-50 cursor-pointer mt-0.5 mr-0.5 lg:mt-2 lg:mr-2 w-fit h-fit"
+                class="dayNight z-50 cursor-pointer mt-1 mr-1 lg:mt-2 lg:mr-2 w-fit h-fit"
                 id="dayNightButton"
             >
                 <svg

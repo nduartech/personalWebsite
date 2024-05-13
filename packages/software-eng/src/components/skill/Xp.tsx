@@ -2,6 +2,7 @@ import skillFilters from "./SkillFilters";
 import { createSignal, For, Show } from "solid-js";
 import skillsDict from "./skillsDict";
 import SkillButtonThin from "./SkillButtonThin";
+import '../../index.css';
 
   const pages = [
     {
@@ -132,7 +133,7 @@ function Xp(props: any) {
             <div
               class="w-full h-fit flex flex-col justify-center items-center top space-x-2 min-h-fit">
               <p class="text-regal-blue-100 text-sm font-light text-center">Context: {pages[page()].context}</p>
-              <div class="flex flex-row flex-wrap lg:hidden w-full h-full justify-center items-center mt-1 md:mt-2">
+              <div class="flex flex-row flex-wrap w-full h-full justify-center items-center mt-1 md:mt-2 lg:hidden lg:invisible">
                 <p class="text-regal-blue-100 text-sm font-light text-center inline-flex">Tags: </p>
                 <For each={pages[page()].skillList}>
                   {(item) => (
