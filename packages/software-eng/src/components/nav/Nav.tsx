@@ -90,6 +90,7 @@ function Nav(props:any) {
                     icon={item.icon}
                     label={item.label}
                     path={item.path}
+                    onClick={item.click}
                   ></NavButton>
                 );
               }}
