@@ -5,11 +5,13 @@
     "packages/*"
   ],
   "scripts": {
-    "dev-l": "yarn workspace landing dev",
     "build-l": "yarn workspace landing build",
     "serve-l": "yarn workspace landing preview",
     "build-se": "yarn workspace software-eng build",
     "serve-se": "yarn workspace software-eng serve",
-    "start-host": "yarn workspace @nathanld/host start"
+    "build-h": "yarn workspace @nathanld/host build",
+    "serve-h": "yarn workspace @nathanld/host serve",
+    "build": "concurrently \"yarn workspace landing regBuild\" \"yarn workspace software-eng regBuild\" \"yarn workspace @nathanld/host regBuild\"",
+    "preview": "concurrently \"yarn build-l\" \"yarn serve-l\" \"yarn build-se\" \"yarn serve-se\" \"yarn build-h\" \"yarn serve-h\" --names \"landing,software-eng,host\" --prefix \"[{name}]\" --prefix-colors blue,green,red"
   }
 }
