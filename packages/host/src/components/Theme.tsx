@@ -145,9 +145,7 @@ function Theme(props:any) {
                     metaTheme.setAttribute("content", "#012d50");
                 }
             }
-            if (dayNightButton !== null) {
-                dayNightButton.addEventListener("click", eventClicked);
-            }
+            dayNightButton.addEventListener("click", eventClicked);
         }
     });
 
