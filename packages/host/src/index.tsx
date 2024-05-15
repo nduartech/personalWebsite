@@ -3,6 +3,7 @@ import './index.css';
 import 'solid-devtools';
 import {LifeCycles, registerApplication, start} from 'single-spa';
 import { bootstrap, mount, unmount } from 'software-eng';
+// @ts-ignore
 import { bootstrap as landingBootstrap, mount as landingMount, unmount as landingUnmount } from 'landing';
 import {render} from "solid-js/web";
 import Theme from "./components/Theme";

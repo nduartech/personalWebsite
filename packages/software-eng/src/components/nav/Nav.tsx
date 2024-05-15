@@ -34,7 +34,7 @@ function Nav(props:any) {
       <div class="flex flex-col items-start justify-start w-fit h-fit navDiv mt-0.5 ml-0.5 lg:mt-2 lg:ml-2">
         <Show when={isClosed()}>
           <NavButton
-            icon="<svg class='nav w-6 h-6' stroke-width='1.2' fill='none' xmlns='http://www.w3.org/2000/svg' color='#ddf2ff' viewBox='2.55 4.55 18.9 14.9'><path d='M3 5H21' stroke='#ddf2ff' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round' class='svg-elem-1'></path><path d='M3 12H21' stroke='#ddf2ff' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round' class='svg-elem-2'></path><path d='M3 19H21' stroke='#ddf2ff' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round' class='svg-elem-3'></path></svg>"
+            icon="<svg class='nav w-6 h-6' stroke-width='0.9' fill='none' xmlns='http://www.w3.org/2000/svg' color='#ddf2ff' viewBox='2.55 4.55 18.9 14.9'><path d='M3 5H21' stroke='#ddf2ff' stroke-width='0.9' stroke-linecap='round' stroke-linejoin='round' class='svg-elem-1'></path><path d='M3 12H21' stroke='#ddf2ff' stroke-width='0.9' stroke-linecap='round' stroke-linejoin='round' class='svg-elem-2'></path><path d='M3 19H21' stroke='#ddf2ff' stroke-width='0.9' stroke-linecap='round' stroke-linejoin='round' class='svg-elem-3'></path></svg>"
             label="Menu"
             onClick={() => {
               document

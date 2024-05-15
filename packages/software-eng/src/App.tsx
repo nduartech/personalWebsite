@@ -14,11 +14,15 @@ const App: Component = (props: any) => {
       label: "Home",
       path: "/",
       click: () => {
-        let link = document.createElement('a');
-        link.href = "/";
-        link.classList.add("hidden");
-        document.body.appendChild(link);
-        link.click();
+        setTimeout(function () {
+          let link = document.createElement('a');
+          link.href = "/";
+          link.classList.add("hidden");
+          document.body.appendChild(link);
+          link.click();
+        },1000);
+        let navClicked = document.querySelector(".transition");
+        navClicked && navClicked.classList.add("animated","bounceOutUp")
       }
     }
   ];
@@ -26,7 +30,7 @@ const App: Component = (props: any) => {
   return (
     <div
       class="flex h-full max-w-screen">
-      <div class="h-full max-h-screen w-full overflow-hidden">
+      <div class="h-full max-h-screen w-full overflow-hidden transition">
         <Nav navItems={nav()}></Nav>
         <div class="page flex flex-col w-full h-full space-y-10">
           <div class="page flex flex-row justify-center items-center w-full">
