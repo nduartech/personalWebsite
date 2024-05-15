@@ -2,7 +2,13 @@
   import './app.css';
 
   const navigateTo = (url: string, transition: string) => {
-      setTimeout(() =>window.location.pathname = url,1000);
+    setTimeout(function () {
+      let link = document.createElement('a');
+      link.href = url;
+      link.classList.add("hidden");
+      document.body.appendChild(link);
+      link.click();
+    },1000);
       let hello = document.getElementById("hello");
       hello && hello.classList.add("animated","bounceOutDown");
       if(transition === "hinge") {
