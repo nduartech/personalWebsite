@@ -18,7 +18,7 @@
   "devDependencies": {
     "@nathanld/single-spa-solid": "^0.1.9",
     "@previewjs/cli": "^1.28.1",
-    "@types/node": "^20.12.11",
+    "@types/node": "^20.12.12",
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.38",
     "solid-devtools": "^0.30.1",
