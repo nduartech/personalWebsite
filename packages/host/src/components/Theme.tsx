@@ -1,7 +1,5 @@
-import { onMount } from "solid-js";
-
 function Theme(props:any) {
-    window.onload =() => {
+    document.addEventListener('DOMContentLoaded', () => {
         const page = document.documentElement;
         const metaTheme = document.querySelector('meta[name="theme-color"]');
         const dayNightButton = document.querySelector("#dayNightButton");
@@ -147,7 +145,7 @@ function Theme(props:any) {
             }
             dayNightButton.addEventListener("click", eventClicked);
         }
-    };
+    });
 
     return (
         <div class="absolute top-0 right-0 z-50">
