@@ -16,13 +16,17 @@ const App: Component = (props: any) => {
       click: () => {
         setTimeout(function () {
           let link = document.createElement('a');
-          link.href = "/";
+          link.href = "";
+          link.onclick = () => {
+            dispatchEvent(new CustomEvent('navigate', { detail: "/" }));
+          }
           link.classList.add("hidden");
           document.body.appendChild(link);
           link.click();
+          document.body.removeChild(link);
         },1000);
         let navClicked = document.querySelector(".transition");
-        navClicked && navClicked.classList.add("animated","bounceOutUp")
+        navClicked && navClicked.classList.add("animated","bounceOutUp");
       }
     }
   ];

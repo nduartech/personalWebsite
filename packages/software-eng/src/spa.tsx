@@ -17,7 +17,7 @@ export const bootstrap = (props:any)=> {
         root && root.appendChild(domEl);
         solidLifecycles.bootstrap().then();
     });
-}
+};
 export const mount = (props:any) => {
     return Promise.resolve().then(()=>{
         window.requestAnimationFrame(() => domEl.classList.add('bounceInUp'));

@@ -4,10 +4,14 @@
   const navigateTo = (url: string, transition: string) => {
     setTimeout(function () {
       let link = document.createElement('a');
-      link.href = url;
+      link.href = "";
+      link.onclick = () => {
+          dispatchEvent(new CustomEvent('navigate', { detail: url }));
+      }
       link.classList.add("hidden");
       document.body.appendChild(link);
       link.click();
+      document.body.removeChild(link);
     },1000);
       let hello = document.getElementById("hello");
       hello && hello.classList.add("animated","bounceOutDown");

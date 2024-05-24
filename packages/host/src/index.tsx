@@ -1,7 +1,8 @@
 /* @refresh reload */
 import './index.css';
 import 'solid-devtools';
-import {LifeCycles, registerApplication, start} from 'single-spa';
+import {LifeCycles, registerApplication, start, navigateToUrl} from 'single-spa';
+// @ts-ignore
 import { bootstrap, mount, unmount } from 'software-eng';
 // @ts-ignore
 import { bootstrap as landingBootstrap, mount as landingMount, unmount as landingUnmount } from 'landing';
@@ -29,6 +30,11 @@ registerApplication({
 });
 
 start();
+
+// @ts-ignore
+window.addEventListener('navigate', (event: CustomEvent) => {
+    navigateToUrl(event.detail);
+});
 
 const root = document.getElementById('theme-root');
 if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
