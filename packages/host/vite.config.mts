@@ -16,7 +16,7 @@ export default defineConfig({
       importMaps: {
         type: 'overridable-importmap',
         dev: './importsMap.dev.json',
-        build: "./importsMap.dev.json",
+        build: "./importsMap.prod.json",
       }
     }),
   ],
