@@ -31,7 +31,7 @@
         }
     }
 </script>
-<div class="background dark:bg-[url('/landing.svg')] bg-[url('/landing-light.svg')] bg-cover bg-bottom min-h-screen min-w-screen overflow-y-hidden">
+<div class="background dark:bg-[url('https://nduartech.github.io/landing.svg')] bg-[url('https://nduartech.github.io/landing-light.svg')] bg-cover bg-bottom min-h-screen min-w-screen overflow-y-hidden">
     <div
             class="w-full min-h-fit lg:max-h-screen flex flex-col justify-center items-center">
         <div class="flex flex-col justify-start md:mt-20 lg:mt-32 sm:portrait:h-screen sm:landscape:h-fit md:landscape:h-screen w-full items-center">

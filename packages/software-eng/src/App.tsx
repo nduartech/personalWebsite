@@ -35,7 +35,7 @@ const App: Component = (props: any) => {
 
     return (
         <div
-            class="bg-[url('/se-light.svg')] dark:bg-[url('/se.svg')] bg-cover bg-bottom min-h-screen min-w-screen overflow-y-hidden">
+            class="bg-[url('https://nduartech.github.io/se-light.svg')] dark:bg-[url('https://nduartech.github.io/se.svg')] bg-cover bg-bottom min-h-screen min-w-screen overflow-y-hidden">
             <div
                 class="flex h-full max-w-screen">
                 <div class="h-full max-h-screen w-full overflow-hidden transition">
