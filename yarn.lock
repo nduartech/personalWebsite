@@ -558,10 +558,10 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@nathanld/single-spa-solid@npm:^0.1.9":
-  version: 0.1.9
-  resolution: "@nathanld/single-spa-solid@npm:0.1.9"
-  checksum: 10c0/9909c05d6e550a0ef43444cd976a2866d9dc38224d518a20a8a1ef205f70a3e5ae91e8aa2391b04b45ec86d4163a64a09afe08bfe0548d7f1d0bfdbc5c89a52d
+"@nathanld/single-spa-solid@npm:^0.1.10":
+  version: 0.1.10
+  resolution: "@nathanld/single-spa-solid@npm:0.1.10"
+  checksum: 10c0/0082f30a1cee9d50b9a70160e0d1d875eecf915502d8d5265e329a70a06c45840b9d46d9bf864972236053fb2f06439d5b9b695eff917cfad2681451f58b7980
   languageName: node
   linkType: hard
 
@@ -4568,7 +4568,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "software-eng@workspace:packages/software-eng"
   dependencies:
-    "@nathanld/single-spa-solid": "npm:^0.1.9"
+    "@nathanld/single-spa-solid": "npm:^0.1.10"
     "@previewjs/cli": "npm:^1.28.1"
     "@types/node": "npm:^20.12.12"
     autoprefixer: "npm:^10.4.19"
