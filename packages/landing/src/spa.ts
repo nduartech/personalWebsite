@@ -14,14 +14,13 @@ export const bootstrap = async (props: any) => {
     await Promise.resolve();
     domEl = document.createElement('div');
     domEl.id = 'app1';
-    domEl.classList.add('animated');
     let root = document.getElementById('root');
     root && root.appendChild(domEl);
     svelteLifecycles.bootstrap(props);
 };
 export const mount = async (props: any) => {
     await Promise.resolve();
-    window.requestAnimationFrame(() => domEl.classList.add('bounceInDown'));
+    window.requestAnimationFrame(() => domEl.classList.add('animated','bounceInDown'));
     svelteLifecycles.mount(props);
 };
 export const unmount = async (props: any) => {

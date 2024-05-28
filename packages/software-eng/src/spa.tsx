@@ -12,7 +12,6 @@ export const bootstrap = (props:any)=> {
     return Promise.resolve().then(()=>{
         domEl = document.createElement('div');
         domEl.id = 'app2';
-        domEl.classList.add('animated');
         let root = document.getElementById('root');
         root && root.appendChild(domEl);
         solidLifecycles.bootstrap().then();
@@ -20,7 +19,7 @@ export const bootstrap = (props:any)=> {
 };
 export const mount = (props:any) => {
     return Promise.resolve().then(()=>{
-        window.requestAnimationFrame(() => domEl.classList.add('bounceInUp'));
+        window.requestAnimationFrame(() => domEl.classList.add('animated','bounceInUp'));
         solidLifecycles.mount(props).then();
     });
 };
