@@ -4,7 +4,7 @@ import { render } from 'solid-js/web';
 import 'solid-devtools';
 import App from './App';
 
-const root = document.getElementById('solid-root');
+const root = document.getElementById('root');
 import './index.css';
 if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
   throw new Error(
