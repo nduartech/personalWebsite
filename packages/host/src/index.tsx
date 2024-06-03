@@ -6,6 +6,8 @@ import {LifeCycles, registerApplication, start, navigateToUrl} from 'single-spa'
 import { bootstrap, mount, unmount } from 'software-eng';
 // @ts-ignore
 import { bootstrap as landingBootstrap, mount as landingMount, unmount as landingUnmount } from 'landing';
+// @ts-ignore
+import { bootstrap as interestsBootstrap, mount as interestsMount, unmount as interestsUnmount } from 'interests';
 import {render} from "solid-js/web";
 import Theme from "./components/Theme";
 
@@ -17,6 +19,16 @@ registerApplication({
     unmount
   })).then(),
   activeWhen: ["/software-engineer"]
+});
+
+registerApplication({
+  name: 'interests',
+  app: () => new Promise<LifeCycles>(resolve=>resolve({
+    bootstrap:interestsBootstrap,
+    mount: interestsMount,
+    unmount: interestsUnmount
+  })).then(),
+  activeWhen: ["/interests"]
 });
 
 registerApplication({

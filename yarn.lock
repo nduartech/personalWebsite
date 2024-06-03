@@ -536,6 +536,7 @@ __metadata:
     "@previewjs/cli": "npm:^1.28.1"
     "@types/node": "npm:^20.12.12"
     autoprefixer: "npm:^10.4.19"
+    interests: "workspace:^"
     landing: "workspace:^"
     postcss: "npm:^8.4.38"
     single-spa: "npm:^6.0.1"
@@ -2812,6 +2813,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"interests@workspace:^, interests@workspace:packages/interests":
+  version: 0.0.0-use.local
+  resolution: "interests@workspace:packages/interests"
+  dependencies:
+    "@nathanld/single-spa-solid": "npm:^0.1.10"
+    "@previewjs/cli": "npm:^1.28.1"
+    "@types/node": "npm:^20.12.12"
+    autoprefixer: "npm:^10.4.19"
+    postcss: "npm:^8.4.38"
+    solid-devtools: "npm:^0.30.1"
+    solid-js: "npm:^1.8.17"
+    tailwind: "npm:^4.0.0"
+    tailwindcss: "npm:^3.4.3"
+    transition-style: "npm:^0.1.3"
+    typescript: "npm:^5.4.5"
+    vite: "npm:^5.2.11"
+    vite-plugin-css-injected-by-js: "npm:^3.5.1"
+    vite-plugin-single-spa: "npm:^0.7.0"
+    vite-plugin-solid: "npm:^2.10.2"
+  languageName: unknown
+  linkType: soft
+
 "internal-slot@npm:^1.0.7":
   version: 1.0.7
   resolution: "internal-slot@npm:1.0.7"
@@ -5052,6 +5075,13 @@ __metadata:
   dependencies:
     is-number: "npm:^7.0.0"
   checksum: 10c0/487988b0a19c654ff3e1961b87f471702e708fa8a8dd02a298ef16da7206692e8552a0250e8b3e8759270f62e9d8314616f6da274734d3b558b1fc7b7724e892
+  languageName: node
+  linkType: hard
+
+"transition-style@npm:^0.1.3":
+  version: 0.1.3
+  resolution: "transition-style@npm:0.1.3"
+  checksum: 10c0/a02f1ecceae84ce7c088c48181052f9adf9643118b8cfaa00bd84d20f88027f628fbfcf4e0382dff768922764648e4b7621effd9a36ce767fc9464992c96341b
   languageName: node
   linkType: hard
 

@@ -3,8 +3,9 @@ import plugin from 'tailwindcss/plugin';
 const config: Config = {
   content: [
     './index.html',
-    './src/**/*.{js,ts,jsx,tsx,css,md,mdx,html,json,scss}',
-    './src/**/**/*.{js,ts,jsx,tsx,css,md,mdx,html,json,scss}',
+    './src/*.{jsx,tsx,html}',
+    './src/**/*.{jsx,tsx,html}',
+    './src/**/**/*.{jsx,tsx,html}',
   ],
   darkMode: 'class',
   theme: {
@@ -40,7 +41,6 @@ const config: Config = {
       })
     })
   ],
-  important: true
 };
 
 export default config;
