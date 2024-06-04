@@ -536,6 +536,7 @@ __metadata:
     "@previewjs/cli": "npm:^1.28.1"
     "@types/node": "npm:^20.14.0"
     autoprefixer: "npm:^10.4.19"
+    interests: "workspace:^"
     landing: "workspace:^"
     postcss: "npm:^8.4.38"
     single-spa: "npm:^6.0.1"
@@ -1043,6 +1044,15 @@ __metadata:
   version: 1.0.5
   resolution: "@types/estree@npm:1.0.5"
   checksum: 10c0/b3b0e334288ddb407c7b3357ca67dbee75ee22db242ca7c56fe27db4e1a31989cb8af48a84dd401deb787fe10cc6b2ab1ee82dc4783be87ededbe3d53c79c70d
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^20.12.12":
+  version: 20.14.1
+  resolution: "@types/node@npm:20.14.1"
+  dependencies:
+    undici-types: "npm:~5.26.4"
+  checksum: 10c0/12b7879047f50cc217bbea3add7c45e542070f6e9fb2092be97542152b7022512bcb2bf848d04f77e295c4c8699acd484e79a4a4dbe9bcfa4e89dd543d530611
   languageName: node
   linkType: hard
 
@@ -2811,6 +2821,28 @@ __metadata:
   checksum: 10c0/6e56402373149ea076a434072671f9982f5fad030c7662be0332122fe6c0fa490acb3cc1010d90b6eff8d640b1167d77674add52dfd1bb85d545cf29e80e73e7
   languageName: node
   linkType: hard
+
+"interests@workspace:^, interests@workspace:packages/interests":
+  version: 0.0.0-use.local
+  resolution: "interests@workspace:packages/interests"
+  dependencies:
+    "@nathanld/single-spa-solid": "npm:^0.1.10"
+    "@previewjs/cli": "npm:^1.28.1"
+    "@types/node": "npm:^20.12.12"
+    autoprefixer: "npm:^10.4.19"
+    postcss: "npm:^8.4.38"
+    solid-devtools: "npm:^0.30.1"
+    solid-js: "npm:^1.8.17"
+    tailwind: "npm:^4.0.0"
+    tailwindcss: "npm:^3.4.3"
+    transition-style: "npm:^0.1.3"
+    typescript: "npm:^5.4.5"
+    vite: "npm:^5.2.11"
+    vite-plugin-css-injected-by-js: "npm:^3.5.1"
+    vite-plugin-single-spa: "npm:^0.7.0"
+    vite-plugin-solid: "npm:^2.10.2"
+  languageName: unknown
+  linkType: soft
 
 "internal-slot@npm:^1.0.7":
   version: 1.0.7
@@ -5055,6 +5087,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"transition-style@npm:^0.1.3":
+  version: 0.1.3
+  resolution: "transition-style@npm:0.1.3"
+  checksum: 10c0/a02f1ecceae84ce7c088c48181052f9adf9643118b8cfaa00bd84d20f88027f628fbfcf4e0382dff768922764648e4b7621effd9a36ce767fc9464992c96341b
+  languageName: node
+  linkType: hard
+
 "ts-interface-checker@npm:^0.1.9":
   version: 0.1.13
   resolution: "ts-interface-checker@npm:0.1.13"
@@ -5344,7 +5383,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^5.2.12":
+"vite@npm:^5.2.11, vite@npm:^5.2.12":
   version: 5.2.12
   resolution: "vite@npm:5.2.12"
   dependencies:

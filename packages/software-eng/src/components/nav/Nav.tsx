@@ -57,18 +57,18 @@ function Nav(props:any) {
             }}
           ></NavButton>
         </Show>
-        <ul class="flex flex-row lg:flex-col items-center justify-center w-fit h-fit space-y-0 md:landscape:space-y-4 lg:space-y-4 space-x-5 md:landscape:space-x-0 lg:space-x-0 list-none">
+        <ul class="flex flex-row lg:flex-col items-start justify-center w-fit h-fit list-none portrait:space-x-3 landscape:space-x-0 portrait:space-y-0 landscape:space-y-3">
           <Show when={!isClosed()}>
             <NavButton
-              icon="<svg class='nav w-4 h-4 lg:mr-1 ml-1 lg:ml-0' stroke-width='0.8' fill='none' xmlns='http://www.w3.org/2000/svg' color='#ddf2ff' viewBox='6.31 6.31 11.39 11.39'><path d='M6.75827 17.2426L12.0009 12M17.2435 6.75736L12.0009 12M12.0009 12L6.75827 6.75736M12.0009 12L17.2435 17.2426' stroke='#ddf2ff' stroke-width='0.8' stroke-linecap='round' stroke-linejoin='round' class='svg-elem-4'></path></svg>"
+              icon='<svg class="nav w-7 h-7" viewBox="0 0 24 24" stroke-width="0.9" fill="none" xmlns="http://www.w3.org/2000/svg" color="#ffffff" width="24" height="24"><path d="M5 7H6" stroke="#ffffff" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" class="svg-elem-11"></path><path d="M2 17.7143V6.28571C2 5.02335 2.99492 4 4.22222 4H19.7778C21.0051 4 22 5.02335 22 6.28571V17.7143C22 18.9767 21.0051 20 19.7778 20H4.22222C2.99492 20 2 18.9767 2 17.7143Z" stroke="#ffffff" stroke-width="0.9" class="svg-elem-21"></path><path d="M10 14L12 12M12 12L14 10M12 12L10 10M12 12L14 14" stroke="#ffffff" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" class="svg-elem-31"></path></svg>'
               label="Close"
               onClick={() => {
                 document
-                  .querySelectorAll("svg.nav")
-                  .forEach((svg) => svg.classList.remove("active"));
+                    .querySelectorAll("svg.nav")
+                    .forEach((svg) => svg.classList.remove("active"));
                 document
-                  .querySelectorAll("p.navIconLabel")
-                  .forEach((svg) => svg.classList.remove("active"));
+                    .querySelectorAll("p.navIconLabel")
+                    .forEach((svg) => svg.classList.remove("active"));
                 setTimeout(function () {
                   setIsClosed(true);
                   let navClosed = new Event("navClosed");

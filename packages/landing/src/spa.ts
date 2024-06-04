@@ -1,6 +1,6 @@
 // @ts-ignore
 import singleSpaSvelte from "single-spa-svelte";
-import App from './App.svelte'
+import App from './App.svelte';
 
 
 let domEl: HTMLDivElement;

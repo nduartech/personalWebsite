@@ -68,4 +68,51 @@
     p.navIconLabel.active {
         color: #ddf2ff;
     }
+
+    svg.nav .svg-elem-11 {
+        stroke-dashoffset: 3px;
+        stroke-dasharray: 3px;
+        -webkit-transition: stroke-dashoffset 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
+        transition: stroke-dashoffset 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
+    }
+
+    svg.nav.active .svg-elem-11 {
+        stroke-dashoffset: 0;
+    }
+
+    svg.nav .svg-elem-21 {
+        stroke-dashoffset: 70.13310241699219px;
+        stroke-dasharray: 70.13310241699219px;
+        -webkit-transition: stroke-dashoffset 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.12s;
+        transition: stroke-dashoffset 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.12s;
+    }
+
+    svg.nav.active .svg-elem-21 {
+        stroke-dashoffset: 0;
+    }
+
+    svg.nav .svg-elem-31 {
+        stroke-dashoffset: 13.313708305358887px;
+        stroke-dasharray: 13.313708305358887px;
+        -webkit-transition: stroke-dashoffset 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.24s;
+        transition: stroke-dashoffset 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.24s;
+    }
+
+    svg.nav.active .svg-elem-31 {
+        stroke-dashoffset: 0;
+    }
+
+
+    svg.nav .svg-elem-12 {
+        stroke-dashoffset: 62.43463134765625px;
+        stroke-dasharray: 62.43463134765625px;
+        -webkit-transition: stroke-dashoffset 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
+        transition: stroke-dashoffset 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
+    }
+
+    svg.nav.active .svg-elem-12 {
+        stroke-dashoffset: 0;
+    }
+
+
 }

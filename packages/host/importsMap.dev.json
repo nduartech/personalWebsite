@@ -3,6 +3,7 @@
     "solid-js": "https://esm.sh/solid-js",
     "software-eng": "http://localhost:3001/spa.js",
     "svelte": "https://esm.sh/svelte@4.2.16",
-    "landing": "http://localhost:4173/bundle.js"
+    "landing": "http://localhost:4173/bundle.js",
+    "interests": "http://localhost:3002/interest-spa.js"
   }
 }

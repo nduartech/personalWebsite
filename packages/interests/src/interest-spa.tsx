@@ -8,13 +8,13 @@ const cssLc = cssLifecycleFactory('spa', /* optional factory options */);
 const solidLifecycles = singleSpaSolid({
     solid: {render: render},
     rootComponent: App,
-    domElementGetter: () => document.getElementById('app2')
+    domElementGetter: () => document.getElementById('app3')
 });
 let domEl: HTMLDivElement;
 export const bootstrap = (props:any)=> {
     return Promise.resolve().then(()=>{
         domEl = document.createElement('div');
-        domEl.id = 'app2';
+        domEl.id = 'app3';
         let root = document.getElementById('root');
         root && root.appendChild(domEl);
         cssLc.bootstrap(props).then();
