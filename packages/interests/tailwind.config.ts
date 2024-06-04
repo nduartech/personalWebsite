@@ -7,7 +7,7 @@ const config: Config = {
     './src/**/*.{jsx,tsx,html}',
     './src/**/**/*.{jsx,tsx,html}',
   ],
-  darkMode: 'class',
+  darkMode: 'selector',
   theme: {
     extend: {
       colors: {

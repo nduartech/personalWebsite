@@ -26,7 +26,7 @@ const Typewriter = (props:any) => {
         clearInterval(interval);}, 1000);
     });
     return (
-        <div>
+        <div class="overflow-y-scroll no-scrollbar h-full">
             <span>{text()}</span>
         </div>
     );
