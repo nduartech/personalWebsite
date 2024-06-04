@@ -10,7 +10,7 @@
     "regBuild": "vite build --mode production",
     "serve": "vite preview"
   },
-  "main": "dist/spa.js",
+  "main": "dist/interest-spa.js",
   "type": "module",
   "files": [
     "dist"

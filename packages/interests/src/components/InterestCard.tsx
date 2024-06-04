@@ -1,4 +1,5 @@
 import '../index.css';
+import {createSignal, onMount} from "solid-js";
 
 function InterestCard(props:any) {
     const showModal = (id: string) => {
@@ -34,7 +35,8 @@ function InterestCard(props:any) {
     }} onClick={() => {
         showModal(props.name)
     }}>
-        <img src={props.imgSrc} alt={props.name} class="h-3/4 w-3/4"/>
+        {/*<img src={props.imgSrc} alt={props.name} class="h-3/4 w-3/4"/>*/}
+        <div class="h-3/4 w-3/4" innerHTML={props.imgSrc}></div>
         <h3 class="text-xl text-center text-regal-blue-100 pt-5">{props.label}</h3>
     </div>);
 }

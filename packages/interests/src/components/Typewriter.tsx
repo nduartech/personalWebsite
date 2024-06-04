@@ -1,4 +1,4 @@
-import { createSignal, onCleanup } from 'solid-js';
+import {createSignal, onCleanup, onMount} from 'solid-js';
 
 const Typewriter = (props:any) => {
     const [text, setText] = createSignal('');
@@ -15,10 +15,16 @@ const Typewriter = (props:any) => {
         }
     };
 
-    const interval = setInterval(type, speed);
+    let interval = setInterval(type, speed);
+
+    onMount(()=>interval = setInterval(type, speed));
 
     onCleanup(() => clearInterval(interval)); // Clean up the interval on component unmount
-
+    document.addEventListener('interestModalClosed', () => {
+        setTimeout(()=>{index = 0;
+        setText('');
+        clearInterval(interval);}, 1000);
+    });
     return (
         <div>
             <span>{text()}</span>
