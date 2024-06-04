@@ -1,8 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  separator: '_',
+  separator: '~',
   content: ['./src/**/*.svelte','./src/*.svelte'],
-  darkMode: 'class',
+  darkMode: 'selector',
   theme: {
     extend: {
       colors: {
