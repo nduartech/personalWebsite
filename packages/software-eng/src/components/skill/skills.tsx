@@ -60,6 +60,18 @@ const skills = () => [
     link: "https://astro.build/"
   },
   {
+    label: "Vite",
+    skill: "vitejs,ts",
+    category: "front-end",
+    link: "https://vitejs.dev/"
+  },
+  {
+    label: "Single-Spa",
+    skill: "single-spa,ts",
+    category: "front-end",
+    link: "https://single-spa.js.org/"
+  },
+  {
     label: "Angular",
     skill: "angularjs,ts",
     category: "front-end",
