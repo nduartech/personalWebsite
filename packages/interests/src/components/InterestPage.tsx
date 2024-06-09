@@ -1,4 +1,3 @@
-import Typewriter from "./Typewriter";
 
 function InterestPage(props:any) {
 
@@ -6,7 +5,7 @@ function InterestPage(props:any) {
         <div class="flex flex-col justify-center items-center absolute top-20 h-4/6 overflow-y-hidden space-y-5 px-10">
             {props.icon}
             <h1 class="text-5xl font-bold text-center">{props.title}</h1>
-            <p class="text-xl mt-5 text-center overflow-y-scroll no-scrollbar lg:px-56" id="pg-content"><Typewriter text={props.content}/></p>
+            <p class="text-xl mt-5 text-center overflow-y-scroll no-scrollbar lg:px-56" id="pg-content">{props.content}</p>
         </div>
     </div>)
 }
