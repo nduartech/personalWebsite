@@ -4,7 +4,7 @@ const Typewriter = (props:any) => {
     const [text, setText] = createSignal('');
     let index = 0;
     const fullText = props.text;
-    const speed = props.speed || 20; // Default speed of 100ms per character
+    const speed = props.speed || 10; // Default speed of 100ms per character
 
     const type = () => {
         if (index < fullText.length) {
@@ -17,7 +17,11 @@ const Typewriter = (props:any) => {
 
     let interval = setInterval(type, speed);
 
-    onMount(()=>interval = setInterval(type, speed));
+    onMount(()=>{
+        if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+            setText(fullText)
+        } else interval = setInterval(type, speed);
+    });
 
     onCleanup(() => clearInterval(interval)); // Clean up the interval on component unmount
     document.addEventListener('interestModalClosed', () => {
