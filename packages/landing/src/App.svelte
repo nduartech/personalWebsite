@@ -35,19 +35,19 @@
     <div
             class="w-full min-h-fit md:max-h-screen flex flex-col justify-center items-center">
         <div class="flex flex-col justify-start md:mt-20 sm:portrait_h-screen sm:landscape_h-fit md:landscape_h-screen w-full items-center">
-            <div class="w-full px-5 flex flex-row justify-center items-center">
+            <div class="w-full px-5 flex flex-row justify-center items-center md:pt-16">
                 <div class="flex flex-col md:flex-col w-full justify-center items-center space-x-5 my-5 md:space-x-0 md:space-y-2 text-center mt-20 md:mt-0"
                      id="hello">
                     <div class="image-container w-2/12 min-w-36 max-w-36 h-2/12 flex justify-center items-center">
-                        <img class="rounded-full object-fill p-2 shrink" id="me"
+                        <img class="rounded-full object-fill mb-10 shrink" id="me"
                              src="https://nduartech.tiiny.site/dist/me.png" alt="Nathan"/>
                     </div>
                     <p class="text-3xl md:text-4xl dark:text-regal-blue-s-100 text-regal-blue-s-50 my-2 text-center">Hi, I'm
                         Nathan.</p>
                 </div>
             </div>
-            <div class="w-10/12 flex flex-row justify-center items-center py-5 bg-[rgba(_35,_188,_255,_0.1)] backdrop-filter backdrop-blur rounded-[10px] dark:bg-[rgba(_1,_45,_80,_0.8)] mb-5">
-                <div class="space-y-4 w-11/12 flex flex-col justify-center items-center">
+            <div class="w-10/12 md:w-11/12 flex flex-row justify-center items-center py-5 bg-[rgba(_35,_188,_255,_0.1)] backdrop-filter backdrop-blur rounded-[10px] dark:bg-[rgba(_1,_45,_80,_0.8)] mb-5">
+                <div class="space-y-4 w-11/12 flex flex-col md:flex-row md:space-y-0 md:space-x-10 lg:space-x-20 justify-center items-center">
                     <button on:click={()=>navigateTo("/software-engineer","hinge")} type="button"
                             class="navBtn softwareEng bg-regal-blue-s-200
                 hover:bg-yellow-600
