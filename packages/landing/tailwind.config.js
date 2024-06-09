@@ -1,12 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  separator: '~',
+  // separator: '~',
   content: ['./src/**/*.svelte','./src/*.svelte'],
   darkMode: 'selector',
   theme: {
     extend: {
       colors: {
-        'regal-blue': {
+        'regal-blue-s': {
           '50': '#eef8ff',
           '100': '#ddf2ff',
           '200': '#b3e5ff',

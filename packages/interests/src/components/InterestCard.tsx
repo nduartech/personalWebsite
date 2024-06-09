@@ -24,20 +24,24 @@ function InterestCard(props:any) {
     };
 
     return (<div
-        class="interest-card py-5 bg-[rgba(_0,_163,_255,_0.7)] backdrop-filter backdrop-blur rounded-[10px] dark:bg-[rgba(_0,_87,_147,_0.8)] h-[15rem] w-[15rem] drop-shadow-xl cursor-pointer flex flex-col justify-center items-center"
+        class="interest-card py-5 bg-regal-blue-300 dark:bg-regal-blue-800 hover:bg-regal-blue-200 dark:hover:bg-gray-900 backdrop-filter backdrop-blur rounded-[10px] h-[15rem] w-[15rem] drop-shadow-xl cursor-pointer flex flex-col justify-center items-center"
         onMouseEnter={(event) => {
             // @ts-ignore
-            event.target.querySelector("img").classList.add("drop-shadow-[0_35px_35px_rgba(221,242,255,0.7)]");
+            event.target.querySelector("h3").classList.replace("text-regal-blue-600","text-regal-blue-800");
+            // @ts-ignore
+            event.target.querySelector("svg").classList.replace("stroke-regal-blue-600","stroke-regal-blue-800");
 
         }} onMouseLeave={(event) => {
         // @ts-ignore
-        event.target.querySelector("img").classList.remove("drop-shadow-[0_35px_35px_rgba(221,242,255,0.7)]");
+        event.target.querySelector("h3").classList.replace("text-regal-blue-800","text-regal-blue-600");
+        // @ts-ignore
+        event.target.querySelector("svg").classList.replace("stroke-regal-blue-800","stroke-regal-blue-600");
     }} onClick={() => {
         showModal(props.name)
     }}>
         {/*<img src={props.imgSrc} alt={props.name} class="h-3/4 w-3/4"/>*/}
         <div class="h-3/4 w-3/4" innerHTML={props.imgSrc}></div>
-        <h3 class="text-xl text-center text-regal-blue-100 pt-5">{props.label}</h3>
+        <h3 class="text-xl text-center text-regal-blue-600 dark:text-regal-blue-100 pt-5 label">{props.label}</h3>
     </div>);
 }
 
