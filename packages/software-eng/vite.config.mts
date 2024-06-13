@@ -3,7 +3,6 @@ import solidPlugin from 'vite-plugin-solid';
 import devtools from 'solid-devtools/vite';
 import { resolve } from "path";
 import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js';
-import vitePluginSingleSpa from 'vite-plugin-single-spa';
 
 export default defineConfig({
   plugins: [
@@ -12,12 +11,6 @@ export default defineConfig({
       autoname: true, // e.g. enable autoname
     }),
     solidPlugin(),
-    vitePluginSingleSpa({
-      type: 'mife',
-      serverPort: 3001,
-      spaEntryPoints: [resolve(__dirname, "src/spa.tsx")],
-      cssStrategy: "multiMife"
-    }),
     cssInjectedByJsPlugin({
       injectCode: (cssCode: string, options) => {
         return `try{if(typeof document != 'undefined'){var elementStyle = document.createElement('style');elementStyle.appendChild(document.createTextNode(${cssCode}));document.head.appendChild(elementStyle);document.addEventListener('astro:page-load', ()=>{var elementStyle = document.createElement('style');elementStyle.appendChild(document.createTextNode(${cssCode}));document.head.appendChild(elementStyle);});}}catch(e){console.error('vite-plugin-css-injected-by-js', e);}`
@@ -36,21 +29,21 @@ export default defineConfig({
       preRenderCSSCode: (cssCode) => cssCode
     }),
   ],
-  // server: {
-  //   port: 3000,
-  // },
-  // preview: {
-  //   port: 7300,
-  //   open: false,
-  // },
+  server: {
+    port: 3000,
+  },
+  preview: {
+    port: 7301,
+    open: false,
+  },
   build: {
     target: 'esnext',
     rollupOptions: {
-      // input: resolve(__dirname, "src/App.tsx"),
+      input: "src/App.tsx",
       preserveEntrySignatures: "exports-only",
       external: ["solid-js"],
       output: {
-          // entryFileNames: "bundle.js",
+          entryFileNames: "bundle.js",
           format: "esm",
       },
     },

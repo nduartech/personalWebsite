@@ -1,6 +1,6 @@
 {
   "name": "@nathanld/monorepo",
-  "packageManager": "yarn@4.2.2",
+  "packageManager": "yarn@4.3.0",
   "workspaces": [
     "packages/*"
   ],
@@ -11,10 +11,10 @@
     "serve-se": "yarn workspace software-eng serve",
     "build-i": "yarn workspace interests build",
     "serve-i": "yarn workspace interests serve",
-    "dev-h": "yarn workspace @nathanld/host dev",
-    "build-h": "yarn workspace @nathanld/host build",
-    "serve-h": "yarn workspace @nathanld/host serve",
-    "build": "concurrently \"yarn workspace landing regBuild\" \"yarn workspace software-eng regBuild\" \"yarn workspace interests regBuild\" && yarn workspace @nathanld/host regBuild",
+    "dev-h": "yarn workspace @nathanld/base-fw dev",
+    "build-h": "yarn workspace @nathanld/base-fw build",
+    "serve-h": "yarn workspace @nathanld/base-fw serve",
+    "build": "concurrently \"yarn workspace landing regBuild\" \"yarn workspace software-eng regBuild\" \"yarn workspace interests regBuild\" && yarn workspace @nathanld/base-fw regBuild",
     "dev": "concurrently \"yarn build-l\" \"yarn serve-l\" \"yarn build-se\" \"yarn serve-se\" \"yarn build-i\" \"yarn serve-i\" \"yarn dev-h\" --names \"landing,software-eng,interests,host\" --prefix \"[{name}]\" --prefix-colors blue,green,yellow,red",
     "preview": "concurrently \"yarn build-h\" \"yarn serve-h\""
   }
