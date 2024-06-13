@@ -73,7 +73,7 @@
             </div>
             <div class="w-10/12 md:w-11/12 flex flex-row justify-center items-center py-5 bg-[rgba(_35,_188,_255,_0.1)] backdrop-filter backdrop-blur rounded-[10px] dark:bg-[rgba(_1,_45,_80,_0.8)] mb-5 z-10">
                 <div class="space-y-4 w-11/12 flex flex-col md:flex-row md:space-y-0 md:space-x-10 lg:space-x-20 justify-center items-center">
-                    <button on:click={()=>navigateTo("/software-engineer","hinge")} type="button"
+                    <button on:click={()=>navigateTo("/software-engineer","hinge")} id="SEButton" type="button"
                             class="navBtn softwareEng bg-regal-blue-200
                 hover:bg-yellow-600
                 dark:bg-regal-blue-700
@@ -81,7 +81,7 @@
                 w-full py-2 px-2 text-sm font-medium text-regal-blue-700 hover:text-regal-blue-50 dark:text-regal-blue-50 border-0 rounded-[45px] shadow-[0px_8px_15px_rgba(0,0,0,0.2)] transition-all cursor-pointer outline-0 hover:shadow-[0px_4px_7px_rgba(202,_138,_4,_0.4)] dark:hover:shadow-[0px_4px_7px_rgba(88,28,135,0.4)] hover:-translate-y-[-4px]">
                         Full Stack Software Engineer
                     </button>
-                    <button on:click={()=>navigateTo("/interests","zoomOut")}
+                    <button on:click={()=>navigateTo("/interests","zoomOut")} id="IntButton"
                             class="altNavBtn bg-regal-blue-200
                 hover:bg-amber-600
                 dark:bg-regal-blue-700
