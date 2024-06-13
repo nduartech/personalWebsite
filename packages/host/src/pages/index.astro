@@ -4,11 +4,6 @@ import Landing from "../components/svelte/Landing.svelte";
 ---
 <script>
     import { navigate } from "astro:transitions/client";
-    import { prefetch } from 'astro:prefetch';
-    const SEButton = document.getElementById("SEButton");
-    const IntButton = document.getElementById("IntButton");
-    SEButton && SEButton.addEventListener('mouseenter',prefetch('/software-engineer'));
-    IntButton && IntButton.addEventListener('mouseenter',prefetch('/interests'));
     window.addEventListener('navigate',(event)=> {
         navigate(event.detail);
     });
