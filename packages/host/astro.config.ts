@@ -9,36 +9,28 @@ import solidJs from "@astrojs/solid-js";
 // https://astro.build/config
 export default defineConfig({
   devToolbar: {
-    enabled: false
+    enabled: false,
   },
-  site: 'https://nduartech.github.io',
+  site: "https://nduartech.github.io",
   prefetch: {
-    prefetchAll: true
+    prefetchAll: true,
   },
   output: "server",
   adapter: node({
-    mode: "standalone"
+    mode: "standalone",
   }),
-  integrations: [qwik({
-    include: "**/qwik/*"
-  }), tailwind({
-    applyBaseStyles: false
-  }), svelte({
-    include: "**/svelte/*"
-  }), {
-    name: 'importmap-externals',
-    hooks: {
-      'astro:build:setup': ({
-        vite,
-        target
-      }) => {
-        if (target === 'client') {
-          // @ts-ignore
-          vite.build.rollupOptions["external"] = [];
-        }
-      }
-    }
-  }, solidJs({
-      include: "**/solid/*"
-  })]
+  integrations: [
+    qwik({
+      include: "**/qwik/*",
+    }),
+    tailwind({
+      applyBaseStyles: false,
+    }),
+    svelte({
+      include: "**/svelte/*",
+    }),
+    solidJs({
+      include: "**/solid/*",
+    }),
+  ],
 });
