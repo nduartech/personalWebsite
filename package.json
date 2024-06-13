@@ -5,17 +5,15 @@
     "packages/*"
   ],
   "scripts": {
-    "build-l": "yarn workspace landing build",
-    "serve-l": "yarn workspace landing preview",
     "build-se": "yarn workspace software-eng build",
     "serve-se": "yarn workspace software-eng serve",
     "build-i": "yarn workspace interests build",
     "serve-i": "yarn workspace interests serve",
-    "dev-h": "yarn workspace @nathanld/base-fw dev",
-    "build-h": "yarn workspace @nathanld/base-fw build",
-    "serve-h": "yarn workspace @nathanld/base-fw serve",
-    "build": "concurrently \"yarn workspace landing regBuild\" \"yarn workspace software-eng regBuild\" \"yarn workspace interests regBuild\" && yarn workspace @nathanld/base-fw regBuild",
-    "dev": "concurrently \"yarn build-l\" \"yarn serve-l\" \"yarn build-se\" \"yarn serve-se\" \"yarn build-i\" \"yarn serve-i\" \"yarn dev-h\" --names \"landing,software-eng,interests,host\" --prefix \"[{name}]\" --prefix-colors blue,green,yellow,red",
+    "dev-h": "yarn workspace host start",
+    "build-h": "yarn workspace host build",
+    "serve-h": "yarn workspace host serve",
+    "build": "concurrently \"yarn workspace software-eng regBuild\" \"yarn workspace interests regBuild\" && yarn workspace @nathanld/base-fw regBuild",
+    "dev": "concurrently \"yarn build-se\" \"yarn serve-se\" \"yarn build-i\" \"yarn serve-i\" \"yarn dev-h\" --names \"software-eng,interests,host\" --prefix \"[{name}]\" --prefix-colors blue,green,yellow",
     "preview": "concurrently \"yarn build-h\" \"yarn serve-h\""
   }
 }

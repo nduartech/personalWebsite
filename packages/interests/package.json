@@ -10,14 +10,13 @@
     "regBuild": "vite build --mode production",
     "serve": "vite preview"
   },
-  "main": "dist/interest-spa.js",
+  "main": "dist/bundle2.js",
   "type": "module",
   "files": [
     "dist"
   ],
   "license": "MIT",
   "devDependencies": {
-    "@nathanld/single-spa-solid": "^0.1.10",
     "@previewjs/cli": "^1.28.1",
     "@types/node": "^20.14.2",
     "autoprefixer": "^10.4.19",
@@ -29,7 +28,6 @@
     "typescript": "^5.4.5",
     "vite": "^5.2.13",
     "vite-plugin-css-injected-by-js": "^3.5.1",
-    "vite-plugin-single-spa": "^0.7.0",
     "vite-plugin-solid": "^2.10.2"
   },
   "dependencies": {

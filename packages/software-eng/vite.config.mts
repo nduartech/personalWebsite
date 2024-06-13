@@ -5,7 +5,7 @@ import { resolve } from "path";
 import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js';
 
 export default defineConfig({
-  plugins: [
+    plugins: [
     devtools({
       /* features options - all disabled by default */
       autoname: true, // e.g. enable autoname

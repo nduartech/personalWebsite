@@ -4,8 +4,6 @@ import Nav from "./components/nav/Nav";
 import SkillBar from './components/skill/SkillBar';
 import skills from "./components/skill/skills";
 import Xp from "./components/skill/Xp";
-import se from "./public/se.svg";
-import seLight from "./public/se-light.svg";
 
 const App: Component = (props: any) => {
 
@@ -25,7 +23,7 @@ const App: Component = (props: any) => {
                     document.body.appendChild(link);
                     link.click();
                     document.body.removeChild(link);
-                }, 1000);
+                }, 300);
                 let navClicked = document.querySelector(".transition");
                 navClicked && navClicked.classList.add("animated", "bounceOutUp");
             }
@@ -43,13 +41,12 @@ const App: Component = (props: any) => {
                     document.body.appendChild(link);
                     link.click();
                     document.body.removeChild(link);
-                }, 1000);
+                }, 300);
                 let navClicked = document.querySelector(".transition");
                 navClicked && navClicked.classList.add("animated", "bounceOutUp");
             }
         }
     ];
-
     return (
         <div
             id="bgSE" class="h-full w-full bg-[url('https://nduartech.tiiny.site/dist/se-light.svg')] dark:bg-[url('https://nduartech.tiiny.site/dist/se.svg')] bg-cover bg-bottom min-h-screen min-w-screen overflow-y-hidden z-0">
