@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SoftwareXP from '../components/solid/SoftwareXP';
+
+---
+<script>
+    import { navigate } from "astro:transitions/client";
+    window.addEventListener('navigate',(event)=> {
+        navigate(event.detail);
+    });
+    document.addEventListener('astro:page-load',()=>{
+        window.requestAnimationFrame(()=> {
+            let docElem = document.getElementById("bgSE");
+            if(docElem) {
+                docElem.classList.add('animated','bounceInUp')
+            }
+        })});
+</script>
+<Layout title="Professional Experience">
+    <SoftwareXP client:only="solid-js" />
+</Layout>

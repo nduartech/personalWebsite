@@ -4,8 +4,6 @@ import Nav from "./components/nav/Nav";
 import SkillBar from './components/skill/SkillBar';
 import skills from "./components/skill/skills";
 import Xp from "./components/skill/Xp";
-import se from "./public/se.svg";
-import seLight from "./public/se-light.svg";
 
 const App: Component = (props: any) => {
 
@@ -18,7 +16,6 @@ const App: Component = (props: any) => {
             click: () => {
                 setTimeout(function () {
                     let link = document.createElement('a');
-                    link.href = "";
                     link.onclick = () => {
                         dispatchEvent(new CustomEvent('navigate', {detail: "/"}));
                     }
@@ -26,7 +23,7 @@ const App: Component = (props: any) => {
                     document.body.appendChild(link);
                     link.click();
                     document.body.removeChild(link);
-                }, 1000);
+                }, 300);
                 let navClicked = document.querySelector(".transition");
                 navClicked && navClicked.classList.add("animated", "bounceOutUp");
             }
@@ -37,7 +34,6 @@ const App: Component = (props: any) => {
             click: () => {
                 setTimeout(function () {
                     let link = document.createElement('a');
-                    link.href = "";
                     link.onclick = () => {
                         dispatchEvent(new CustomEvent('navigate', {detail: "/interests"}));
                     }
@@ -45,19 +41,18 @@ const App: Component = (props: any) => {
                     document.body.appendChild(link);
                     link.click();
                     document.body.removeChild(link);
-                }, 1000);
+                }, 300);
                 let navClicked = document.querySelector(".transition");
                 navClicked && navClicked.classList.add("animated", "bounceOutUp");
             }
         }
     ];
-
     return (
         <div
-            class="bg-[url('https://nduartech.tiiny.site/dist/se-light.svg')] dark:bg-[url('https://nduartech.tiiny.site/dist/se.svg')] bg-cover bg-bottom min-h-screen min-w-screen overflow-y-hidden">
+            id="bgSE" class="h-full w-full bg-[url('https://nduartech.tiiny.site/dist/se-light.svg')] dark:bg-[url('https://nduartech.tiiny.site/dist/se.svg')] bg-cover bg-bottom min-h-screen min-w-screen overflow-y-hidden z-0">
             <div
-                class="flex h-full max-w-screen">
-                <div class="h-full max-h-screen w-full overflow-hidden transition">
+                class="flex h-full max-w-screen z-0">
+                <div class="h-full max-h-screen w-full overflow-hidden z-0 transition">
                     <Nav navItems={nav()}></Nav>
                     <div class="page flex flex-col w-full h-full space-y-10">
                         <div class="page flex flex-row justify-center items-center w-full">

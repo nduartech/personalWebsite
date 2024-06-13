@@ -15,7 +15,6 @@ const App: Component = (props: any) => {
             click: () => {
                 setTimeout(function () {
                     let link = document.createElement('a');
-                    link.href = "";
                     link.onclick = () => {
                         dispatchEvent(new CustomEvent('navigate', {detail: "/"}));
                     }
@@ -23,7 +22,7 @@ const App: Component = (props: any) => {
                     document.body.appendChild(link);
                     link.click();
                     document.body.removeChild(link);
-                }, 1000);
+                }, 300);
                 let navClicked = document.querySelector(".transition");
                 navClicked && navClicked.classList.add("animated", "bounceOutUp");
             }
@@ -35,7 +34,6 @@ const App: Component = (props: any) => {
             click: () => {
                 setTimeout(function () {
                     let link = document.createElement('a');
-                    link.href = "";
                     link.onclick = () => {
                         dispatchEvent(new CustomEvent('navigate', {detail: "/software-engineer"}));
                     }
@@ -43,7 +41,7 @@ const App: Component = (props: any) => {
                     document.body.appendChild(link);
                     link.click();
                     document.body.removeChild(link);
-                }, 1000);
+                }, 300);
                 let navClicked = document.querySelector(".transition");
                 navClicked && navClicked.classList.add("animated", "bounceOutUp");
             }
@@ -63,11 +61,11 @@ const App: Component = (props: any) => {
     onMount(() => setTimeout(() => document.querySelectorAll("svg.interest").forEach((elem) => !elem.classList.contains("active") && elem.classList.add("active")), 700));
 
     return (
-        <div
-            class="bg-[url('./interests-light.svg')] dark:bg-[url('./interests.svg')] bg-cover bg-bottom min-h-screen min-w-screen overflow-y-hidden transition">
+        <div id="bgInt"
+            class="h-full w-full bg-[url('https://nduartech.tiiny.site/dist/interests-light.svg')] dark:bg-[url('https://nduartech.tiiny.site/dist/interests.svg')] bg-cover bg-bottom min-h-screen min-w-screen overflow-y-hidden transition">
             <div
-                class="flex h-full max-w-screen">
-                <div class="h-full max-h-screen w-full overflow-hidden">
+                class="flex h-full max-w-screen z-0">
+                <div class="h-full max-h-screen w-full overflow-hidden z-0">
                     <Nav navItems={nav()}></Nav>
                 </div>
             </div>

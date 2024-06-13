@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Landing from "../components/svelte/Landing.svelte";
+---
+<script>
+    import { navigate } from "astro:transitions/client";
+    window.addEventListener('navigate',(event)=> {
+        navigate(event.detail);
+    });
+</script>
+<Layout title="Hi, I'm Nathan">
+	<main id="app">
+        <Landing client:only="svelte"></Landing>
+	</main>
+</Layout>
+
+<style is:global>
+
+</style>
