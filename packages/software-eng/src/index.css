@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer {
+@layer base {
     svg.nav .svg-elem-1 {
         stroke-dashoffset: 20px;
         stroke-dasharray: 20px;

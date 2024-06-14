@@ -1,5 +1,5 @@
 import { Component } from "solid-js";
-import "./index.css";
+import style from "./index.css?inline";
 import Nav from "./components/nav/Nav";
 import SkillBar from './components/skill/SkillBar';
 import skills from "./components/skill/skills";
@@ -7,6 +7,10 @@ import Xp from "./components/skill/Xp";
 
 const App: Component = (props: any) => {
 
+    const elementStyle = document.createElement('style');
+    elementStyle.innerText = style;
+    document.head.appendChild(elementStyle);
+    document.addEventListener('astro:before-swap',()=>elementStyle.remove());
 
     const nav = () => [
         {

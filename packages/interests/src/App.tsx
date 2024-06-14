@@ -1,11 +1,15 @@
 import {Component, onMount} from "solid-js";
-import "./index.css";
+import style from "./index.css?inline";
 import Nav from "./components/nav/Nav";
 import InterestCard from "./components/InterestCard";
 import InterestPage from "./components/InterestPage";
 
 const App: Component = (props: any) => {
 
+    const elementStyle = document.createElement('style');
+    elementStyle.innerText = style;
+    document.head.appendChild(elementStyle);
+    document.addEventListener('astro:before-swap',()=>elementStyle.remove());
 
     const nav = () => [
         {

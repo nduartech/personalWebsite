@@ -5065,7 +5065,6 @@ __metadata:
     transition-style: "npm:^0.1.3"
     typescript: "npm:^5.4.5"
     vite: "npm:^5.3.0"
-    vite-plugin-css-injected-by-js: "npm:^3.5.1"
     vite-plugin-solid: "npm:^2.10.2"
   languageName: unknown
   linkType: soft
@@ -8253,7 +8252,6 @@ __metadata:
     tailwindcss: "npm:^3.4.4"
     typescript: "npm:^5.4.5"
     vite: "npm:^5.3.0"
-    vite-plugin-css-injected-by-js: "npm:^3.5.1"
     vite-plugin-solid: "npm:^2.10.2"
   languageName: unknown
   linkType: soft
@@ -9358,15 +9356,6 @@ __metadata:
     unist-util-stringify-position: "npm:^4.0.0"
     vfile-message: "npm:^4.0.0"
   checksum: 10c0/443bda43e5ad3b73c5976e987dba2b2d761439867ba7d5d7c5f4b01d3c1cb1b976f5f0e6b2399a00dc9b4eaec611bd9984ce9ce8a75a72e60aed518b10a902d2
-  languageName: node
-  linkType: hard
-
-"vite-plugin-css-injected-by-js@npm:^3.5.1":
-  version: 3.5.1
-  resolution: "vite-plugin-css-injected-by-js@npm:3.5.1"
-  peerDependencies:
-    vite: ">2.0.0-0"
-  checksum: 10c0/bdb82a8b25ac80f49908cc046a5efeec6a5a540fe5b80ccea42ce280ae64e7dfada3979231994ecba6546a00a59386b461142aa2525209716a70d675d14dee4e
   languageName: node
   linkType: hard
 
