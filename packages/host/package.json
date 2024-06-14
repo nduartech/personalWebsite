@@ -16,7 +16,7 @@
     "lint.dry-run": "eslint --fix-dry-run \"**/*.{js,jsx,ts,tsx,astro}\"",
     "preview": "yarn build && yarn serve",
     "prod": "yarn check && astro build",
-    "serve": "node ./dist/server/entry.mjs",
+    "serve": "astro preview",
     "start": "astro dev --open"
   },
   "dependencies": {

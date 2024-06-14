@@ -69,7 +69,7 @@ const App: Component = (props: any) => {
                     <Nav navItems={nav()}></Nav>
                 </div>
             </div>
-            <div class="h-screen w-screen flex flex-col justify-start items-center pt-10 md:pt-32">
+            <div class="h-screen w-screen flex flex-col justify-start items-center pt-16 md:pt-32">
                 <div
                     class="max-h-screen h-fit w-9/12 overflow-y-scroll no-scrollbar grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-5  place-items-center pb-20">
                     <InterestCard name="family" label="Family"
