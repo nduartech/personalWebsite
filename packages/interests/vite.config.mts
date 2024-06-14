@@ -25,6 +25,7 @@ export default defineConfig({
       preserveEntrySignatures: "exports-only",
       external: ["solid-js"],
       output: {
+          assetFileNames: "assets/int.css",
           entryFileNames: "bundle2.js",
           format: "esm",
       },

@@ -7,10 +7,10 @@ import Xp from "./components/skill/Xp";
 
 const App: Component = (props: any) => {
 
-    const elementStyle = document.createElement('style');
-    elementStyle.innerText = style;
-    document.head.appendChild(elementStyle);
-    document.addEventListener('astro:before-swap',()=>elementStyle.remove());
+    // const elementStyle = document.createElement('style');
+    // elementStyle.innerText = style;
+    // document.head.appendChild(elementStyle);
+    // document.addEventListener('astro:before-swap',()=>elementStyle.remove());
 
     const nav = () => [
         {

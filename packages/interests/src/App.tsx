@@ -6,10 +6,10 @@ import InterestPage from "./components/InterestPage";
 
 const App: Component = (props: any) => {
 
-    const elementStyle = document.createElement('style');
-    elementStyle.innerText = style;
-    document.head.appendChild(elementStyle);
-    document.addEventListener('astro:before-swap',()=>elementStyle.remove());
+    // const elementStyle = document.createElement('style');
+    // elementStyle.innerText = style;
+    // document.head.appendChild(elementStyle);
+    // document.addEventListener('astro:before-swap',()=>elementStyle.remove());
 
     const nav = () => [
         {
