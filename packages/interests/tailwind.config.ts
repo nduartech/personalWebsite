@@ -41,6 +41,7 @@ const config: Config = {
       })
     })
   ],
+  important: true
 };
 
 export default config;
