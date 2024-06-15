@@ -11,6 +11,6 @@
     "serve-i": "yarn workspace interests serve",
     "dev-h": "yarn workspace host start",
     "build": "concurrently \"yarn workspace software-eng regBuild\" \"yarn workspace interests regBuild\" && yarn workspace host build",
-    "preview": "concurrently \"yarn build-se\" \"yarn serve-se\" \"yarn build-i\" \"yarn serve-i\" \"yarn workspace host dev\" --names \"software-eng,software-eng,interests,interests,host\" --prefix \"[{name}]\" --prefix-colors blue,blue,green,green,yellow"
+    "prev-deps": "concurrently \"yarn build-se\" \"yarn serve-se\" \"yarn build-i\" \"yarn serve-i\" --names \"software-eng,software-eng,interests,interests\" --prefix \"[{name}]\" --prefix-colors blue,blue,green,green"
   }
 }

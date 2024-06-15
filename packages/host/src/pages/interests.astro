@@ -5,8 +5,10 @@ import '../styles/interest.css';
 ---
 <script>
     import { navigate } from "astro:transitions/client";
+    import { prefetch } from 'astro:prefetch';
     window.addEventListener('navigate',(event)=> {
-        navigate(event.detail);
+        prefetch(event.detail);
+        setTimeout(navigate(event.detail),300);
     });
     document.addEventListener('astro:page-load',()=>{
         window.requestAnimationFrame(()=> {
