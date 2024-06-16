@@ -6,40 +6,6 @@ export default {
   darkMode: "selector",
   theme: {
     extend: {
-        typography: {
-            DEFAULT: {
-                css: {
-                    color: '#ddf2ff',
-                    a: {
-                        color: '#b3e5ff',
-                        '&:hover': {
-                            color: '#b3e5ff',
-                        },
-                    },
-                    h1: {
-                        color: '#eef8ff',
-                    },
-                    h2: {
-                        color: '#eef8ff',
-                    },
-                    h3: {
-                        color: '#eef8ff',
-                    },
-                    h4: {
-                        color: '#eef8ff',
-                    },
-                    h5: {
-                        color: '#eef8ff',
-                    },
-                    h6: {
-                        color: '#eef8ff',
-                    },
-                    p: {
-                        color: '#eef8ff',
-                    },
-                },
-            },
-        },
       colors: {
         "regal-blue": {
           50: "#eef8ff",
@@ -58,7 +24,6 @@ export default {
     },
   },
   plugins: [
-    require('@tailwindcss/typography'),
     plugin(function ({ addUtilities }) {
       addUtilities({
         ".no-scrollbar::-webkit-scrollbar": {

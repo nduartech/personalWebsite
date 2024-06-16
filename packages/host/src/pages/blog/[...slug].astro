@@ -12,8 +12,11 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
-<PostLayout>
-<div class="prose">
-<Content></Content>
-</div>
+<PostLayout title={entry.data.title}>
+    <div class="space-y-2">
+    <span class="text-regal-blue-50 text-md lg:text:lg"><span class="text-regal-blue-50 text-xl lg:text-2xl">{entry.data.title} | </span> {entry.data.description}</span>
+    <div class="text-regal-blue-50 text-xs lg:text:xs">Published: {entry.data.pubDate.toLocaleDateString('Eastern')}</div>
+    <div class="text-regal-blue-50 text-xs lg:text:xs">Tags: [{entry.data.tags.map(t=>t.toLowerCase()).join(", ")}]</div>
+    <div class="text-regal-blue-50 text-xs lg:text:xs"><Content></Content></div>
+    </div>
 </PostLayout>
