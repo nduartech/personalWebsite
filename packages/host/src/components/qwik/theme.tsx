@@ -1,6 +1,31 @@
-import { component$, useSignal } from "@builder.io/qwik";
+import {$, component$, useOnDocument, useSignal} from "@builder.io/qwik";
+import {isServer} from "@builder.io/qwik/build";
 export const Theme = component$(() => {
   const darkMode = useSignal("dark");
+    useOnDocument("pageLoad",$(()=>{
+        if(isServer) return;
+        setTimeout(() => {
+            const theme = document.documentElement.className;
+            const sun = document.getElementById("dayNightSun");
+            const moon = document.getElementById("dayNightMoon");
+            if (sun && moon) {
+                if (theme === "dark") {
+                    document.documentElement.className = "dark";
+                    localStorage.setItem("theme", "dark");
+                    sun.classList.remove("hidden");
+                    setTimeout(() => sun.classList.add("active"), 200);
+                    moon.classList.replace("active", "hidden");
+                } else {
+                    document.documentElement.className = "light";
+                    localStorage.setItem("theme", "light");
+                    moon.classList.remove("hidden");
+                    setTimeout(() => moon.classList.add("active"), 200);
+                    sun.classList.replace("active", "hidden");
+                }
+            }
+        }, 300);
+
+    }));
   return (
     <div class="absolute top-0 right-0 z-10">
       <div
@@ -28,7 +53,7 @@ export const Theme = component$(() => {
         }}
       >
         <svg
-          class={["w-8", "h-8", darkMode.value === "dark" ? "active" : ""]}
+          class="h-8 w-8"
           id="dayNightSun"
           stroke-width="0.9"
           fill="none"
@@ -110,7 +135,7 @@ export const Theme = component$(() => {
           ></path>
         </svg>
         <svg
-          class={["w-7", "h-7", darkMode.value === "light" ? "active" : ""]}
+          class="h-7 w-7"
           id="dayNightMoon"
           stroke-width="0.9"
           fill="none"

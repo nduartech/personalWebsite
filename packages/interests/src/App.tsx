@@ -1,51 +1,9 @@
 import {Component, onMount} from "solid-js";
 import style from "./index.css?inline";
-import Nav from "./components/nav/Nav";
 import InterestCard from "./components/InterestCard";
 import InterestPage from "./components/InterestPage";
 
 const App: Component = (props: any) => {
-
-    const nav = () => [
-        {
-            icon: '<svg class="nav w-7 h-7" stroke-width="0.8" fill="none" xmlns="http://www.w3.org/2000/svg" color="#ddf2ff" viewBox="2.55 3.23 18.9 18.22"><path d="M9 21H7C4.79086 21 3 19.2091 3 17V10.7076C3 9.30887 3.73061 8.01175 4.92679 7.28679L9.92679 4.25649C11.2011 3.48421 12.7989 3.48421 14.0732 4.25649L19.0732 7.28679C20.2694 8.01175 21 9.30887 21 10.7076V17C21 19.2091 19.2091 21 17 21H15M9 21V17C9 15.3431 10.3431 14 12 14V14C13.6569 14 15 15.3431 15 17V21M9 21H15" stroke="#ddf2ff" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" class="svg-elem-5"></path></svg>',
-            label: "Home",
-            path: "/",
-            click: () => {
-                setTimeout(function () {
-                    let link = document.createElement('a');
-                    link.onclick = () => {
-                        dispatchEvent(new CustomEvent('navigate', {detail: "/"}));
-                    }
-                    link.classList.add("hidden");
-                    document.body.appendChild(link);
-                    link.click();
-                    document.body.removeChild(link);
-                }, 300);
-                let navClicked = document.querySelector(".transition");
-                navClicked && navClicked.classList.add("animated", "bounceOutUp");
-            }
-        },
-        {
-            icon: '<svg viewBox="0 0 24 24" class="nav w-7 h-7" stroke-width="0.9" fill="none" xmlns="http://www.w3.org/2000/svg" color="#ffffff"><path d="M6.81815 22L6.81819 19.143C6.66235 17.592 5.63284 16.4165 4.68213 15M14.4545 22L14.4545 20.2858C19.3636 20.2858 18.8182 14.5717 18.8182 14.5717C18.8182 14.5717 21 14.5717 21 12.286L18.8182 8.8576C18.8182 4.28632 15.1094 2.04169 11.1818 2.00068C8.98139 1.97771 7.22477 2.53124 5.91201 3.5" stroke="#ffffff" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" class="svg-elem-10"></path><path d="M13 7L15 9.5L13 12" stroke="#ffffff" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" class="svg-elem-20"></path><path d="M5 7L3 9.5L5 12" stroke="#ffffff" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" class="svg-elem-30"></path><path d="M10 6L8 13" stroke="#ffffff" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" class="svg-elem-40"></path></svg>',
-            label: "Work",
-            path: "/software-engineer",
-            click: () => {
-                setTimeout(function () {
-                    let link = document.createElement('a');
-                    link.onclick = () => {
-                        dispatchEvent(new CustomEvent('navigate', {detail: "/software-engineer"}));
-                    }
-                    link.classList.add("hidden");
-                    document.body.appendChild(link);
-                    link.click();
-                    document.body.removeChild(link);
-                }, 300);
-                let navClicked = document.querySelector(".transition");
-                navClicked && navClicked.classList.add("animated", "bounceOutUp");
-            }
-        }
-    ];
 
     const closeModal = (id: string) => {
         let modal = document.getElementById(id);
@@ -62,12 +20,6 @@ const App: Component = (props: any) => {
     return (
         <div id="bgInt"
             class="h-full w-full bg-[url('https://nduartech.tiiny.site/dist/interests-light.svg')] dark:bg-[url('https://nduartech.tiiny.site/dist/interests.svg')] bg-cover bg-bottom min-h-screen min-w-screen overflow-y-hidden transition">
-            <div
-                class="flex h-full max-w-screen z-0">
-                <div class="h-full max-h-screen w-full overflow-hidden z-0">
-                    <Nav navItems={nav()}></Nav>
-                </div>
-            </div>
             <div class="h-screen w-screen flex flex-col justify-start items-center pt-16 md:pt-32">
                 <div
                     class="max-h-screen h-fit w-9/12 overflow-y-scroll no-scrollbar grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-5  place-items-center pb-20">
