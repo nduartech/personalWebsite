@@ -1,27 +1,10 @@
 ---
-import BlogLayout from '../layouts/BlogLayout.astro';
-import SoftwareXP from "../components/solid/SoftwareXP";
-import {$} from "@builder.io/qwik";
-import { getCollection } from 'astro:content';
-const blogEntries = await getCollection('blog');
+import "../styles/global.css";
+import BlogLayout from "./BlogLayout.astro";
+const {title, navProps} = Astro.props;
 
 ---
-<script>
-    import { navigate } from "astro:transitions/client";
-    import { prefetch } from 'astro:prefetch';
-    window.addEventListener('navigate',(event)=> {
-        prefetch(event.detail);
-        setTimeout(navigate(event.detail),300);
-    });
-    document.addEventListener('astro:page-load',()=>{
-        window.requestAnimationFrame(()=> {
-            let docElem = document.getElementById("bgBlog");
-            if(docElem) {
-                docElem.classList.add('animated','fadeIn')
-            }
-        })});
-</script>
-<BlogLayout title="Technical Blog" navProps={[
+<BlogLayout navProps={[
     {
         icon: '<svg class="nav w-7 h-7" stroke-width="0.8" fill="none" xmlns="http://www.w3.org/2000/svg" color="#ddf2ff" viewBox="2.55 3.23 18.9 18.22"><path d="M9 21H7C4.79086 21 3 19.2091 3 17V10.7076C3 9.30887 3.73061 8.01175 4.92679 7.28679L9.92679 4.25649C11.2011 3.48421 12.7989 3.48421 14.0732 4.25649L19.0732 7.28679C20.2694 8.01175 21 9.30887 21 10.7076V17C21 19.2091 19.2091 21 17 21H15M9 21V17C9 15.3431 10.3431 14 12 14V14C13.6569 14 15 15.3431 15 17V21M9 21H15" stroke="#ddf2ff" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" class="svg-elem-5"></path></svg>',
         label: "Home",
@@ -36,12 +19,7 @@ const blogEntries = await getCollection('blog');
         path: "/interests"
     }
 ]}>
-    <h1 class="text-regal-blue-50 text-2xl pb-5">Posts</h1>
-    <ul class="space-y-4">
-        {blogEntries.map(blogPostEntry => (
-                <li class="text-regal-blue-50">
-                    <a class="text-regal-blue-50 text-md" href={`/blog/${blogPostEntry.slug}`}>{blogPostEntry.data.title} - {blogPostEntry.data.description} | Published {blogPostEntry.data.pubDate.toLocaleDateString("Eastern")} ~ Tags: [{blogPostEntry.data.tags.map(t=>t.toLowerCase()).join(", ")}]</a>
-                </li>
-        ))}
-    </ul>
+    <a href="/blog"><i class="iconoir-arrow-left-tag before:size-8 before:text-regal-blue-100 left-20 absolute">
+    </i></a>
+    <slot></slot>
 </BlogLayout>
