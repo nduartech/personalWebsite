@@ -13,7 +13,7 @@ import '../../index.css';
       context: "This Website :)",
       skillList: ['css','js','ts','tailwindcss','solidjs,ts','astrojs,ts','vitejs,ts','single-spa,ts','mitosisjs,ts'],
       title: "Not Your Average Personal Website",
-      blob: "This website  <a class='text-regal-blue-300 underline' href='https://github.com/nduartech/monorepo-v1' target='_blank'>started off</a> as an exploration of micro-frontends and SPAs, using Astro and SolidJS. The inspiration for that initial version came from this <a class='text-regal-blue-300 underline' href='https://medium.com/@sergio.a.soria/setting-up-micro-frontends-with-astro-and-ecma-script-modules-137340d2c520' target='_blank'>excellent Medium post by Sergio A. Arevalo Soria.</a> I later decided to rewrite the entire site in the single-spa framework, the code for which can be found <a class='text-regal-blue-300 underline' href='https://github.com/nduartech/nduartech.github.io/tree/single-spa' target='_blank'>here on Github</a>. As part of this rewrite, I wrote <a class='text-regal-blue-300 underline' href='https://github.com/nduartech/single-spa-solid' target='_blank'>a utility to allow the use of single-spa with SolidJS microfrontends</a>. With that said, however, ultimately I chose <a class='text-regal-blue-300 underline' href='https://github.com/nduartech/nduartech.github.io/tree/master' target='_blank'>to return to Astro</a>, this time using the Qwik + Astro integration, as I found both the DX and results just a tad better than with single-spa. In the latest version, the landing page is a component written in Svelte, both sub-sites are SolidJS micro-frontends, while the dark/light theming functionality is written in Qwik. This demonstrates some of the flexibility front-end developers have when using a modern stack.",
+      blob: "This site demonstrates some of the flexibility front-end developers have when using a modern stack, incorporating 4 different frameworks. To read more about my development of this site and what makes it special, check out my <a class='text-regal-blue-300 underline' href='/blog/first-foray' target='_blank'>blog post.</a>",
     },
     {
       context: "While working as a Full Stack Software Engineer at BNY Mellon as part of the SETUP Program...",
@@ -147,7 +147,7 @@ function Xp(props: any) {
         </div>
       </div>
       <div
-        class="flex flex-col justify-center items-center h-4/6 w-full md:h-full md:w-8/12 lg:w-9/12 bg-gradient-to-br from-regal-blue-400 to-regal-blue-700 dark:from-gray-900 dark:to-gray-950  overflow-y-hidden">
+        class="flex flex-col justify-center items-center h-4/6 w-full md:h-full md:w-8/12 lg:w-9/12 bg-transparent overflow-y-hidden">
         <Show when={page() === 0}>
           <div class="w-9/12 h-full flex flex-col items-center justify-start lg:justify-center space-y-3 overflow-y-auto no-scrollbar">
             <p class="text-white text-xs md:text-sm lg:text-xl text-center pt-5 pb-5">As a Full Stack Software Engineer, I've had

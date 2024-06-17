@@ -1,10 +1,7 @@
 ---
 import BlogLayout from '../layouts/BlogLayout.astro';
-import SoftwareXP from "../components/solid/SoftwareXP";
-import {$} from "@builder.io/qwik";
 import { getCollection } from 'astro:content';
 const blogEntries = await getCollection('blog');
-
 ---
 <script>
     import { navigate } from "astro:transitions/client";
@@ -36,11 +33,11 @@ const blogEntries = await getCollection('blog');
         path: "/interests"
     }
 ]}>
-    <h1 class="text-regal-blue-50 text-2xl pb-5">Posts</h1>
+    <h1 class="text-regal-blue-50 text-2xl pb-5 font-medium">Posts</h1>
     <ul class="space-y-4">
         {blogEntries.map(blogPostEntry => (
-                <li class="text-regal-blue-50">
-                    <a class="text-regal-blue-50 text-md" href={`/blog/${blogPostEntry.slug}`}>{blogPostEntry.data.title} <span class="text-xs">- {blogPostEntry.data.description} | Published {blogPostEntry.data.pubDate.toLocaleDateString("Eastern")} ~ Tags: [{blogPostEntry.data.tags.map(t=>t.toLowerCase()).join(", ")}]</span></a>
+                <li key={blogPostEntry.data.title} class="text-regal-blue-50">
+                    <a class="text-regal-blue-50 text-md font-semibold" href={`/blog/${blogPostEntry.slug}`}>{blogPostEntry.data.title} <span class="text-xs font-medium">- {blogPostEntry.data.description} | Published {blogPostEntry.data.pubDate.toLocaleDateString("Eastern")} ~ Tags: [{blogPostEntry.data.tags.map(t=>t.toLowerCase()).join(", ")}]</span></a>
                 </li>
         ))}
     </ul>

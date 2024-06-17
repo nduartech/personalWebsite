@@ -1,28 +1,37 @@
-import {$, component$, useOnDocument, useSignal} from "@builder.io/qwik";
-import {isServer} from "@builder.io/qwik/build";
+import { $, component$, useOnDocument } from "@builder.io/qwik";
+import { isServer } from "@builder.io/qwik/build";
 export const Theme = component$(() => {
-    useOnDocument("pageLoad",$(()=>{
-        if(isServer) return;
-        const theme = document.documentElement.className;
-        const sun = document.getElementById("dayNightSun");
-        const moon = document.getElementById("dayNightMoon");
-        if (sun && moon) {
-            if (theme === "dark") {
-                document.documentElement.className = "dark";
-                localStorage.setItem("theme", "dark");
-                if(sun.classList.contains("hidden")) sun.classList.remove("hidden");
-                sun.classList.add("active");
-                if(!moon.classList.contains("hidden")) moon.classList.contains("active")?moon.classList.replace("active", "hidden"):moon.classList.add("hidden");
-            } else {
-                document.documentElement.className = "light";
-                localStorage.setItem("theme", "light");
-                if(moon.classList.contains("hidden")) moon.classList.remove("hidden");
-                moon.classList.add("active");
-                if(!sun.classList.contains("hidden")) sun.classList.contains("active")?sun.classList.replace("active", "hidden"):sun.classList.add("hidden");
-            }
+  useOnDocument(
+    "pageLoad",
+    $(() => {
+      if (isServer) return;
+      const theme = document.documentElement.className;
+      const sun = document.getElementById("dayNightSun");
+      const moon = document.getElementById("dayNightMoon");
+      if (sun && moon) {
+        if (theme === "dark") {
+          document.documentElement.className = "dark";
+          localStorage.setItem("theme", "dark");
+          if (sun.classList.contains("hidden")) sun.classList.remove("hidden");
+          sun.classList.add("active");
+          if (!moon.classList.contains("hidden"))
+            moon.classList.contains("active")
+              ? moon.classList.replace("active", "hidden")
+              : moon.classList.add("hidden");
+        } else {
+          document.documentElement.className = "light";
+          localStorage.setItem("theme", "light");
+          if (moon.classList.contains("hidden"))
+            moon.classList.remove("hidden");
+          moon.classList.add("active");
+          if (!sun.classList.contains("hidden"))
+            sun.classList.contains("active")
+              ? sun.classList.replace("active", "hidden")
+              : sun.classList.add("hidden");
         }
-
-    }));
+      }
+    }),
+  );
   return (
     <div class="absolute top-0 right-0 z-10">
       <div

@@ -3,10 +3,7 @@ import SkillButton from "./SkillButton";
 
 function SkillBar(props: any) {
   return (
-    <div class="rounded-t-none w-[60vw] min-h-[5rem] h-fit bg-[rgba(_0,_0,_0,_0.55_)] [box-shadow:0_8px_32px_0_rgba(_31,_38,_135,_0.37_)]
-        backdrop-filter backdrop-blur-[2px] rounded-[10px] border-[1px] border-[solid] border-[rgba(255,255,255,0.18)]
-        dark:bg-[rgba(_0,_0,_0,_0.7_)] dark:[box-shadow:0_8px_32px_0_rgba(_31,_38,_135,_0.37_)] dark:backdrop-filter
-        dark:backdrop-blur-[14.5px] dark:rounded-[10px] dark:border-[1px] dark:border-[solid] dark:border-[rgba(255,255,255,0.18)]
+    <div class="rounded-t-none w-[60vw] min-h-[5rem] h-fit bg-gradient-to-br from-[rgba(_0,_163,_255,_0.6)] to-[rgba(_0,_102,_179,_0.9)] backdrop-filter backdrop-blur rounded-[10px] dark:from-[rgba(_15,_23,_42,_0.9)] dark:to-[rgba(_15,_23,_42,_1)]
         hidden md:hidden lg:flex xl:flex 2xl:flex flex-row justify-start items-center px-0 md:px-5 lg:px-10">
       <div class="flex flex-row flex-wrap w-12/12 h-11/12  py-2 justify-center items-center"
         // no-scrollbar scroll-smooth

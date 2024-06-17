@@ -17,7 +17,7 @@ function SkillButtonThin(props: { category: string; skill: string; link: string 
           class={"skillButton cursor-pointer min-w-fit flex flex-row space-x-0.5 items-center justify-center" +
             " py-0.5 mx-2 my-0.5 px-1 text-xs font-medium text-regal-blue-50 dark:text-regal-blue-50 border " +
             "rounded-lg " + (
-              !filterButton(filters(), props.skill) ? "bg-slate-800 dark:bg-slate-900 border-transparent" :
+              !filterButton(filters(), props.skill) ? "border-transparent" :
                 props.category === "front-end" ? "bg-green-800 dark:bg-green-850 border-transparent" :
                   props.category === "back-end" ? "bg-purple-800 dark:bg-purple-850 border-transparent" : "")}
           data-skill={props.skill}
