@@ -62,13 +62,13 @@
             }
         }
     }
-    document.addEventListener('astro:page-load',()=>{
-       window.requestAnimationFrame(()=> {
-           let docElem = document.getElementById("bgLanding");
-           if(docElem) {
-           docElem.classList.add('animated','bounceInDown')
-       }
-    })});
+    // document.addEventListener('astro:page-load',()=>{
+    //    window.requestAnimationFrame(()=> {
+    //        let docElem = document.getElementById("bgLanding");
+    //        if(docElem) {
+    //        docElem.classList.add('animated','bounceInDown')
+    //    }
+    // })});
 </script>
 <div id="bgLanding" class="h-screen w-screen dark:bg-[url('https://nduartech.tiiny.site/dist/landing.svg')] bg-[url('https://nduartech.tiiny.site/dist/landing-light.svg')] bg-cover bg-bottom min-h-screen min-w-screen overflow-y-hidden">
     <div

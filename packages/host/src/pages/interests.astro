@@ -2,6 +2,25 @@
 import SubLayout from '../layouts/SubLayout.astro';
 import Interest from '../components/solid/Interest';
 import '../styles/interest.css';
+const zoomInAnim = {
+    new: {
+        name: 'zoomIn',
+        duration: '0.7s',
+        easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
+        fillMode: 'forwards',
+    },
+    old: {
+        name: 'zoomOut',
+        duration: '0.7s',
+        easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
+        fillMode: 'forwards',
+    }
+};
+
+const ziAnim = {
+    forwards: zoomInAnim,
+    backwards: zoomInAnim,
+};
 ---
 <script>
     import { navigate } from "astro:transitions/client";
@@ -10,13 +29,13 @@ import '../styles/interest.css';
         prefetch(event.detail);
         setTimeout(navigate(event.detail),300);
     });
-    document.addEventListener('astro:page-load',()=>{
-        window.requestAnimationFrame(()=> {
-            let docElem = document.getElementById("bgInt");
-            if(docElem) {
-                docElem.classList.add('animated','zoomIn')
-            }
-        })});
+    // document.addEventListener('astro:page-load',()=>{
+    //     window.requestAnimationFrame(()=> {
+    //         let docElem = document.getElementById("bgInt");
+    //         if(docElem) {
+    //             docElem.classList.add('animated','zoomIn')
+    //         }
+    //     })});
 </script>
 <SubLayout title="I'm Passionate About..." navProps={[
     {
@@ -32,6 +51,7 @@ import '../styles/interest.css';
         label:'Blog',
         path: '/blog'
     }
-]}>
+]}> <div transition:animate={ziAnim}>
     <Interest client:only="solid-js" />
+    </div>
 </SubLayout>

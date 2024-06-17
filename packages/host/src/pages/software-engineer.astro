@@ -2,6 +2,25 @@
 import SubLayout from '../layouts/SubLayout.astro';
 import SoftwareXP from '../components/solid/SoftwareXP';
 import '../styles/se.css';
+const bounceInUpAnim = {
+    new: {
+        name: 'bounceInUp',
+        duration: '0.7s',
+        easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
+        fillMode: 'forwards',
+    },
+    old: {
+        name: 'bounceOutUp',
+        duration: '0.7s',
+        easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
+        fillMode: 'forwards',
+    }
+};
+
+const biuAnim = {
+    forwards: bounceInUpAnim,
+    backwards: bounceInUpAnim,
+};
 ---
 <script>
     import { navigate } from "astro:transitions/client";
@@ -10,13 +29,13 @@ import '../styles/se.css';
         prefetch(event.detail);
         setTimeout(navigate(event.detail),300);
     });
-    document.addEventListener('astro:page-load',()=>{
-        window.requestAnimationFrame(()=> {
-            let docElem = document.getElementById("bgSE");
-            if(docElem) {
-                docElem.classList.add('animated','bounceInUp')
-            }
-        })});
+    // document.addEventListener('astro:page-load',()=>{
+    //     window.requestAnimationFrame(()=> {
+    //         let docElem = document.getElementById("bgSE");
+    //         if(docElem) {
+    //             docElem.classList.add('animated','bounceInUp')
+    //         }
+    //     })});
 </script>
 <SubLayout title="Professional Experience" navProps={[
     {
@@ -33,5 +52,7 @@ import '../styles/se.css';
         path: "/interests"
     }
 ]}>
+    <div transition:animate={biuAnim}>
     <SoftwareXP client:only="solid-js" />
+    </div>
 </SubLayout>

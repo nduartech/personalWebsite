@@ -1,11 +1,9 @@
 ---
 import {ViewTransitions} from 'astro:transitions';
-import {Theme} from "../components/qwik/theme";
-import { Nav } from "../components/qwik/nav";
 import "../styles/global.css";
-
+import {Nav} from '../components/qwik/nav';
+import {Theme} from '../components/qwik/theme';
 const {title, navProps} = Astro.props;
-
 ---
 
 <!doctype html>
@@ -17,8 +15,8 @@ const {title, navProps} = Astro.props;
     <script type="importmap">
         {
             "imports":{
-                "interests":"https://nduartech.tiiny.site/dist/bundle2.js",
-                "software-eng":"https://nduartech.tiiny.site/dist/bundle.js",
+                "interests":"http://localhost:7300/bundle2.js",
+                "software-eng":"http://localhost:7301/bundle.js",
                 "solid-js":"https://esm.sh/solid-js@1.8.17"
             }
         }
@@ -81,14 +79,6 @@ const {title, navProps} = Astro.props;
 <body class="bg-regal-blue-400 dark:bg-regal-blue-950">
 <Nav entries={navProps} />
 <Theme></Theme>
-<div id="bgBlog"
-     class="h-screen w-screen dark:bg-[url('/blog.svg')] bg-[url('/blog-light.svg')] bg-cover bg-bottom min-h-screen min-w-screen overflow-y-hidden">
-    <div class="h-full w-full flex flex-col justify-center items-center">
-        <div
-                class="flex flex-col justify-start items-start bg-gradient-to-br from-[rgba(_0,_163,_255,_0.6)] to-[rgba(_0,_102,_179,_0.9)] backdrop-filter backdrop-blur rounded-[10px] dark:from-[rgba(_15,_23,_42,_0.9)] dark:to-[rgba(_15,_23,_42,_1)] py-10 px-10 overflow-y-scroll md:p-10 lg:p-16 w-[80vw] h-[85vh] lg:h-[85vh] min-h-fit transition">
-            <slot />
-        </div>
-    </div>
-</div>
+<slot />
 </body>
 </html>

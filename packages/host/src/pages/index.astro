@@ -1,6 +1,25 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Landing from "../components/svelte/Landing.svelte";
+const bounceInDownAnim = {
+    new: {
+        name: 'bounceInDown',
+        duration: '0.7s',
+        easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
+        fillMode: 'forwards',
+    },
+    old: {
+        name: 'bounceOutDown',
+        duration: '0.7s',
+        easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
+        fillMode: 'forwards',
+    }
+};
+
+const bidAnim = {
+    forwards: bounceInDownAnim,
+    backwards: bounceInDownAnim,
+};
 ---
 <script>
     import { navigate } from "astro:transitions/client";
@@ -11,7 +30,7 @@ import Landing from "../components/svelte/Landing.svelte";
     });
 </script>
 <Layout title="Hi, I'm Nathan">
-	<main id="app">
+	<main id="app" transition:animate={bidAnim}>
         <Landing client:only="svelte"></Landing>
 	</main>
 </Layout>

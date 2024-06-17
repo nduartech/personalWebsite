@@ -1,9 +1,8 @@
 ---
 import "../styles/global.css";
 import BlogLayout from "./BlogLayout.astro";
-import * as console from "node:console";
-const { title } = Astro.props;
-console.log(title);
+const {title} = Astro.props;
+import BlogSubLayout from "./BlogSubLayout.astro";
 ---
 <BlogLayout title={title} navProps={[
     {
@@ -20,7 +19,9 @@ console.log(title);
         path: "/interests"
     }
 ]}>
-    <a href="/blog"><i class="iconoir-arrow-left-tag before:size-8 before:text-regal-blue-100 left-20">
-    </i></a>
-    <slot></slot>
+        <BlogSubLayout>
+                <a href="/blog"><i class="iconoir-arrow-left-tag before:size-8 before:text-regal-blue-100 left-20">
+                </i></a>
+                <slot></slot>
+        </BlogSubLayout>
 </BlogLayout>

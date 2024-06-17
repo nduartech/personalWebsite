@@ -92,7 +92,7 @@ export const Nav = component$<NavProps>((props: NavProps) => {
                       document.body.appendChild(link);
                       link.click();
                       document.body.removeChild(link);
-                    }, 1000);
+                    }, 10);
                     const navClicked = document.querySelector(".transition");
                     navClicked &&
                       navClicked.classList.add("animated", "bounceOutUp");

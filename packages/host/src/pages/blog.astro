@@ -1,22 +1,24 @@
 ---
 import BlogLayout from '../layouts/BlogLayout.astro';
-import { getCollection } from 'astro:content';
+import {getCollection} from 'astro:content';
+import BlogSubLayout from "../layouts/BlogSubLayout.astro";
 const blogEntries = await getCollection('blog');
 ---
 <script>
-    import { navigate } from "astro:transitions/client";
-    import { prefetch } from 'astro:prefetch';
-    window.addEventListener('navigate',(event)=> {
+    import {navigate} from "astro:transitions/client";
+    import {prefetch} from 'astro:prefetch';
+
+    window.addEventListener('navigate', (event) => {
         prefetch(event.detail);
-        setTimeout(navigate(event.detail),300);
+        setTimeout(navigate(event.detail), 300);
     });
-    document.addEventListener('astro:page-load',()=>{
-        window.requestAnimationFrame(()=> {
-            let docElem = document.getElementById("bgBlog");
-            if(docElem) {
-                docElem.classList.add('animated','fadeIn')
-            }
-        })});
+    // document.addEventListener('astro:page-load',()=>{
+    //     window.requestAnimationFrame(()=> {
+    //         let docElem = document.getElementById("bgBlog");
+    //         if(docElem) {
+    //             docElem.classList.add('animated','fadeIn')
+    //         }
+    //     })});
 </script>
 <BlogLayout title="Technical Blog" navProps={[
     {
@@ -33,12 +35,20 @@ const blogEntries = await getCollection('blog');
         path: "/interests"
     }
 ]}>
-    <h1 class="text-regal-blue-50 text-2xl pb-5 font-medium">Posts</h1>
-    <ul class="space-y-4">
-        {blogEntries.map(blogPostEntry => (
-                <li key={blogPostEntry.data.title} class="text-regal-blue-50">
-                    <a class="text-regal-blue-50 text-md font-semibold" href={`/blog/${blogPostEntry.slug}`}>{blogPostEntry.data.title} <span class="text-xs font-medium">- {blogPostEntry.data.description} | Published {blogPostEntry.data.pubDate.toLocaleDateString("Eastern")} ~ Tags: [{blogPostEntry.data.tags.map(t=>t.toLowerCase()).join(", ")}]</span></a>
-                </li>
-        ))}
-    </ul>
+    <BlogSubLayout>
+                <div>
+                    <h1 class="text-regal-blue-50 text-2xl pb-5 font-medium">Posts</h1>
+                    <ul class="space-y-4">
+                        {blogEntries.map(blogPostEntry => (
+                                <li key={blogPostEntry.data.title} class="text-regal-blue-50">
+                                    <a class="text-regal-blue-50 text-md font-semibold"
+                                       href={`/blog/${blogPostEntry.slug}`}>{blogPostEntry.data.title} <span
+                                            class="text-xs font-medium">- {blogPostEntry.data.description}
+                                        | Published {blogPostEntry.data.pubDate.toLocaleDateString("Eastern")}
+                                        ~ Tags: [{blogPostEntry.data.tags.map(t => t.toLowerCase()).join(", ")}]</span></a>
+                                </li>
+                        ))}
+                    </ul>
+                </div>
+    </BlogSubLayout>
 </BlogLayout>
