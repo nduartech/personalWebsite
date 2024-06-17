@@ -13,12 +13,12 @@ function SkillButton(props: { category: string; skill: string; link: string | UR
   return (
     <>
       <div
-        class={"skillButton cursor-pointer min-w-fit flex flex-row space-x-1.5 items-center justify-center" +
-          " py-1 mx-2 my-1 px-1.5 text-sm font-medium text-regal-blue-50 dark:text-regal-blue-50 border " +
-          "rounded-lg "+(
-            !filterButton(filters(),props.skill)?"border-transparent":
-              props.category==="front-end"?"bg-green-800 dark:bg-green-800 border-transparent" :
-                props.category==="back-end"?"bg-purple-800 dark:bg-purple-800 border-transparent":"")}
+        class={"skillButton se-cursor-pointer se-min-w-fit se-flex se-flex-row se-space-x-1.5 se-items-center se-justify-center" +
+          " se-py-1 se-mx-2 se-my-1 se-px-1.5 se-text-sm se-font-medium se-text-regal-blue-50 dark:se-text-regal-blue-50 se-border " +
+          "se-rounded-lg "+(
+            !filterButton(filters(),props.skill)?"se-border-transparent":
+              props.category==="front-end"?"se-bg-green-800 dark:se-bg-green-800 se-border-transparent" :
+                props.category==="back-end"?"se-bg-purple-800 dark:se-bg-purple-800 se-border-transparent":"")}
         data-skill={props.skill}
         onMouseOver={()=>{
           if(filters().length === 0) {

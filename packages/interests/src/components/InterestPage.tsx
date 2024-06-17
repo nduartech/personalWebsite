@@ -1,11 +1,11 @@
 
 function InterestPage(props:any) {
 
-    return (<div class="typewriter w-full h-full flex flex-col justify-start items-center text-center text-regal-blue-100 py-20">
-        <div class="flex flex-col justify-center items-center absolute top-20 h-4/6 overflow-y-hidden space-y-5 mx-10 lg:mx-32">
+    return (<div class="i-w-full i-h-full i-flex i-flex-col i-justify-start i-items-center i-text-center i-text-regal-blue-100 i-py-20">
+        <div class="i-flex i-flex-col i-justify-center i-items-center i-absolute i-top-20 i-h-4/6 i-overflow-y-hidden i-space-y-5 i-mx-10 lg:i-mx-32">
             {props.icon}
-            <h1 class="text-5xl font-bold text-center">{props.title}</h1>
-            <p class="text-xl mt-5 text-center overflow-y-scroll no-scrollbar lg:mx-32" id="pg-content">{props.content}</p>
+            <h1 class="i-text-5xl i-font-bold i-text-center">{props.title}</h1>
+            <p class="i-text-xl i-mt-5 i-text-center i-overflow-y-scroll i-no-scrollbar lg:i-mx-32" id="pg-content">{props.content}</p>
         </div>
     </div>)
 }

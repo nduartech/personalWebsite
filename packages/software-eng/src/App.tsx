@@ -9,17 +9,17 @@ const App: Component = (props: any) => {
 
     return (
         <div
-            id="bgSE" class="h-full w-full bg-[url('https://nduartech.tiiny.site/dist/se-light.svg')] dark:bg-[url('https://nduartech.tiiny.site/dist/se.svg')] bg-cover bg-bottom min-h-screen min-w-screen overflow-y-hidden z-0">
+            id="bgSE" class="se-h-full se-w-full se-bg-[url('https://nduartech.tiiny.site/dist/se-light.svg')] dark:se-bg-[url('https://nduartech.tiiny.site/dist/se.svg')] se-bg-cover se-bg-bottom se-min-h-screen se-min-w-screen se-overflow-y-hidden se-z-0">
             <div
-                class="flex h-full max-w-screen z-0">
-                <div class="h-full max-h-screen w-full overflow-hidden z-0 transition">
-                    <div class="page flex flex-col w-full h-full space-y-10">
-                        <div class="page flex flex-row justify-center items-center w-full">
+                class="se-flex se-h-full se-max-w-screen se-z-0">
+                <div class="se-h-full se-max-h-screen se-w-full se-overflow-hidden se-z-0 transition">
+                    <div class="page se-flex se-flex-col se-w-full se-h-full se-space-y-10">
+                        <div class="page se-flex se-flex-row se-justify-center se-items-center se-w-full">
                             <SkillBar skills={skills()}></SkillBar>
                         </div>
-                        <div class="page flex flex-col justify-start items-center w-full">
+                        <div class="page se-flex se-flex-col se-justify-start se-items-center se-w-full">
                             <div
-                                class="mt-2 flex flex-col md:flex-row justify-center items-center bg-gradient-to-br from-[rgba(_0,_163,_255,_0.6)] to-[rgba(_0,_102,_179,_0.9)] backdrop-filter backdrop-blur rounded-[10px] dark:from-[rgba(_15,_23,_42,_0.9)] dark:to-[rgba(_15,_23,_42,_1)] p-5 w-[80vw] h-[85vh] lg:h-[65vh] min-h-fit">
+                                class="se-mt-2 se-flex se-flex-col md:se-flex-row se-justify-center se-items-center se-bg-gradient-to-br se-from-[rgba(_0,_163,_255,_0.6)] se-to-[rgba(_0,_102,_179,_0.9)] se-backdrop-filter se-backdrop-blur se-rounded-[10px] dark:se-from-[rgba(_15,_23,_42,_0.9)] dark:se-to-[rgba(_15,_23,_42,_1)] se-p-5 se-w-[80vw] se-h-[85vh] lg:se-h-[65vh] se-min-h-fit">
                                 <Xp></Xp>
                             </div>
                         </div>

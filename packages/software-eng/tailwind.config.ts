@@ -1,12 +1,13 @@
 import type { Config } from 'tailwindcss';
 import plugin from 'tailwindcss/plugin';
 const config: Config = {
+  prefix: "se-",
   content: [
     './index.html',
     './src/**/*.{js,ts,jsx,tsx,css,md,mdx,html,json,scss}',
     './src/**/**/*.{js,ts,jsx,tsx,css,md,mdx,html,json,scss}',
   ],
-  darkMode: 'selector',
+  darkMode: ['selector','[class=dark]'],
   theme: {
     extend: {
       colors: {
@@ -40,7 +41,6 @@ const config: Config = {
       })
     })
   ],
-  important: true
 };
 
 export default config;

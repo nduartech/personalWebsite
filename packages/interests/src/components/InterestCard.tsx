@@ -5,9 +5,9 @@ function InterestCard(props:any) {
     const showModal = (id: string) => {
         let modal = document.getElementById(id);
         document.querySelectorAll(".interest-card").forEach((card)=>{
-            card.classList.add("hidden");
+            card.classList.add("i-hidden");
         });
-        modal && modal.classList.contains("hidden") && modal.classList.remove("hidden");
+        modal && modal.classList.contains("i-hidden") && modal.classList.remove("i-hidden");
         if (id === "basketball") {
             modal && modal.setAttribute("transition-style", "in:circle:hesitate");
         } else if (id === "ballroom") {
@@ -24,7 +24,7 @@ function InterestCard(props:any) {
     };
 
     return (<div
-        class="interest-card py-5 bg-regal-blue-300 dark:bg-regal-blue-800 hover:bg-regal-blue-200 dark:hover:bg-gray-900 backdrop-filter backdrop-blur rounded-[10px] h-[15rem] w-[15rem] drop-shadow-xl cursor-pointer flex flex-col justify-center items-center"
+        class="interest-card i-py-5 i-bg-regal-blue-300 dark:i-bg-regal-blue-800 hover:i-bg-regal-blue-200 dark:hover:i-bg-gray-900 i-backdrop-filter i-backdrop-blur i-rounded-[10px] i-h-[15rem] i-w-[15rem] i-drop-shadow-xl i-cursor-pointer i-flex i-flex-col i-justify-center i-items-center"
         onMouseEnter={(event) => {
             // @ts-ignore
             event.target.querySelector("h3").classList.replace("text-regal-blue-600","text-regal-blue-800");
@@ -40,8 +40,8 @@ function InterestCard(props:any) {
         showModal(props.name)
     }}>
         {/*<img src={props.imgSrc} alt={props.name} class="h-3/4 w-3/4"/>*/}
-        <div class="h-3/4 w-3/4" innerHTML={props.imgSrc}></div>
-        <h3 class="text-xl text-center text-regal-blue-600 dark:text-regal-blue-100 pt-5 label">{props.label}</h3>
+        <div class="i-h-3/4 i-w-3/4" innerHTML={props.imgSrc}></div>
+        <h3 class="i-text-xl i-text-center i-text-regal-blue-600 dark:i-text-regal-blue-100 i-pt-5 label">{props.label}</h3>
     </div>);
 }
 

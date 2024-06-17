@@ -13,7 +13,7 @@ import '../../index.css';
       context: "This Website :)",
       skillList: ['css','js','ts','tailwindcss','solidjs,ts','astrojs,ts','vitejs,ts','single-spa,ts','mitosisjs,ts'],
       title: "Not Your Average Personal Website",
-      blob: "This site demonstrates some of the flexibility front-end developers have when using a modern stack, incorporating 4 different frameworks. To read more about my development of this site and what makes it special, check out my <a class='text-regal-blue-300 underline' href='/blog/first-foray' target='_blank'>blog post.</a>",
+      blob: "This site demonstrates some of the flexibility front-end developers have when using a modern stack, incorporating 4 different frameworks. To read more about my development of this site and what makes it special, check out my <a class='se-text-regal-blue-300 se-underline' href='/blog/first-foray' target='_blank'>blog post.</a>",
     },
     {
       context: "While working as a Full Stack Software Engineer at BNY Mellon as part of the SETUP Program...",
@@ -91,7 +91,7 @@ import '../../index.css';
 
 function Xp(props: any) {
   return (
-    <div class="w-full h-full flex flex-col md:flex-row"
+    <div class="se-w-full se-h-full se-flex se-flex-col md:se-flex-row"
      onMouseOver={()=>{
        if (page() !== 0 && filters().length === 0) {
          setFilters(pages[page()].skillList);
@@ -100,19 +100,19 @@ function Xp(props: any) {
      onMouseOut={()=>{
        setFilters([]);
      }}>
-      <div class="flex flex-col justify-center items-center h-2/6 min-h-fit w-full md:h-full md:w-4/12 lg:w-3/12 overflow-y-auto">
-        <div class="w-11/12 min-h-fit">
+      <div class="se-flex se-flex-col se-justify-center se-items-center se-h-2/6 se-min-h-fit se-w-full md:se-h-full md:se-w-4/12 lg:se-w-3/12 se-overflow-y-auto">
+        <div class="se-w-11/12 se-min-h-fit">
           <Show when={page() === 0}>
-            <div class="w-full h-fit flex flex-row md:flex-col justify-center items-center md:items-end top space-x-10 min-h-fit">
-              <a href="https://www.linkedin.com/in/nathanduarte" class="cursor-pointer">
-                <div class="flex flex-row justify-center items-center">
-                  <p class="hidden md:flex text-regal-blue-100 text-xs lg:text-sm font-light">LinkedIn</p>
-                  <i class="iconoir-linkedin before:size-7 lg:before:size-8 before:text-regal-blue-100 m-2">
+            <div class="se-w-full se-h-fit se-flex se-flex-row md:se-flex-col se-justify-center se-items-center md:se-items-end top se-space-x-10 se-min-h-fit">
+              <a href="https://www.linkedin.com/in/nathanduarte" class="se-cursor-pointer">
+                <div class="se-flex se-flex-row se-justify-center se-items-center">
+                  <p class="se-hidden md:se-flex se-text-regal-blue-100 se-text-xs lg:se-text-sm se-font-light">LinkedIn</p>
+                  <i class="iconoir-linkedin before:se-size-7 lg:before:se-size-8 before:se-text-regal-blue-100 se-m-2">
                   </i>
-                  <p class="flex md:hidden text-regal-blue-100 text-xs font-light">LinkedIn</p>
+                  <p class="se-flex md:se-hidden se-text-regal-blue-100 se-text-xs se-font-light">LinkedIn</p>
                 </div>
               </a>
-              <div class="flex flex-row justify-center items-center cursor-pointer"
+              <div class="se-flex se-flex-row se-justify-center se-items-center se-cursor-pointer"
                    onClick={() => fetch('https://nduartech.tiiny.site/dist/resume.pdf').then(resp => resp.blob()).then(blob => {
                      const url = URL.createObjectURL(blob);
                      const a = document.createElement("a");
@@ -123,18 +123,18 @@ function Xp(props: any) {
                      a.click();
                      URL.revokeObjectURL(url);
                    }).catch(() => alert("Download failed"))}>
-                <p class="text-regal-blue-100 text-xs lg:text-sm font-light">Resume PDF</p>
-                <i class="iconoir-page before:size-6 lg:before:size-7 before:text-regal-blue-100 m-2">
+                <p class="se-text-regal-blue-100 se-text-xs lg:se-text-sm se-font-light">Resume PDF</p>
+                <i class="iconoir-page before:se-size-6 lg:before:se-size-7 before:se-text-regal-blue-100 se-m-2">
                 </i>
               </div>
             </div>
           </Show>
           <Show when={page() !== 0}>
             <div
-              class="w-full h-fit flex flex-col justify-center items-center top space-x-2 min-h-fit">
-              <p class="text-regal-blue-100 text-sm font-light text-center">Context: {pages[page()].context}</p>
-              <div class="flex flex-row flex-wrap w-full h-full justify-center items-center mt-1 md:mt-2 lg:hidden lg:invisible">
-                <p class="text-regal-blue-100 text-sm font-light text-center inline-flex">Tags: </p>
+              class="se-w-full se-h-fit se-flex se-flex-col se-justify-center se-items-center se-top se-space-x-2 se-min-h-fit">
+              <p class="se-text-regal-blue-100 se-text-sm se-font-light se-text-center">Context: {pages[page()].context}</p>
+              <div class="se-flex se-flex-row se-flex-wrap se-w-full se-h-full se-justify-center se-items-center se-mt-1 md:se-mt-2 lg:se-hidden lg:se-invisible">
+                <p class="se-text-regal-blue-100 se-text-sm se-font-light se-text-center se-inline-flex">Tags: </p>
                 <For each={pages[page()].skillList}>
                   {(item) => (
                     <SkillButtonThin label={skillsDict()[item].label} skill={item} category={skillsDict()[item].category}
@@ -147,36 +147,36 @@ function Xp(props: any) {
         </div>
       </div>
       <div
-        class="flex flex-col justify-center items-center h-4/6 w-full md:h-full md:w-8/12 lg:w-9/12 bg-transparent overflow-y-hidden">
+        class="se-flex se-flex-col se-justify-center se-items-center se-h-4/6 se-w-full md:se-h-full md:se-w-8/12 lg:se-w-9/12 se-bg-transparent se-overflow-y-hidden">
         <Show when={page() === 0}>
-          <div class="w-9/12 h-full flex flex-col items-center justify-start lg:justify-center space-y-3 overflow-y-auto no-scrollbar">
-            <p class="text-white text-xs md:text-sm lg:text-xl text-center pt-5 pb-5">As a Full Stack Software Engineer, I've had
+          <div class="se-w-9/12 se-h-full se-flex se-flex-col se-items-center se-justify-start lg:se-justify-center se-space-y-3 se-overflow-y-auto no-scrollbar">
+            <p class="se-text-white se-text-xs md:se-text-sm lg:se-text-xl se-text-center se-pt-5 se-pb-5">As a Full Stack Software Engineer, I've had
               the opportunity to tackle some unique problems. Here I examine the methodologies and skills I've employed over the course of my
               career
-              and personal projects <i class="font-serif">(Interactive Resume)</i>.</p>
-            <p class="text-regal-blue-100 text-xs text-center">To move forward, hit next. To go back, hit back. Also
+              and personal projects <i class="se-font-serif">(Interactive Resume)</i>.</p>
+            <p class="se-text-regal-blue-100 se-text-xs se-text-center">To move forward, hit next. To go back, hit back. Also
               included on this page
               are shortcuts to my LinkedIn profile as well as my resume.</p>
           </div>
         </Show>
         <Show when={page() !== 0}>
           <div
-            class="w-9/12 h-full flex flex-col items-center justify-start lg:justify-center space-y-0 overflow-y-auto no-scrollbar">
-            <p class="text-white text-xs md:text-lg lg:text-xl text-center pt-5 pb-5">{pages[page()].title}</p>
-            <p class="text-regal-blue-100 text-xs md:text-sm text-center leading-normal md:leading-loose" innerHTML={pages[page()].blob}></p>
+            class="se-w-9/12 se-h-full se-flex se-flex-col se-items-center se-justify-start lg:se-justify-center se-space-y-0 se-overflow-y-auto no-scrollbar">
+            <p class="se-text-white se-text-xs md:se-text-lg lg:se-text-xl se-text-center se-pt-5 se-pb-5">{pages[page()].title}</p>
+            <p class="se-text-regal-blue-100 se-text-xs md:se-text-sm se-text-center se-leading-normal md:se-leading-loose" innerHTML={pages[page()].blob}></p>
           </div>
         </Show>
-        <div class="w-1/2 h-fit flex flex-row justify-center items-center space-x-10">
-          <div class="flex flex-row justify-center items-center cursor-pointer"
+        <div class="se-w-1/2 se-h-fit se-flex se-flex-row se-justify-center se-items-center se-space-x-10">
+          <div class="se-flex se-flex-row se-justify-center se-items-center se-cursor-pointer"
                onClick={() => getPrevPage()}>
-            <i class={"iconoir-arrow-left-tag before:size-8 " + (page() > 0 ? "before:text-regal-blue-100" : "before:text-gray-700") + " m-2"}>
+            <i class={"iconoir-arrow-left-tag before:se-size-8 " + (page() > 0 ? "before:se-text-regal-blue-100" : "before:se-text-gray-700") + " se-m-2"}>
             </i>
-            <p class={(page() > 0 ? "text-regal-blue-100" : "text-gray-700") + " text-xs font-light"}>Back</p>
+            <p class={(page() > 0 ? "se-text-regal-blue-100" : "se-text-gray-700") + " se-text-xs se-font-light"}>Back</p>
           </div>
-          <div class="flex flex-row justify-center items-center cursor-pointer"
+          <div class="se-flex se-flex-row se-justify-center se-items-center se-cursor-pointer"
                onClick={() => getNextPage()}>
-            <p class={(page() < pages.length - 1 ? "text-regal-blue-100" : "text-gray-700") + " text-xs font-light"}>Next</p>
-            <i class={"iconoir-arrow-right-tag before:size-8 "+(page()<pages.length-1?"before:text-regal-blue-100":"before:text-gray-700")+" m-2"}>
+            <p class={(page() < pages.length - 1 ? "se-text-regal-blue-100" : "se-text-gray-700") + " se-text-xs se-font-light"}>Next</p>
+            <i class={"iconoir-arrow-right-tag before:se-size-8 "+(page()<pages.length-1?"before:se-text-regal-blue-100":"before:se-text-gray-700")+" se-m-2"}>
             </i>
           </div>
         </div>
