@@ -107,8 +107,7 @@ function Xp(props: any) {
               <a href="https://www.linkedin.com/in/nathanduarte" class="se-cursor-pointer">
                 <div class="se-flex se-flex-row se-justify-center se-items-center">
                   <p class="se-hidden md:se-flex se-text-regal-blue-100 se-text-xs lg:se-text-sm se-font-light">LinkedIn</p>
-                  <i class="iconoir-linkedin before:se-size-7 lg:before:se-size-8 before:se-text-regal-blue-100 se-m-2">
-                  </i>
+                    <svg class="se-h-7 se-w-7 lg:se-h-8 lg:se-w-8 se-stroke-regal-blue-100 se-m-2" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16V8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7 17V13.5V10" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11 17V13.75M11 10V13.75M11 13.75C11 10 17 10 17 13.75V17" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7 7.01L7.01 6.99889" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                   <p class="se-flex md:se-hidden se-text-regal-blue-100 se-text-xs se-font-light">LinkedIn</p>
                 </div>
               </a>
@@ -124,8 +123,7 @@ function Xp(props: any) {
                      URL.revokeObjectURL(url);
                    }).catch(() => alert("Download failed"))}>
                 <p class="se-text-regal-blue-100 se-text-xs lg:se-text-sm se-font-light">Resume PDF</p>
-                <i class="iconoir-page before:se-size-6 lg:before:se-size-7 before:se-text-regal-blue-100 se-m-2">
-                </i>
+                  <svg class="se-h-6 se-w-6 lg:se-h-7 lg:se-w-7 se-stroke-regal-blue-100 se-m-2" viewBox="0 0 24 24" stroke-width="1.5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 21.4V2.6C4 2.26863 4.26863 2 4.6 2H16.2515C16.4106 2 16.5632 2.06321 16.6757 2.17574L19.8243 5.32426C19.9368 5.43679 20 5.5894 20 5.74853V21.4C20 21.7314 19.7314 22 19.4 22H4.6C4.26863 22 4 21.7314 4 21.4Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8 10L16 10" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8 18L16 18" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8 14L12 14" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M16 2V5.4C16 5.73137 16.2686 6 16.6 6H20" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
               </div>
             </div>
           </Show>
@@ -169,15 +167,13 @@ function Xp(props: any) {
         <div class="se-w-1/2 se-h-fit se-flex se-flex-row se-justify-center se-items-center se-space-x-10">
           <div class="se-flex se-flex-row se-justify-center se-items-center se-cursor-pointer"
                onClick={() => getPrevPage()}>
-            <i class={"iconoir-arrow-left-tag before:se-size-8 " + (page() > 0 ? "before:se-text-regal-blue-100" : "before:se-text-gray-700") + " se-m-2"}>
-            </i>
+            <svg class={"se-h-8 se-w-8 " + (page() > 0 ? "se-stroke-regal-blue-100" : "se-stroke-gray-700") + " se-m-2"} stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.75 12H6.75M6.75 12L9.5 14.75M6.75 12L9.5 9.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2 15V9C2 6.79086 3.79086 5 6 5H18C20.2091 5 22 6.79086 22 9V15C22 17.2091 20.2091 19 18 19H6C3.79086 19 2 17.2091 2 15Z" stroke-width="1.5"></path></svg>
             <p class={(page() > 0 ? "se-text-regal-blue-100" : "se-text-gray-700") + " se-text-xs se-font-light"}>Back</p>
           </div>
           <div class="se-flex se-flex-row se-justify-center se-items-center se-cursor-pointer"
                onClick={() => getNextPage()}>
             <p class={(page() < pages.length - 1 ? "se-text-regal-blue-100" : "se-text-gray-700") + " se-text-xs se-font-light"}>Next</p>
-            <i class={"iconoir-arrow-right-tag before:se-size-8 "+(page()<pages.length-1?"before:se-text-regal-blue-100":"before:se-text-gray-700")+" se-m-2"}>
-            </i>
+            <svg class={"se-h-8 se-w-8 "+(page()<pages.length-1?"se-stroke-regal-blue-100":"se-stroke-gray-700")+" se-m-2"} stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#ffffff"><path d="M6.75 12H16.75M16.75 12L14 14.75M16.75 12L14 9.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2 15V9C2 6.79086 3.79086 5 6 5H18C20.2091 5 22 6.79086 22 9V15C22 17.2091 20.2091 19 18 19H6C3.79086 19 2 17.2091 2 15Z" stroke-width="1.5"></path></svg>
           </div>
         </div>
       </div>

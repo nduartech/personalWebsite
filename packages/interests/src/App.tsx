@@ -19,7 +19,7 @@ const App: Component = (props: any) => {
 
     return (
         <div id="bgInt"
-            class="i-h-full i-w-full i-bg-[url('https://nduartech.tiiny.site/dist/interests-light.svg')] dark:i-bg-[url('https://nduartech.tiiny.site/dist/interests.svg')] i-bg-cover i-bg-bottom i-min-h-screen i-min-w-screen i-overflow-y-hidden i-transition">
+            class="i-h-full i-w-full i-bg-lght dark:i-bg-drk i-bg-cover i-bg-bottom i-min-h-screen i-min-w-screen i-overflow-y-hidden i-transition">
             <div class="i-h-screen i-w-screen i-flex i-flex-col i-justify-start i-items-center i-pt-16 md:i-pt-32">
                 <div
                     class="i-max-h-screen i-h-fit i-w-9/12 i-overflow-y-scroll no-scrollbar i-grid i-grid-cols-1 md:i-grid-cols-2 lg:i-grid-cols-3 i-justify-items-center i-gap-5 i-place-items-center i-pb-20">
