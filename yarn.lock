@@ -120,15 +120,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/node@npm:^8.3.0":
-  version: 8.3.0
-  resolution: "@astrojs/node@npm:8.3.0"
+"@astrojs/node@npm:^8.3.1":
+  version: 8.3.1
+  resolution: "@astrojs/node@npm:8.3.1"
   dependencies:
     send: "npm:^0.18.0"
     server-destroy: "npm:^1.0.1"
   peerDependencies:
     astro: ^4.2.0
-  checksum: 10c0/29e78d118f27df5e8bcfc10cfb619436dec700e5ff5646236baba37dac5c80eabc858f1055085c6c30d5135d2d3f38f235b38941153d09b2a79bda36bd00462a
+  checksum: 10c0/8ee0a86819ee501ecf7c6054962420c88ad8c23c839a2f64011c566964955a14100b27f36ec7db6855cca456ae75fbe4c1c5321c79a51dd7019b521df3b0f864
   languageName: node
   linkType: hard
 
@@ -4925,7 +4925,7 @@ __metadata:
   resolution: "host@workspace:packages/host"
   dependencies:
     "@astrojs/check": "npm:^0.7.0"
-    "@astrojs/node": "npm:^8.3.0"
+    "@astrojs/node": "npm:^8.3.1"
     "@astrojs/solid-js": "npm:^4.4.0"
     "@astrojs/svelte": "npm:^5.5.0"
     "@astrojs/tailwind": "npm:^5.1.0"
