@@ -1,6 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Landing from "../components/svelte/Landing.svelte";
+import { Image } from 'astro:assets';
+import '../../public/landing.svg';
+import '../../public/landing-light.svg';
+import me from '../assets/me.png';
 const bounceInDownAnim = {
     new: {
         name: 'bounceInDown',
@@ -15,6 +19,7 @@ const bounceInDownAnim = {
         fillMode: 'forwards',
     }
 };
+
 
 const bidAnim = {
     forwards: bounceInDownAnim,
@@ -31,7 +36,9 @@ const bidAnim = {
 </script>
 <Layout title="Hi, I'm Nathan">
 	<main id="app" transition:animate={bidAnim}>
-        <Landing client:only="svelte"></Landing>
+        <Landing client:only="svelte">
+            <Image class="rounded-full object-fill mb-10" src={me} alt="Nathan Duarte" slot="me"/>
+        </Landing>
 	</main>
 </Layout>
 

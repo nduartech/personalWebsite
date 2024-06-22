@@ -10,6 +10,10 @@ const config: Config = {
   darkMode: ['selector','[class=dark]'],
   theme: {
     extend: {
+      backgroundImage: {
+        'drk': "url('https://raw.githubusercontent.com/nduartech/nduartech.github.io/master/packages/software-eng/public/se.svg')",
+        'lght': "url('https://raw.githubusercontent.com/nduartech/nduartech.github.io/master/packages/software-eng/public/se-light.svg')",
+      },
       colors: {
         'regal-blue': {
           '50': '#eef8ff',

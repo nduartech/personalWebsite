@@ -24,18 +24,18 @@ function InterestCard(props:any) {
     };
 
     return (<div
-        class="interest-card i-py-5 i-bg-regal-blue-300 dark:i-bg-regal-blue-800 hover:i-bg-regal-blue-200 dark:hover:i-bg-gray-900 i-backdrop-filter i-backdrop-blur i-rounded-[10px] i-h-[15rem] i-w-[15rem] i-drop-shadow-xl i-cursor-pointer i-flex i-flex-col i-justify-center i-items-center"
+        class="interest-card i-py-5 hover:i-bg-regal-blue-100 dark:i-bg-regal-blue-800 i-bg-regal-blue-200 dark:hover:i-bg-gray-900 i-backdrop-filter i-backdrop-blur i-rounded-[10px] i-h-[15rem] i-w-[15rem] i-drop-shadow-xl i-cursor-pointer i-flex i-flex-col i-justify-center i-items-center"
         onMouseEnter={(event) => {
             // @ts-ignore
-            event.target.querySelector("h3").classList.replace("text-regal-blue-600","text-regal-blue-800");
+            event.target.querySelector("h3").classList.replace("i-text-regal-blue-600","i-text-regal-blue-500");
             // @ts-ignore
-            event.target.querySelector("svg").classList.replace("stroke-regal-blue-600","stroke-regal-blue-800");
+            event.target.querySelector("svg").classList.replace("i-stroke-regal-blue-600","i-stroke-regal-blue-500");
 
         }} onMouseLeave={(event) => {
         // @ts-ignore
-        event.target.querySelector("h3").classList.replace("text-regal-blue-800","text-regal-blue-600");
+        event.target.querySelector("h3").classList.replace("i-text-regal-blue-500","i-text-regal-blue-600");
         // @ts-ignore
-        event.target.querySelector("svg").classList.replace("stroke-regal-blue-800","stroke-regal-blue-600");
+        event.target.querySelector("svg").classList.replace("i-stroke-regal-blue-500","i-stroke-regal-blue-600");
     }} onClick={() => {
         showModal(props.name)
     }}>

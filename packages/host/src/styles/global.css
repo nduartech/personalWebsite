@@ -836,30 +836,30 @@
     animation-name: fadeIn;
   }
 
-    @-webkit-keyframes fadeOut {
-        from {
-            opacity: 1;
-        }
-
-        to {
-            opacity: 0;
-        }
+  @-webkit-keyframes fadeOut {
+    from {
+      opacity: 1;
     }
 
-    @keyframes fadeOut {
-        from {
-            opacity: 1;
-        }
+    to {
+      opacity: 0;
+    }
+  }
 
-        to {
-            opacity: 0;
-        }
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
     }
 
-    .fadeOut {
-        -webkit-animation-name: fadeOut;
-        animation-name: fadeOut;
+    to {
+      opacity: 0;
     }
+  }
+
+  .fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+  }
 
   a {
     color: #eef8ff;
