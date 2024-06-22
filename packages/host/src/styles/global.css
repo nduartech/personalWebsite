@@ -3,7 +3,22 @@
 @tailwind utilities;
 
 @layer base {
-  svg#dayNightSun .svg-elem-1 {
+    .reset-tw a {
+        color: #b3e5ff !important;
+        text-decoration: underline !important;
+    }
+
+    .reset-tw a:hover {
+        color: #eef8ff !important;
+        text-decoration: underline !important;
+    }
+
+    .reset-tw,
+    .reset-tw * {
+        all: revert !important;
+    }
+
+    svg#dayNightSun .svg-elem-1 {
     stroke-dashoffset: 39.704383850097656px;
     stroke-dasharray: 39.704383850097656px;
     -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.215, 0.61, 0.355, 1)
@@ -859,15 +874,5 @@
   .fadeOut {
     -webkit-animation-name: fadeOut;
     animation-name: fadeOut;
-  }
-
-  a {
-    color: #eef8ff;
-    text-decoration: underline;
-  }
-
-  .dark a {
-    color: #b3e5ff;
-    text-decoration: underline;
   }
 }
