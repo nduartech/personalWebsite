@@ -77,8 +77,9 @@
                         class="flex flex-col md:flex-col w-full justify-center items-center space-x-5 my-5 md:space-x-0 md:space-y-2 text-center mt-20 sm:mt-15 md:mt-0 z-20"
                         id="hello">
                     <div class="image-container w-2/12 min-w-28 max-w-36 h-2/12 flex justify-center items-center">
-                        <img class="rounded-full object-fill mb-10 h-28 w-28 md:h-36 md:w-36" id="me"
-                             src="/me.png" alt="Nathan"/>
+                            <slot name="me"></slot>
+<!--                        <img class="rounded-full object-fill mb-10 h-28 w-28 md:h-36 md:w-36" id="me"-->
+<!--                             src="/me.png" alt="Nathan"/>-->
                     </div>
                     <p class="text-3xl md:text-3xl lg:text-4xl dark:text-regal-blue-100 text-regal-blue-50 my-0 text-center">Hi,
                         I'm
