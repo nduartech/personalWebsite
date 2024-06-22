@@ -141,9 +141,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/solid-js@npm:^4.3.0":
-  version: 4.3.0
-  resolution: "@astrojs/solid-js@npm:4.3.0"
+"@astrojs/solid-js@npm:^4.4.0":
+  version: 4.4.0
+  resolution: "@astrojs/solid-js@npm:4.4.0"
   dependencies:
     vite-plugin-solid: "npm:^2.10.2"
   peerDependencies:
@@ -152,7 +152,7 @@ __metadata:
   peerDependenciesMeta:
     solid-devtools:
       optional: true
-  checksum: 10c0/22176f1df0825c22bb94e384c94389e4fb02aac4422be6025c1286c8f82035916c32c43c04a89bb511ea5c4f56cb44e3d90e1ef81af6134c468c9903cfe731c5
+  checksum: 10c0/de4287878889c950ebfc7170a9f3bb138f356239aec03bb2c85ea98bf49361221c2ec6304afb8fd662aff79d0d126fa7416045eabc30de369ab997a05871825c
   languageName: node
   linkType: hard
 
@@ -4926,7 +4926,7 @@ __metadata:
   dependencies:
     "@astrojs/check": "npm:^0.7.0"
     "@astrojs/node": "npm:^8.3.0"
-    "@astrojs/solid-js": "npm:^4.3.0"
+    "@astrojs/solid-js": "npm:^4.4.0"
     "@astrojs/svelte": "npm:^5.5.0"
     "@astrojs/tailwind": "npm:^5.1.0"
     "@builder.io/qwik": "npm:1.5.6"
