@@ -1,20 +1,28 @@
 ---
 title: "A First Foray Back Into Front-End Dev"
 pubDate: 2024-06-22 09:00:00
-description: "Why I Built This Site"
+description: "A Journey Building My Personal Website as a Static SPA With Micro-Frontends"
 tags:
   [
     "Astro",
     "Qwik",
-    "Solid",
+    "SolidJS",
     "Svelte",
     "Tailwind",
     "single-spa",
-    "mitosis",
+    "MitosisJS",
     "vite",
+    "micro-frontends",
+    "Typescript"
   ]
+image: "https://raw.githubusercontent.com/nduartech/nduartech.github.io/master/packages/host/src/assets/astronaut.png"
 ---
+import { Image } from 'astro:assets';
+import astronaut from '../../assets/astronaut.png';
 
+<Image src={astronaut} alt="Astro-naut" class="w-1/4 h-1/4 mt-7 mb-7 rounded-r-3xl float-start mr-7"></Image>
+
+<div class="reset-tw">
 I began my career working as an unpaid intern at a startup in NYC when I was 17. It was the summer of 2015. Notably, my programming knowledge till that point came from building static sites painstakingly slowly from barebones HTML and CSS (I didn't really even know JS at the time) and learning some very basic Python and Java. The most I had accomplished in a personal project was using Bootstrap effectively.
 
 It was enlightening then to be introduced to the world of Rails in that first job. I absolutely fell in love with the framework, where there was always a correct way to do something, almost everything you needed was either built-in or could be added easily, and was ridiculously readable and understandable. It was from Rails that I learned about MVC architecture. Later that year, when the Rails 5 beta was released, it was because of Rails that I learned a bit more JavaScript, when the Rails team first added Action Cable. It was also at that time that I created my first personal website using Jekyll, a Ruby based static site generator.
@@ -25,7 +33,7 @@ Thus, over the past 9 years, I spent some time away from the front-end. I studie
 
 Recently, however, I got the chance to work on a different project at the office, building a UI for one of the AI Hub teams. Although still using Angular, I was introduced to a new technology as part of this effort: micro-frontends, via the [single-spa framework](https://single-spa.js.org/), which allowed various teams to independently develop their own pages and functionalities, while delivering one unified UX.
 
-_(It's important to note that by 'new' I'm not referring to the existence of micro-frontends, which have been around for quite some time now, nor single-spa—it's releases on Github go back to 2016. Indeed, their adoption at a large bank is only proof of their age, but they were still novel to me.)_
+_(It's important to note that by 'new' I'm not referring to the existence of micro-frontends, which have been around for quite some time now, nor single-spa—its releases on Github go back to 2016. Indeed, its adoption at a large bank is only proof of its age and maturity, but it was still novel to me.)_
 
 This led to the realization that it had been nearly a decade since I read up on modern UI development. And so I set out to build this, my personal website. Specifically, I sought to utilize the latest in web development tools, in order to educate myself as I progressed.
 
@@ -53,6 +61,7 @@ That said, the process was not completely without its stumbling blocks (or rathe
 - The micro-frontends are served as JS bundles separately (statically compiled beforehand), but could also be served via either CDN or even installed as modules if published to npm.
 - Using TailwindCSS led to [clashes between micro-frontends](https://github.com/tailwindlabs/tailwindcss/discussions/6829) which in turn meant having to manually prefix all classes used in both, respectively. It also clashed with Astro's Markdown formatting, so I had to find a [workaround](https://www.swyx.io/tailwind-unreset). In future projects, I might try UnoCSS to see if it's better in these situations.
 - Once I finished, I then decided to evaluate my page speed via [Lighthouse Score](https://pagespeed.web.dev/). The initial results were only a tad surprising—the site scored in the high 60s to high 70s on each page—and so I turned to optimization. In this case, I chose to inline all icon svgs (removing the hefty icon font I was fetching from a CDN), used Astro's prefetching capabilities to ease page transitions, added the [astro-compressor](https://github.com/sondr3/astro-compressor) plugin, and used Astro's built-in image optimization to handle the png on my landing page. The results? Lighthouse scores were immediately boosted to the high 90s (feel free to run it yourself on the site), now running with the performance one might expect from the framework.
-- Next stop: SEO
+- I chose not to engage in any SEO optimization, though I might revisit this later down the road.
 
 I'm pretty psyched about how this site turned out and am grateful to all the amazing developers who didn't back down from JS, but instead brought it to where it is today, making it accessible yet comprehensive. I didn't cover every framework—that would be too much—but I was able to get some valuable insight into the state of modern UI software engineering practices by exploring these 4.
+</div>
