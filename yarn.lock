@@ -192,17 +192,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/svelte@npm:^5.5.0":
-  version: 5.5.0
-  resolution: "@astrojs/svelte@npm:5.5.0"
+"@astrojs/svelte@npm:^5.7.0":
+  version: 5.7.0
+  resolution: "@astrojs/svelte@npm:5.7.0"
   dependencies:
     "@sveltejs/vite-plugin-svelte": "npm:^3.1.1"
-    svelte2tsx: "npm:^0.7.9"
+    svelte2tsx: "npm:^0.7.13"
   peerDependencies:
     astro: ^4.0.0
-    svelte: ^4.0.0 || ^5.0.0-next.90
+    svelte: ^4.0.0 || ^5.0.0-next.190
     typescript: ^5.3.3
-  checksum: 10c0/40da174e77669a7e1b1d537cf2a700990e0e02bed49c36fb98dfbcb1b1a64a701a6cd2e8721adfff3c2aecce6acd6a5ba4c772f8da2a6d054c471674951d26b7
+  checksum: 10c0/34eba73488ca83925d257e2600800583ab908cf4847c5e29f642e9cd047afa6884f0ccd535798d2ec402c616e2c382466c24d6882b6515ec1fa93791ffa88eca
   languageName: node
   linkType: hard
 
@@ -5191,7 +5191,7 @@ __metadata:
     "@astrojs/node": "npm:^8.3.1"
     "@astrojs/sitemap": "npm:^3.1.6"
     "@astrojs/solid-js": "npm:^4.4.0"
-    "@astrojs/svelte": "npm:^5.5.0"
+    "@astrojs/svelte": "npm:^5.7.0"
     "@astrojs/tailwind": "npm:^5.1.0"
     "@builder.io/qwik": "npm:1.5.6"
     "@qwikdev/astro": "npm:^0.5.16"
@@ -9352,16 +9352,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"svelte2tsx@npm:^0.7.9":
-  version: 0.7.9
-  resolution: "svelte2tsx@npm:0.7.9"
+"svelte2tsx@npm:^0.7.13":
+  version: 0.7.13
+  resolution: "svelte2tsx@npm:0.7.13"
   dependencies:
     dedent-js: "npm:^1.0.1"
     pascal-case: "npm:^3.1.1"
   peerDependencies:
     svelte: ^3.55 || ^4.0.0-next.0 || ^4.0 || ^5.0.0-next.0
     typescript: ^4.9.4 || ^5.0.0
-  checksum: 10c0/3db610b5bfb1f549ba1214e780e96d9f1d1c91309aab45a3438d0e74750a6f0c9a15b9a9bd85bb6d39113311a0c1623b87c57b80a6d87c9eac4e9adefecede42
+  checksum: 10c0/a6df2873e551d116bae8b4664b1838a52c6aa50ad50e30e41611e8bf390c525ceb97b53d034f2e0030a640e157e1f88ac33d52b6e4abb54861b3fc120aae82f7
   languageName: node
   linkType: hard
 
