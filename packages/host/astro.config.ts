@@ -14,37 +14,48 @@ import mdx from "@astrojs/mdx";
 export default defineConfig({
   output: "static",
   devToolbar: {
-    enabled: false
+    enabled: false,
   },
   site: "https://nduartech.github.io",
   prefetch: {
-    prefetchAll: true
+    prefetchAll: true,
   },
   // output: "server",
   // adapter: node({
   //   mode: "standalone",
   // }),
-  integrations: [qwik({
-    include: "**/qwik/*"
-  }), tailwind({
-    applyBaseStyles: false
-  }), svelte({
-    include: "**/svelte/*"
-  }), solidJs({
-    include: "**/solid/*"
-  }), {
-    name: "importmap-externals",
-    hooks: {
-      "astro:build:setup": ({
-        vite,
-        target
-      }) => {
-        if (target === "client") {
-          if (vite.build && vite.build.rollupOptions) {
-            vite.build.rollupOptions["external"] = ["software-eng", "interests", "solid-js"];
+  integrations: [
+    qwik({
+      include: "**/qwik/*",
+    }),
+    tailwind({
+      applyBaseStyles: false,
+    }),
+    svelte({
+      include: "**/svelte/*",
+    }),
+    solidJs({
+      include: "**/solid/*",
+    }),
+    {
+      name: "importmap-externals",
+      hooks: {
+        "astro:build:setup": ({ vite, target }) => {
+          if (target === "client") {
+            if (vite.build && vite.build.rollupOptions) {
+              vite.build.rollupOptions["external"] = [
+                "software-eng",
+                "interests",
+                "solid-js",
+              ];
+            }
           }
-        }
-      }
-    }
-  }, mdx(), sitemap(), robotsTxt(), compressor()]
+        },
+      },
+    },
+    mdx(),
+    sitemap(),
+    robotsTxt(),
+    compressor(),
+  ],
 });

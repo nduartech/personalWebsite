@@ -3,22 +3,22 @@
 @tailwind utilities;
 
 @layer base {
-    .reset-tw a {
-        color: #b3e5ff !important;
-        text-decoration: underline !important;
-    }
+  .reset-tw a {
+    color: #b3e5ff !important;
+    text-decoration: underline !important;
+  }
 
-    .reset-tw a:hover {
-        color: #eef8ff !important;
-        text-decoration: underline !important;
-    }
+  .reset-tw a:hover {
+    color: #eef8ff !important;
+    text-decoration: underline !important;
+  }
 
-    .reset-tw,
-    .reset-tw * {
-        all: revert !important;
-    }
+  .reset-tw,
+  .reset-tw * {
+    all: revert !important;
+  }
 
-    svg#dayNightSun .svg-elem-1 {
+  svg#dayNightSun .svg-elem-1 {
     stroke-dashoffset: 39.704383850097656px;
     stroke-dasharray: 39.704383850097656px;
     -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.215, 0.61, 0.355, 1)

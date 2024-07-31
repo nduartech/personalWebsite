@@ -13,14 +13,19 @@ tags:
     "MitosisJS",
     "vite",
     "micro-frontends",
-    "Typescript"
+    "Typescript",
   ]
 image: "https://raw.githubusercontent.com/nduartech/nduartech.github.io/master/packages/host/src/assets/astronaut.png"
 ---
-import { Image } from 'astro:assets';
-import astronaut from '../../assets/astronaut.png';
 
-<Image src={astronaut} alt="Astro-naut" class="w-1/4 h-1/4 mt-7 mb-7 rounded-r-3xl float-start mr-7"></Image>
+import { Image } from "astro:assets";
+import astronaut from "../../assets/astronaut.png";
+
+<Image
+  src={astronaut}
+  alt="Astro-naut"
+  class="w-1/4 h-1/4 mt-7 mb-7 rounded-r-3xl float-start mr-7"
+></Image>
 
 <div class="reset-tw">
 I began my career working as an unpaid intern at a startup in NYC when I was 17. It was the summer of 2015. Notably, my programming knowledge till that point came from building static sites painstakingly slowly from barebones HTML and CSS (I didn't really even know JS at the time) and learning some very basic Python and Java. The most I had accomplished in a personal project was using Bootstrap effectively.
@@ -40,7 +45,6 @@ This led to the realization that it had been nearly a decade since I read up on 
 As part of my reading, I came across an [excellent Medium post by Sergio A. Arevalo Soria](https://medium.com/@sergio.a.soria/setting-up-micro-frontends-with-astro-and-ecma-script-modules-137340d2c520). Inspired by that article, I [first](https://github.com/nduartech/monorepo-v1) wrote this website using Astro and SolidJS. While I enjoyed the experience, I did also want to try to utilize single-spa, so I then [rewrote the site in that instead](https://github.com/nduartech/nduartech.github.io/tree/single-spa). As part of this rewrite, I created [single-spa-solid](https://github.com/nduartech/single-spa-solid), a helper library that helps implement single-spa registered application lifecycle functions (bootstrap, mount and unmount) for use with SolidJS.
 
 However, after comparing the two, I ultimately chose [to return to Astro](https://github.com/nduartech/nduartech.github.io/tree/master), this time utilizing the Qwik integration. The DX was better, I didn't have to grapple as badly with FOUC issues, nor did I have to rethink the wheel when implementing modern practices. As a result, this site utilizes 4 frameworks, Astro + Qwik as a base, 2 SolidJS micro-frontends imported via an import-map, and a Svelte component. These frameworks were chosen for their respective innovations:
-
 
 - SolidJS made Signals popular, a feature which eventually was picked up by many more widely-utilized frameworks <i>(Vue, Angular, Svelte, React, Qwik all have Signals in some form)</i>. And its direct manipulation of the DOM, rather than a VDOM implementation, makes it unique among web frameworks. Also, it's created and developed by Ryan Carniato, who continues to push web frameworks forward.
 - Qwik has a unique concept called resumability, and was created by Miško Hevery, who created the Angular framework as well. <i>(Interestingly, Angular announced they will be partnering with the Wiz framework team—which also uses resumability)</i>.
@@ -62,4 +66,5 @@ That said, the process was not completely without its stumbling blocks (or rathe
 - I chose not to engage in any SEO optimization, though I might revisit this later down the road.
 
 I'm pretty psyched about how this site turned out and am grateful to all the amazing developers who didn't back down from JS, but instead brought it to where it is today, making it accessible yet comprehensive. I didn't cover every framework—that would be too much—but I was able to get some valuable insight into the state of modern UI software engineering practices by exploring these 4.
+
 </div>
