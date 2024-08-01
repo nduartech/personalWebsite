@@ -1,8 +1,8 @@
 ---
-import BlogLayout from '../layouts/BlogLayout.astro';
-import {getCollection} from 'astro:content';
-import BlogSubLayout from "../layouts/BlogSubLayout.astro";
-const blogEntries = await getCollection('blog');
+import BlogLayout from '../layouts/BlogLayout.astro'
+import { getCollection } from 'astro:content'
+import BlogSubLayout from '../layouts/BlogSubLayout.astro'
+const blogEntries = await getCollection('blog')
 ---
 <script>
     import {navigate} from "astro:transitions/client";

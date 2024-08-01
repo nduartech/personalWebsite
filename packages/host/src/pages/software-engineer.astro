@@ -1,26 +1,26 @@
 ---
-import SubLayout from '../layouts/SubLayout.astro';
-import SoftwareXP from '../components/solid/SoftwareXP';
-import '../styles/se.css';
+import SubLayout from '../layouts/SubLayout.astro'
+import SoftwareXP from '../components/solid/SoftwareXP'
+import '../styles/se.css'
 const bounceInUpAnim = {
-    new: {
-        name: 'bounceInUp',
-        duration: '0.7s',
-        easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
-        fillMode: 'forwards',
-    },
-    old: {
-        name: 'bounceOutUp',
-        duration: '0.7s',
-        easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
-        fillMode: 'forwards',
-    }
-};
+  new: {
+    name: 'bounceInUp',
+    duration: '0.7s',
+    easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
+    fillMode: 'forwards',
+  },
+  old: {
+    name: 'bounceOutUp',
+    duration: '0.7s',
+    easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
+    fillMode: 'forwards',
+  },
+}
 
 const biuAnim = {
-    forwards: bounceInUpAnim,
-    backwards: bounceInUpAnim,
-};
+  forwards: bounceInUpAnim,
+  backwards: bounceInUpAnim,
+}
 ---
 <script>
     import { navigate } from "astro:transitions/client";

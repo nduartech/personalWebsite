@@ -15,4 +15,9 @@
 .idea/**
 node_modules
 node_modules/**
+**/node_modules
+**/node_modules/**
 /*.patch
+/packages/interests/dist/
+/packages/host/dist/
+/packages/software-eng/dist/

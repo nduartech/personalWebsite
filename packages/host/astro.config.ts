@@ -1,22 +1,22 @@
-import qwik from "@qwikdev/astro";
-import { defineConfig } from "astro/config";
+import qwik from '@qwikdev/astro'
+import { defineConfig } from 'astro/config'
 // import node from "@astrojs/node";
-import tailwind from "@astrojs/tailwind";
-import svelte from "@astrojs/svelte";
-import solidJs from "@astrojs/solid-js";
-import compressor from "astro-compressor";
-import sitemap from "@astrojs/sitemap";
-import robotsTxt from "astro-robots-txt";
+import tailwind from '@astrojs/tailwind'
+import svelte from '@astrojs/svelte'
+import solidJs from '@astrojs/solid-js'
+import compressor from 'astro-compressor'
+import sitemap from '@astrojs/sitemap'
+import robotsTxt from 'astro-robots-txt'
 
-import mdx from "@astrojs/mdx";
+import mdx from '@astrojs/mdx'
 
 // https://astro.build/config
 export default defineConfig({
-  output: "static",
+  output: 'static',
   devToolbar: {
     enabled: false,
   },
-  site: "https://nduartech.github.io",
+  site: 'https://nduartech.github.io',
   prefetch: {
     prefetchAll: true,
   },
@@ -26,28 +26,28 @@ export default defineConfig({
   // }),
   integrations: [
     qwik({
-      include: "**/qwik/*",
+      include: '**/qwik/*',
     }),
     tailwind({
       applyBaseStyles: false,
     }),
     svelte({
-      include: "**/svelte/*",
+      include: '**/svelte/*',
     }),
     solidJs({
-      include: "**/solid/*",
+      include: '**/solid/*',
     }),
     {
-      name: "importmap-externals",
+      name: 'importmap-externals',
       hooks: {
-        "astro:build:setup": ({ vite, target }) => {
-          if (target === "client") {
+        'astro:build:setup': ({ vite, target }) => {
+          if (target === 'client') {
             if (vite.build && vite.build.rollupOptions) {
-              vite.build.rollupOptions["external"] = [
-                "software-eng",
-                "interests",
-                "solid-js",
-              ];
+              vite.build.rollupOptions['external'] = [
+                'software-eng',
+                'interests',
+                'solid-js',
+              ]
             }
           }
         },
@@ -58,4 +58,4 @@ export default defineConfig({
     robotsTxt(),
     compressor(),
   ],
-});
+})

@@ -1,59 +1,58 @@
-import { $, component$, useOnDocument } from "@builder.io/qwik";
-import { isServer } from "@builder.io/qwik/build";
+import { $, component$, useOnDocument } from '@builder.io/qwik'
+import { isServer } from '@builder.io/qwik/build'
 export const Theme = component$(() => {
   useOnDocument(
-    "pageLoad",
+    'pageLoad',
     $(() => {
-      if (isServer) return;
-      const theme = document.documentElement.className;
-      const sun = document.getElementById("dayNightSun");
-      const moon = document.getElementById("dayNightMoon");
+      if (isServer) return
+      const theme = document.documentElement.className
+      const sun = document.getElementById('dayNightSun')
+      const moon = document.getElementById('dayNightMoon')
       if (sun && moon) {
-        if (theme === "dark") {
-          document.documentElement.className = "dark";
-          localStorage.setItem("theme", "dark");
-          if (sun.classList.contains("hidden")) sun.classList.remove("hidden");
-          sun.classList.add("active");
-          if (!moon.classList.contains("hidden"))
-            moon.classList.contains("active")
-              ? moon.classList.replace("active", "hidden")
-              : moon.classList.add("hidden");
+        if (theme === 'dark') {
+          document.documentElement.className = 'dark'
+          localStorage.setItem('theme', 'dark')
+          if (sun.classList.contains('hidden')) sun.classList.remove('hidden')
+          sun.classList.add('active')
+          if (!moon.classList.contains('hidden'))
+            moon.classList.contains('active')
+              ? moon.classList.replace('active', 'hidden')
+              : moon.classList.add('hidden')
         } else {
-          document.documentElement.className = "light";
-          localStorage.setItem("theme", "light");
-          if (moon.classList.contains("hidden"))
-            moon.classList.remove("hidden");
-          moon.classList.add("active");
-          if (!sun.classList.contains("hidden"))
-            sun.classList.contains("active")
-              ? sun.classList.replace("active", "hidden")
-              : sun.classList.add("hidden");
+          document.documentElement.className = 'light'
+          localStorage.setItem('theme', 'light')
+          if (moon.classList.contains('hidden')) moon.classList.remove('hidden')
+          moon.classList.add('active')
+          if (!sun.classList.contains('hidden'))
+            sun.classList.contains('active')
+              ? sun.classList.replace('active', 'hidden')
+              : sun.classList.add('hidden')
         }
       }
     }),
-  );
+  )
   return (
     <div class="absolute top-0 right-0 z-10">
       <div
         class="dayNight cursor-pointer mt-1 mr-1 lg:mt-2 lg:mr-2 w-fit h-fit z-10"
         id="dayNightButton"
         onClick$={() => {
-          const theme = document.documentElement.className;
-          const sun = document.getElementById("dayNightSun");
-          const moon = document.getElementById("dayNightMoon");
+          const theme = document.documentElement.className
+          const sun = document.getElementById('dayNightSun')
+          const moon = document.getElementById('dayNightMoon')
           if (sun && moon) {
-            if (theme === "light") {
-              document.documentElement.className = "dark";
-              localStorage.setItem("theme", "dark");
-              sun.classList.remove("hidden");
-              setTimeout(() => sun.classList.add("active"), 200);
-              moon.classList.replace("active", "hidden");
+            if (theme === 'light') {
+              document.documentElement.className = 'dark'
+              localStorage.setItem('theme', 'dark')
+              sun.classList.remove('hidden')
+              setTimeout(() => sun.classList.add('active'), 200)
+              moon.classList.replace('active', 'hidden')
             } else {
-              document.documentElement.className = "light";
-              localStorage.setItem("theme", "light");
-              moon.classList.remove("hidden");
-              setTimeout(() => moon.classList.add("active"), 200);
-              sun.classList.replace("active", "hidden");
+              document.documentElement.className = 'light'
+              localStorage.setItem('theme', 'light')
+              moon.classList.remove('hidden')
+              setTimeout(() => moon.classList.add('active'), 200)
+              sun.classList.replace('active', 'hidden')
             }
           }
         }}
@@ -160,5 +159,5 @@ export const Theme = component$(() => {
         </svg>
       </div>
     </div>
-  );
-});
+  )
+})

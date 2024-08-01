@@ -1,11 +1,11 @@
 module.exports = {
-  purge: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx,svelte,astro,md,mdx}"],
+  purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx,svelte,astro,md,mdx}'],
   plugins: {
-    "postcss-import": {},
+    'postcss-import': {},
     tailwindcss: {},
     autoprefixer: {},
-    "postcss-sort-media-queries": {
-      sort: "desktop-first",
+    'postcss-sort-media-queries': {
+      sort: 'desktop-first',
     },
   },
-};
+}

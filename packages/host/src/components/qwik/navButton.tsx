@@ -1,10 +1,10 @@
-import { $, component$ } from "@builder.io/qwik";
+import { $, component$ } from '@builder.io/qwik'
 
 export interface NavButtonProps {
-  path?: string;
-  onClick?: any;
-  icon: string;
-  label: string;
+  path?: string
+  onClick?: any
+  icon: string
+  label: string
 }
 
 export const NavButton = component$<NavButtonProps>((props: NavButtonProps) => {
@@ -17,8 +17,8 @@ export const NavButton = component$<NavButtonProps>((props: NavButtonProps) => {
         props.icon +
         '<p class="navIconLabel hidden md:flex font-semibold">' +
         props.label +
-        "</p>"
+        '</p>'
       }
     ></div>
-  );
-});
+  )
+})

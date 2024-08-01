@@ -4,53 +4,53 @@ import {
   useOnDocument,
   useSignal,
   useStyles$,
-} from "@builder.io/qwik";
-import { NavButton } from "./navButton";
-import { isServer } from "@builder.io/qwik/build";
-import styles from "./nav.css?inline";
+} from '@builder.io/qwik'
+import { NavButton } from './navButton'
+import { isServer } from '@builder.io/qwik/build'
+import styles from './nav.css?inline'
 
 interface NavProps {
   entries: {
-    icon: string;
-    label: string;
-    path: string;
-  }[];
+    icon: string
+    label: string
+    path: string
+  }[]
 }
 
 export const Nav = component$<NavProps>((props: NavProps) => {
-  const navOpen = useSignal(false);
+  const navOpen = useSignal(false)
   const toggleNav = $(() => {
     setTimeout(() => {
-      navOpen.value = !navOpen.value;
+      navOpen.value = !navOpen.value
       setTimeout(() => {
         document
-          .querySelectorAll("svg.nav")
-          .forEach((svg) => svg.classList.add("active"));
-      }, 300);
+          .querySelectorAll('svg.nav')
+          .forEach((svg) => svg.classList.add('active'))
+      }, 300)
       setTimeout(() => {
         document
-          .querySelectorAll("p.navIconLabel")
-          .forEach((svg) => svg.classList.add("active"));
-      }, 300);
-    }, 300);
-  });
-  useStyles$(styles);
+          .querySelectorAll('p.navIconLabel')
+          .forEach((svg) => svg.classList.add('active'))
+      }, 300)
+    }, 300)
+  })
+  useStyles$(styles)
   useOnDocument(
-    "pageLoad",
+    'pageLoad',
     $(() => {
-      if (isServer) return;
+      if (isServer) return
       setTimeout(() => {
         document
-          .querySelectorAll("svg.nav")
-          .forEach((svg) => svg.classList.add("active"));
-      }, 300);
+          .querySelectorAll('svg.nav')
+          .forEach((svg) => svg.classList.add('active'))
+      }, 300)
       setTimeout(() => {
         document
-          .querySelectorAll("p.navIconLabel")
-          .forEach((svg) => svg.classList.add("active"));
-      }, 300);
+          .querySelectorAll('p.navIconLabel')
+          .forEach((svg) => svg.classList.add('active'))
+      }, 300)
     }),
-  );
+  )
   return (
     <div class="flex flex-row md:flex-col items-start justify-start w-1/4 h-fit absolute p-1.5 z-20">
       <div class="flex flex-col items-start justify-start w-fit h-fit navDiv mt-0.5 ml-0.5 lg:mt-2 lg:ml-2">
@@ -82,20 +82,20 @@ export const Nav = component$<NavProps>((props: NavProps) => {
                   path={prop.path}
                   onClick={$(() => {
                     setTimeout(function () {
-                      const link = document.createElement("a");
+                      const link = document.createElement('a')
                       link.onclick = () => {
                         dispatchEvent(
-                          new CustomEvent("navigate", { detail: prop.path }),
-                        );
-                      };
-                      link.classList.add("hidden");
-                      document.body.appendChild(link);
-                      link.click();
-                      document.body.removeChild(link);
-                    }, 10);
-                    const navClicked = document.querySelector(".transition");
+                          new CustomEvent('navigate', { detail: prop.path }),
+                        )
+                      }
+                      link.classList.add('hidden')
+                      document.body.appendChild(link)
+                      link.click()
+                      document.body.removeChild(link)
+                    }, 10)
+                    const navClicked = document.querySelector('.transition')
                     navClicked &&
-                      navClicked.classList.add("animated", "bounceOutUp");
+                      navClicked.classList.add('animated', 'bounceOutUp')
                   })}
                 ></NavButton>
               </li>
@@ -103,5 +103,5 @@ export const Nav = component$<NavProps>((props: NavProps) => {
         </ul>
       </div>
     </div>
-  );
-});
+  )
+})

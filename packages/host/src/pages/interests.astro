@@ -1,26 +1,26 @@
 ---
-import SubLayout from '../layouts/SubLayout.astro';
-import Interest from '../components/solid/Interest';
-import '../styles/interest.css';
+import SubLayout from '../layouts/SubLayout.astro'
+import Interest from '../components/solid/Interest'
+import '../styles/interest.css'
 const zoomInAnim = {
-    new: {
-        name: 'zoomIn',
-        duration: '0.7s',
-        easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
-        fillMode: 'forwards',
-    },
-    old: {
-        name: 'zoomOut',
-        duration: '0.7s',
-        easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
-        fillMode: 'forwards',
-    }
-};
+  new: {
+    name: 'zoomIn',
+    duration: '0.7s',
+    easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
+    fillMode: 'forwards',
+  },
+  old: {
+    name: 'zoomOut',
+    duration: '0.7s',
+    easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
+    fillMode: 'forwards',
+  },
+}
 
 const ziAnim = {
-    forwards: zoomInAnim,
-    backwards: zoomInAnim,
-};
+  forwards: zoomInAnim,
+  backwards: zoomInAnim,
+}
 ---
 <script>
     import { navigate } from "astro:transitions/client";

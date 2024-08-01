@@ -1,12 +1,12 @@
 /** @type {import("prettier").Config} */
 module.default = {
-  plugins: ["prettier-plugin-astro"],
-  quoteProps: "consistent",
+  plugins: ['prettier-plugin-astro'],
+  quoteProps: 'consistent',
   bracketSpacing: true,
-  arrowParens: "always",
+  arrowParens: 'always',
   jsdocPreferCodeFences: true,
   tsdoc: true,
-  trailingComma: "es5",
+  trailingComma: 'es5',
   tabWidth: 2,
   semi: true,
   singleQuote: true,
@@ -14,10 +14,10 @@ module.default = {
   useTabs: false,
   overrides: [
     {
-      files: "*.astro",
+      files: '*.astro',
       options: {
-        parser: "astro",
+        parser: 'astro',
       },
     },
   ],
-};
+}
