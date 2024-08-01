@@ -1,0 +1,171 @@
+{
+  "manifestHash": "j32asx",
+  "symbols": {},
+  "mapping": {},
+  "bundles": {
+    "client.cj38MUTN.js": {
+      "size": 4579,
+      "origins": [
+        "../../node_modules/@astrojs/solid-js/dist/client.js",
+        "../../node_modules/solid-js/web/dist/web.js"
+      ]
+    },
+    "client.Cx1FBVJX.js": {
+      "size": 612,
+      "origins": [
+        "../../node_modules/@astrojs/svelte/client.js"
+      ]
+    },
+    "core.prod.BsIg0y2v.js": {
+      "size": 60205,
+      "origins": [
+        "../../node_modules/@builder.io/qwik/dist/core.prod.mjs",
+        "@builder.io/qwik/build"
+      ]
+    },
+    "hoisted.BhCQDIiZ.js": {
+      "size": 164,
+      "imports": [
+        "hoisted.C1PoabJt.js",
+        "index.BG2nPUTX.js"
+      ],
+      "origins": [
+        "../../../../../../astro/hoisted.js?q=3",
+        "src/pages/software-engineer.astro?astro&type=script&index=0&lang.ts"
+      ]
+    },
+    "hoisted.C1PoabJt.js": {
+      "size": 12032,
+      "imports": [
+        "index.BG2nPUTX.js"
+      ],
+      "origins": [
+        "../../../../../../astro/hoisted.js?q=4",
+        "../../node_modules/astro/components/ViewTransitions.astro?astro&type=script&index=0&lang.ts",
+        "../../node_modules/astro/dist/transitions/events.js",
+        "../../node_modules/astro/dist/transitions/router.js",
+        "../../node_modules/astro/dist/transitions/swap-functions.js"
+      ]
+    },
+    "hoisted.Dgtoz3Xa.js": {
+      "size": 164,
+      "imports": [
+        "hoisted.C1PoabJt.js",
+        "index.BG2nPUTX.js"
+      ],
+      "origins": [
+        "../../../../../../astro/hoisted.js?q=0",
+        "src/pages/interests.astro?astro&type=script&index=0&lang.ts"
+      ]
+    },
+    "hoisted.DSrQToTC.js": {
+      "size": 164,
+      "imports": [
+        "hoisted.C1PoabJt.js",
+        "index.BG2nPUTX.js"
+      ],
+      "origins": [
+        "../../../../../../astro/hoisted.js?q=2",
+        "src/pages/index.astro?astro&type=script&index=0&lang.ts"
+      ]
+    },
+    "hoisted.N60B7c6T.js": {
+      "size": 164,
+      "imports": [
+        "hoisted.C1PoabJt.js",
+        "index.BG2nPUTX.js"
+      ],
+      "origins": [
+        "../../../../../../astro/hoisted.js?q=1",
+        "src/pages/blog.astro?astro&type=script&index=0&lang.ts"
+      ]
+    },
+    "index.BG2nPUTX.js": {
+      "size": 2197,
+      "origins": [
+        "../../node_modules/astro/dist/prefetch/index.js"
+      ]
+    },
+    "Interest.B0X6UAAP.js": {
+      "size": 116,
+      "origins": [
+        "src/components/solid/Interest.tsx"
+      ]
+    },
+    "Landing.DMnjTu-a.js": {
+      "size": 15289,
+      "origins": [
+        "../../node_modules/svelte/src/runtime/internal/Component.js",
+        "../../node_modules/svelte/src/runtime/internal/disclose-version/index.js",
+        "../../node_modules/svelte/src/runtime/internal/dom.js",
+        "../../node_modules/svelte/src/runtime/internal/lifecycle.js",
+        "../../node_modules/svelte/src/runtime/internal/scheduler.js",
+        "../../node_modules/svelte/src/runtime/internal/transitions.js",
+        "../../node_modules/svelte/src/runtime/internal/utils.js",
+        "../../node_modules/svelte/src/shared/version.js",
+        "src/components/svelte/Landing.svelte"
+      ]
+    },
+    "nav.CwJFFq8P.js": {
+      "size": 7027,
+      "imports": [
+        "core.prod.BsIg0y2v.js",
+        "navButton.DVTshIoP.js"
+      ],
+      "origins": [
+        "src/components/qwik/nav.css?inline",
+        "src/components/qwik/nav.tsx"
+      ]
+    },
+    "navButton.DVTshIoP.js": {
+      "size": 523,
+      "imports": [
+        "core.prod.BsIg0y2v.js"
+      ],
+      "origins": [
+        "src/components/qwik/navButton.tsx"
+      ]
+    },
+    "page.C89vApUe.js": {
+      "size": 40,
+      "imports": [
+        "index.BG2nPUTX.js"
+      ],
+      "origins": [
+        "astro:scripts/page.js"
+      ]
+    },
+    "SoftwareXP.DaJ6W-wX.js": {
+      "size": 119,
+      "origins": [
+        "src/components/solid/SoftwareXP.tsx"
+      ]
+    },
+    "theme.BpPX9Xl4.js": {
+      "size": 3780,
+      "imports": [
+        "core.prod.BsIg0y2v.js"
+      ],
+      "origins": [
+        "src/components/qwik/theme.tsx"
+      ]
+    }
+  },
+  "injections": [],
+  "version": "1",
+  "options": {
+    "target": "client",
+    "buildMode": "production",
+    "entryStrategy": {
+      "type": "hoist"
+    }
+  },
+  "platform": {
+    "qwik": "1.7.3",
+    "vite": "",
+    "rollup": "4.18.0",
+    "env": "node",
+    "os": "linux",
+    "node": "20.15.0"
+  }
+}

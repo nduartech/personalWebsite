@@ -1,0 +1,1 @@
+import{k as a}from"./q-CfXuNiTC.js";const t=()=>{setTimeout(()=>{document.querySelectorAll("svg.nav").forEach(e=>e.classList.add("active"))},300),setTimeout(()=>{document.querySelectorAll("p.navIconLabel").forEach(e=>e.classList.add("active"))},300)};export{a as _hW,t as s_C2N0ijjDckk};

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nduartech.github.io/sitemap-index.xml
