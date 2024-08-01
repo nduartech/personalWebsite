@@ -41,12 +41,8 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.8.3",
-    "@types/eslint": "^8.56.10",
     "@types/node": "^22.0.0",
-    "eslint-plugin-astro": "^1.2.2",
-    "eslint-plugin-qwik": "^1.5.7",
     "postcss-import": "^16.1.0",
-    "postcss-sort-media-queries": "^5.2.0",
-    "prettier-plugin-astro": "^0.14.1"
+    "postcss-sort-media-queries": "^5.2.0"
   }
 }
