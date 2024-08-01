@@ -1445,6 +1445,7 @@ __metadata:
   dependencies:
     concurrently: "npm:^8.2.2"
     global: "npm:^4.4.0"
+    lodash: "npm:^4.17.21"
   languageName: unknown
   linkType: soft
 
