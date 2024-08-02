@@ -1,3 +1,4 @@
+
 # [@QwikDev/astro](https://github.com/QwikDev/astro) Starter Kit
 
 ## Overview
@@ -33,23 +34,27 @@ Inside of your [Qwik](https://qwik.dev/) + [Astro](https://astro.build/) project
 - **src/** : This directory is the core of your Qwik + Astro application. Here's an overview of its structure:
 
   - **assets/** : This directory is for resources such as images, SVG files, etc.
+  
   - **components/** : Qwik components are stored here. Use this directory to organize and create reusable components for your application.
+  
   - **layouts/** : Astro layouts reside in this directory. Layout files define the overall structure of your pages.
+  
   - **pages/** : This directory contains the pages of your Astro application. Each file with the `.astro` or `.md` extension is exposed as a route based on its file name.
+  
   - **styles/** : Global style files for your application are stored here, such as `globals.css`.
 
 ## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:
 
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `pnpm install`         | Installs dependencies                            |
+| Command              | Action                                         |
+| :------------------- | :----------------------------------------------|
+| `pnpm install`         | Installs dependencies                          |
 | `pnpm start`           | Starts local dev server at `localhost:4321`      |
 | `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+| `pnpm preview`         | Preview your build locally, before deploying   |
+| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check`   |
+| `pnpm astro -- --help` | Get help using the Astro CLI                   |
 
 ## 📚 References
 
