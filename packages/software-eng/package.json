@@ -18,7 +18,7 @@
   "license": "MIT",
   "devDependencies": {
     "@previewjs/cli": "^1.28.1",
-    "@types/node": "^22.0.0",
+    "@types/bun": "^1.1.6",
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.40",
     "solid-devtools": "^0.30.1",
