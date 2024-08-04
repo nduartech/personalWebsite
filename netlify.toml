@@ -1,5 +1,7 @@
 # example netlify.toml
 [build]
+  base = '/'
+  package = 'packages/host'
   command = "bun --filter 'host' run build"
   functions = "netlify/functions"
   publish = "packages/host/dist"
