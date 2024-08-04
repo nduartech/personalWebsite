@@ -1,6 +1,7 @@
 {
   "name": "personalwebsite",
   "type": "module",
+  "private": true,
   "workspaces": [
     "packages/*"
   ],
