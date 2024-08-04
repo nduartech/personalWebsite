@@ -2,7 +2,7 @@
 [build]
   base = '/'
   package = 'packages/host'
-  command = "bun --filter 'host' run build"
+  command = "bun run build"
   functions = "netlify/functions"
   publish = "packages/host/dist"
 
