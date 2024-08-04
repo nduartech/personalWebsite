@@ -7,12 +7,17 @@ import solidJs from '@astrojs/solid-js'
 import compressor from 'astro-compressor'
 import sitemap from '@astrojs/sitemap'
 import robotsTxt from 'astro-robots-txt'
-
+import netlify from '@astrojs/netlify'
 import mdx from '@astrojs/mdx'
 
 // https://astro.build/config
 export default defineConfig({
-  output: 'static',
+  // output: 'static',
+  output: "hybrid",
+  adapter: netlify(),
+  experimental: {
+    serverIslands: true,
+  },
   devToolbar: {
     enabled: false,
   },
