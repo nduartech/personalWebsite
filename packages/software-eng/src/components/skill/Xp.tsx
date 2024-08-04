@@ -112,7 +112,7 @@ function Xp(props: any) {
                 </div>
               </a>
               <div class="se-flex se-flex-row se-justify-center se-items-center se-cursor-pointer"
-                   onClick={() => fetch('/resume.pdf').then(resp => resp.blob()).then(blob => {
+                   onClick={() => fetch('https://nathanldse.netlify.app/resume.pdf').then(resp => resp.blob()).then(blob => {
                      const url = URL.createObjectURL(blob);
                      const a = document.createElement("a");
                      a.style.display = "none";
