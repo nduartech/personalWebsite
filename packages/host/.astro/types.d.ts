@@ -157,6 +157,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"simple-chess-app.mdx": {
+	id: "simple-chess-app.mdx";
+  slug: "simple-chess-app";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
 };
 
 	};

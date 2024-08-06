@@ -1,0 +1,36 @@
+---
+title: Building a Simple Chess App
+pubDate: 2024-08-05 23:00:00
+description: "Developing a web app GUI allowing chess matches against Stockfish"
+tags: ["Golang", "Templ", "HTMX", "Dragula", "Stockfish"]
+image: "https://raw.githubusercontent.com/nduartech/nduartech.github.io/master/packages/host/src/assets/goChessfish.jpeg"
+---
+
+import { Image } from "astro:assets";
+import goChessfish from "../../assets/goChessfish.jpeg";
+import chessAppGif from "../../assets/chessApp.gif?url";
+
+<Image
+  src={goChessfish}
+  alt="Go Chessfish"
+class="w-1/4 h-1/4 mt-7 mb-7 rounded-r-3xl float-start mr-7"
+></Image>
+
+<div class="reset-tw"> 
+    I mentioned in my post on building this site that I wanted to learn SSR with Golang and [HTMX](https://htmx.org/). As it happens, my wife and I have also played quite a bit of chess recently. (As we prepared for the birth of our daughter we found ourselves spending a lot more time sitting in waiting rooms and doctor's offices, which in turn led to frequent matches on the chess.com app.)
+
+    And so, when I first set out to tackle my learning goals, it felt natural to try building a chess app. After all how hard could it be?
+
+    Of course, I say that facetiously. Chess is a game that is notoriously difficult to program. Fortunately, I found after some digging that I did not have to reinvent the wheel to reach my goal.
+
+    First, I defined the key components that would make up the functionality of my app, with the caveat that I would not necessarily seek to build everything from scratch but rather attempt first to utilize existing solutions where possible.
+
+1. I knew that in addition to Stockfish, which would provide adversarial play, I would need something to manage the game, determine valid moves, etc. This came in the form of [notnil's chess package for go](https://github.com/notnil/chess), which drastically reduced the effort needed for the app.
+2. I didn't want to build two separate apps, one for the UI and one for the backend, so I decided to use [Templ](https://templ.dev) to create a single app that would handle both.
+3. After some light reading on HTMX, I felt that while it would be useful for the pre-game menus, using it for the actual game would be a bit too much, and so decided to divide my front-end code slightly. At this stage I knew I could easily use HTMX for the pre-game forms, but then the next question that I arrived at was how to achieve the minimal level of interactivity needed (dragging pieces to allowed locations, dropping them, removing taken pieces, etc.) Which in turn led me (after a lot of trial and error with different JS libaries) to [dragula](https://github.com/bevacqua/dragula).
+4. Lastly, I needed a way  to communicate messages between the Templ front-end and base Golang web server back-end. Enter [melody](https://github.com/olahol/melody), a websocket framework perfect for this purpose.
+
+Putting all these parts together, I was able to construct a functional, but still very basic chess app, the code for which can be found [here](https://github.com/nduartech/chess). While not thoroughly tested, and lacking in many features found today in Stockfish GUIs and chess apps in general, I gained a lot from this project. From rediscovering my enthusiasm for Go, to learning a bit more about HTMX and even Templ, I found the end result satisfactory.
+</div>
+
+<img src={chessAppGif} alt="Chess App" class="w-full float-center"></img>

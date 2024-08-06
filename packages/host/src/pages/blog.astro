@@ -39,7 +39,12 @@ const blogEntries = await getCollection('blog')
                 <div>
                     <h1 class="text-regal-blue-50 text-2xl pb-5 font-medium">Posts</h1>
                     <ul class="space-y-4">
-                        {blogEntries.map(blogPostEntry => (
+                        {blogEntries.sort((a,b)=>{
+  if (a.data.pubDate > b.data.pubDate) return 1;
+  if (a.data.pubDate < b.data.pubDate) return -1;
+  return 0;
+})
+.map(blogPostEntry => (
                                 <li key={blogPostEntry.data.title} class="text-regal-blue-50">
                                     <a class="text-regal-blue-50 text-md font-semibold"
                                        href={`/blog/${blogPostEntry.slug}`}>{blogPostEntry.data.title} <span
