@@ -21,7 +21,7 @@ export default defineConfig({
   devToolbar: {
     enabled: false,
   },
-  site: 'https://nduartech.github.io',
+  site: 'https://www.nathanld.xyz',
   prefetch: {
     prefetchAll: true,
   },
