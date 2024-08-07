@@ -21,7 +21,7 @@ export default defineConfig({
   devToolbar: {
     enabled: false,
   },
-  site: 'https://www.nathanld.xyz',
+  site: 'https://nathanld.xyz',
   prefetch: {
     prefetchAll: true,
   },
