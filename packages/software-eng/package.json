@@ -20,7 +20,7 @@
     "@previewjs/cli": "^1.28.1",
     "@types/bun": "^1.1.6",
     "autoprefixer": "^10.4.20",
-    "postcss": "^8.4.40",
+    "postcss": "^8.4.41",
     "solid-devtools": "^0.30.1",
     "solid-js": "^1.8.19",
     "tailwind": "^4.0.0",
