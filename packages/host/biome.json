@@ -47,7 +47,8 @@
       "**/package-lock.json",
       "**/yarn.lock",
       "**/svelte.config.js",
-      "tmp*/**"
+      "tmp*/**",
+      ".netlify/**"
     ]
   },
   "organizeImports": { "enabled": true },
@@ -168,7 +169,8 @@
       "**/package-lock.json",
       "**/yarn.lock",
       "**/svelte.config.js",
-      "tmp*/**"
+      "tmp*/**",
+      ".netlify/**"
     ]
   },
   "javascript": {

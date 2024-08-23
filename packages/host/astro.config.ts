@@ -1,19 +1,19 @@
-import qwik from '@qwikdev/astro'
-import { defineConfig } from 'astro/config'
+import mdx from '@astrojs/mdx'
+import netlify from '@astrojs/netlify'
+import sitemap from '@astrojs/sitemap'
+import solidJs from '@astrojs/solid-js'
+import svelte from '@astrojs/svelte'
 // import node from "@astrojs/node";
 import tailwind from '@astrojs/tailwind'
-import svelte from '@astrojs/svelte'
-import solidJs from '@astrojs/solid-js'
+import qwik from '@qwikdev/astro'
 import compressor from 'astro-compressor'
-import sitemap from '@astrojs/sitemap'
 import robotsTxt from 'astro-robots-txt'
-import netlify from '@astrojs/netlify'
-import mdx from '@astrojs/mdx'
+import { defineConfig } from 'astro/config'
 
 // https://astro.build/config
 export default defineConfig({
   // output: 'static',
-  output: "hybrid",
+  output: 'hybrid',
   adapter: netlify(),
   experimental: {
     serverIslands: true,
