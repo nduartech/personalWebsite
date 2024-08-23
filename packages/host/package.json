@@ -44,9 +44,5 @@
     "@types/bun": "^1.1.6",
     "postcss-import": "^16.1.0",
     "postcss-sort-media-queries": "^5.2.0"
-  },
-  "trustedDependencies": [
-     "biome",
-     "sharp"
-  ]
+  }
 }
