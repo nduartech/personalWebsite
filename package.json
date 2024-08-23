@@ -30,6 +30,7 @@
   ],
   "dependencies": {
     "concurrently": "^8.2.2",
+    "mimic-response": "npm:@esm2cjs/mimic-response",
     "netlify-cli": "^17.34.2"
   }
 }
