@@ -18,7 +18,7 @@ function InterestCard(props:any) {
             modal && modal.setAttribute("transition-style", "in:wipe:cinematic");
         } else if(id === "family") {
             modal && modal.setAttribute("transition-style", "in:wipe:bottom-right");
-        } else if(id === "cooking") {
+        } else if(id === "skate") {
             modal && modal.setAttribute("transition-style", "in:wipe:up");
         }
     };
