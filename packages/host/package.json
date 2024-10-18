@@ -39,7 +39,7 @@
     "typescript": "^5.5.4"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.8.3",
+    "@biomejs/biome": "1.9.4",
     "@types/bun": "^1.1.6",
     "postcss-import": "^16.1.0",
     "postcss-sort-media-queries": "^5.2.0"
