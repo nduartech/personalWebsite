@@ -40,8 +40,8 @@ const blogEntries = await getCollection('blog')
                     <h1 class="text-regal-blue-50 text-2xl pb-5 font-medium">Posts</h1>
                     <ul class="space-y-4">
                         {blogEntries.sort((a,b)=>{
-  if (a.data.pubDate > b.data.pubDate) return 1;
-  if (a.data.pubDate < b.data.pubDate) return -1;
+  if (a.data.pubDate > b.data.pubDate) return -1;
+  if (a.data.pubDate < b.data.pubDate) return 1;
   return 0;
 })
 .map(blogPostEntry => (
