@@ -61,7 +61,7 @@ import '../../index.css';
       context: "While working as a Lead Full Stack Software Engineer at BNY Mellon...",
       skillList: ["css","js","ts","angularjs,ts"],
       title: "AI Hub",
-      blob: "Presently, alongside my ongoing contributions to Treasury Services, I am providing assistance to the AI Hub team in the development of their micro-frontend site using Angular and the single-spa library."
+      blob: "While concurrently contributing to Treasury Services, also assisted the AI Hub team with the development of a client-facing micro-frontend site using Angular and the single-spa library."
     },
     {
       context: "Personal Project",
