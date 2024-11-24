@@ -1,0 +1,38 @@
+---
+title: 'Chiron - Part 2: Rive-ting Animations'
+pubDate: 2024-11-23 09:15:00
+description: "An ongoing series covering the development of a personal AI assistant"
+tags: ["LLM","AI"]
+image: "https://raw.githubusercontent.com/nduartech/nduartech.github.io/master/packages/host/src/assets/chironAnimations.jpeg"
+---
+import {Image} from "astro:assets";
+import chironAnimations from "../../assets/chironAnimations.jpeg";
+import rive1 from "../../assets/rive1.png";
+import rive1Url from "../../assets/rive1.png?url";
+import rive2 from "../../assets/rive2.png";
+import rive2Url from "../../assets/rive2.png?url";
+
+
+<Image
+    src={chironAnimations}
+    alt="Animating Chiron"
+    class="w-1/4 h-1/4 mt-7 mb-7 rounded-l-3xl float-end ml-7"
+></Image>
+<div class="reset-tw">
+    Everybody knows that one of the most important features, if not the feature, of AI assistants is the clever animations that play in sync with the audio, giving the impression that the agent is speaking to the user. This is a core part of Siri, Google's Assistant, and others. Unfortunately, as someone who mainly operates on the back-end in a professional capacity, my experience with developing such animations was non-existent. At the same time, I did not want to simply take someone else's implementation, though these could be found online, as I felt it would be better to build something that was specifically designed to integrate with my as of yet unwritten UI and back-end.
+
+    An initial search led me to [LottieFiles](https://lottiefiles.com/), the site on which I created the first version of Chiron's persona (half-baked Siri-like animation). However, I didn't appreciate that exporting this animation without a watermark required payment/subscription to LottieFiles as a service. And so I began searching for an alternative.
+
+    Enter [Rive](https://rive.app/), a brilliant piece of software that creates animations as finite state machines. Even better, Rive *allows you to import projects from LottieFiles*. From there adding them to your personal projects using the Rive runtime for *free* is straightforward. Bingo.
+</div>
+<div class="gallery">
+<a href={rive1Url}>
+    <Image src={rive1} alt="Designing Chiron" class="w-full h-full float-center"></Image>
+</a>
+<a href={rive2Url}>
+    <Image src={rive2} alt="Animating Chiron" class="w-full h-full float-center"></Image>
+</a>
+</div>
+<div class="reset-tw">
+    Using Rive, I developed both a dark mode and light mode version of the Chiron persona, and was able to test the very basic animations I designed out on the app's website. Finally, I exported both of these to .riv files, ready for integration into a web-based UI using the embeddable runtime.
+</div>

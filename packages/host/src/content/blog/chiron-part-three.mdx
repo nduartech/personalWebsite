@@ -1,0 +1,38 @@
+---
+title: 'Chiron - Part 3: Getting Serious'
+pubDate: 2024-11-23 09:30:00
+description: "An ongoing series covering the development of a personal AI assistant"
+tags: ["LLM","AI"]
+image: "https://raw.githubusercontent.com/nduartech/nduartech.github.io/master/packages/host/src/assets/chironTauri.jpeg"
+---
+import { Image } from "astro:assets";
+import chironTauri from "../../assets/chironTauri.jpeg";
+
+<Image
+  src={chironTauri}
+  alt="Taking shape"
+class="w-1/3 h-1/3 mt-7 mb-7 rounded-r-3xl float-start mr-16"
+></Image>
+<div class="reset-tw">
+Of course some moderately firm value statements and an animation do not a product make, and thus I began thinking about how I wanted to build my application.
+
+    1. It should be a desktop app
+
+    2. It should match the Tokyo Night Storm color scheme, which I use across my EndeavourOS system from my browser, to my IDEs, to Neovim, to Obsidian (the Chiron persona I created already used this color scheme as well)
+
+    3. It should not send user requests to third-party services. That means: no ElevenLabs, no OpenAI, Claude,nor any other AI API providers
+
+    4. It should be useful, and integrate deeply with not only my OS but also IOT devices around my residence (this one being a stretch goal that I was fully aware wouldn't be immediately possible, if at all with my limited hardware constraints, but one that I would at least attempt)
+
+Conveniently, my time working on a chess application had given me some minimal experience with developing web-based non-Electron desktop apps. Even though I did not complete that project, it was in learning about Wails that I came across another interesting framework: [Tauri](https://v2.tauri.app/).
+
+Tauri allows developers to build lightweight native Web apps in Rust, which when compiled can be shipped to any desktop OS. It offers compatibility with Bun, which I opted to use for this project, and is very thoughtful in its approach to bidirectional communication between the Rust layer and the front-end. Their recently released v2 even adds mobile support, though that was not something I was targeting for this app. The Tauri framework I think offers a real alternative to memory-hungry Electron apps and I hope more developers choose to use it going forward.
+
+There was only one tiny problem: I didn't know a lick of Rust. Undaunted, I began going through Tauri's documentation, which was thankfully stellar. After an hour or so of reading I was hooked, and Chiron's core began to take shape. I chose SolidJS for the front-end as I found it pleasant to work with previously, along with UnoCSS for the majority of the styling. Relying on the docs for guidance, I created the project locally and started working on the UI.
+
+I began by creating the main window for the app, which contained an input box for entering instructions via text as well as a chat box to show past messages. On submission, new messages were added to a list stored in a Solid signal (permanent storage of conversation history over time might be a later addition, though initially I envisioned it working  more like Siri with one-off chats), which in turn updated the chat box. Wanting the assistant to be less obtrusive, I selected to make the background of the window transparent, as well as shrink its size down to take up only a portion of my screen while remaining on top of all other windows. I also added a light and dark mode toggle, more out of habit than anything else, as this is now a standard feature in most apps.
+
+Finally, I spent some time integrating my Rive animation into the UI, including triggering the state changes on mouse interaction events (*holding the Chiron persona triggers the recording animation, release triggers the processing animation, and I used a timer to simulate the trigger for the processing-complete animation which returns the finite state machine to idle–these of course had no real effect yet, but visualizing these interactions was helpful in planning my next steps*).
+
+Now having a very basic skeleton for my UI, it was time to research how to implement the different key  components of my application.
+</div>

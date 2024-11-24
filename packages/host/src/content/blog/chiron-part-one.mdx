@@ -1,0 +1,42 @@
+---
+title: 'Chiron - Part 1: The Beginning'
+pubDate: 2024-11-23 09:00:00
+description: "An ongoing series covering the development of a personal AI assistant"
+tags: ["LLM","AI"]
+image: "https://raw.githubusercontent.com/nduartech/nduartech.github.io/master/packages/host/src/assets/chironBeginnings.jpeg"
+---
+import { Image } from "astro:assets";
+import chironBeginnings from "../../assets/chironBeginnings.jpeg";
+
+<Image
+  src={chironBeginnings}
+  alt="Beginnings"
+class="w-1/3 h-1/3 mt-7 mb-7 rounded-r-3xl float-start mr-16"
+></Image>
+<div class="reset-tw">
+Following the conclusion of the TS Online Banking hackathon, I found myself itching to engage with LLMs once more. At the same time, I was beginning to develop some concerns around this technology:
+
+1) **AI/LLMs are a threat to existing jobs**
+
+	This is not a doomsday post. I don't think we're anywhere close to a world where this technology will replace humans completely, nor eliminate entire industries. That said I believe that pretending that this will not lead to a reduction in human capital previously required to perform tasks is irresponsible. The claim that prompt engineering jobs and their ilk will replace the engineering, QA, and other roles which will all face and have already faced reduced hiring due to AI just simply doesn't hold up, and it's extremely unlikely we see a future where this is the case, in my opinion. And since we export most chip manufacturing here in the U.S., it's hard to see how this will do more good than harm in the long run. In reality, I think the cost-benefit ratio of hiring a competent human being vs utilizing an AI service isn't quite as golden as many firms seem to think currently, and still presents plenty of real risk. The grim side-effect of this investment, however, due mainly to deceptive marketing practices employed by companies in the space, is that *perceived* need for labor will lessen and in turn people will suffer. The slim hope is that access to these tools will become universal, which in turn *may* lessen their detrimental effect on employment horizons, but that looks increasingly unlikely as well, at least not without significant trade-offs.
+
+2) **AI/LLM access is not democratized**
+
+	The sheer cost of GPUs has already reached outrageous levels and will only continue to rise as Nvidia continues to monopolize the market. API costs quickly stack up if opting for that route, and even with the subscription-based plans, how many subscriptions is a consumer expected to have? While there is data to show that these prices are steadily becoming more friendly, they are not currently readily accessible to most people, barring a few notable exceptions which have their own demerits, which I will expound on further below. Fundamentally, I think the use of small LLMs that do not require expensive commercial hardware is a future I would prefer. One where data is stored on-device, and the system is able to produce at least minimal results without breaking the bank.
+
+3) **AI/LLM incorporation into Operating Systems like Microsoft Windows and Apple OS is a step in the wrong direction**
+
+	[These](https://www.youtube.com/watch?v=cq4AqVNErqM&t=70s) [videos](https://www.youtube.com/watch?v=DLzOQYY6wjM) from well-respected Youtube creator Low Level are prime examples of why I feel hesitant to trust the decision by these companies to integrate AI and LLMs into *every feature of their systems.* While admittedly based on the second it seems like Apple Intelligence is a bit better designed from a safety perspective, neither company has an absolutely stellar track record when it comes to handling user data. As I mentioned in previous posts, it was the announcement of Windows Recall that initially spurred my return to Linux as my main OS.
+
+4) **Not reading the Terms of Service and Privacy Policy for subscription-based services is a mistake, and even if you do...**
+
+	Many of these services include sections in their Privacy Policy and Terms of Service that seem like cause for concern. While some do state they do not train on user data, many fail to even promise that minimum standard, and those that do often still include a section covering their use of prompts entered for blanket "improvement of our product" which in turn seems to suggest they *do* in fact utilize user data directly. (*Given that these statements are often drafted by legal teams, I do not see how ambiguity benefits the consumer.*) Using any of these subscription products requires an immense amount of trust in the company facilitating the service, and again most tech companies' track record on issues of privacy is muddled at best if not outright dishonest. Furthermore, there has been some success in using specialized prompts to jailbreak such services, leading in turn to the compromising and leaking of data from **other users**. *[These can be found with a quick search, ](https://www.spiceworks.com/tech/artificial-intelligence/news/chatgpt-leaks-sensitive-user-data-openai-suspects-hack/) [while examples like this get fixed, an on-device alternative seems significantly safer](https://www.thestreet.com/technology/chatgpt-sam-altman-artificial-intelligence-privacy-ethics-passwords)*. Given that many users have started entering their goals, dreams, wishes, and desires into tools like ChatGPT, it becomes increasingly apparent that the ability for a company like OpenAI to profile and monitor users over time will reach levels that even Google in its heyday could have only dreamt of.
+
+5) **Downloading/installing a tool someone else has built is fine, but won't teach me as much**
+
+	It goes without saying that there are tools that exist out there that do this better than I am going to be able to achieve by myself, as they have had numerous contributions from the open source community over the span of years. That said, I wanted to build something I could use while learning.
+
+Feeling strongly on these main points, I jumped head-first into building an AI assistant for my own personal use. This project is ongoing (we'll see for how long), and each of the following posts will explore a different aspect of the program I developed over time.
+
+Oh, and I named it Chiron after the centaur teacher in Greek mythology who helped legends on their path to greatness. Because why not?
+</div>

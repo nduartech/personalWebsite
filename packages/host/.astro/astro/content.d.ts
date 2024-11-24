@@ -159,6 +159,55 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] };
+"chiron-part-five.mdx": {
+	id: "chiron-part-five.mdx";
+  slug: "chiron-part-five";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"chiron-part-four.mdx": {
+	id: "chiron-part-four.mdx";
+  slug: "chiron-part-four";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"chiron-part-one.mdx": {
+	id: "chiron-part-one.mdx";
+  slug: "chiron-part-one";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"chiron-part-seven.mdx": {
+	id: "chiron-part-seven.mdx";
+  slug: "chiron-part-seven";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"chiron-part-six.mdx": {
+	id: "chiron-part-six.mdx";
+  slug: "chiron-part-six";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"chiron-part-three.mdx": {
+	id: "chiron-part-three.mdx";
+  slug: "chiron-part-three";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"chiron-part-two.mdx": {
+	id: "chiron-part-two.mdx";
+  slug: "chiron-part-two";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
 "first-foray.mdx": {
 	id: "first-foray.mdx";
   slug: "first-foray";
@@ -173,6 +222,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"sentimental.mdx": {
+	id: "sentimental.mdx";
+  slug: "sentimental";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
 "simple-chess-app.mdx": {
 	id: "simple-chess-app.mdx";
   slug: "simple-chess-app";
