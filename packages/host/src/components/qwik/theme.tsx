@@ -58,7 +58,7 @@ export const Theme = component$(() => {
         }}
       >
         <svg
-          class="h-8 w-8"
+          class="h-6 w-6"
           id="dayNightSun"
           stroke-width="0.9"
           fill="none"
@@ -140,7 +140,7 @@ export const Theme = component$(() => {
           ></path>
         </svg>
         <svg
-          class="h-7 w-7"
+          class="h-5 w-5"
           id="dayNightMoon"
           stroke-width="0.9"
           fill="none"
