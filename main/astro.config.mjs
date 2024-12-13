@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap'
 import svelte from '@astrojs/svelte'
 import tailwind from '@astrojs/tailwind'
 import deno from '@deno/astro-adapter'
-
+import Icons from 'unplugin-icons/vite'
 // @ts-check
 import { defineConfig } from 'astro/config'
 
@@ -31,7 +31,11 @@ export default defineConfig({
     mdx(),
   ],
   vite: {
-    plugins: [],
+    plugins: [
+        Icons({
+        compiler: 'astro',
+      }),
+    ],
     server: {
       fs: {
         strict: false,

@@ -1,4 +1,6 @@
 {
   "workspace": ["./main"],
-  "nodeModulesDir": "auto"
+  "nodeModulesDir": "auto",
+  "imports": {
+  }
 }
