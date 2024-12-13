@@ -1,0 +1,8 @@
+---
+import Landing from '../components/Landing.svelte'
+import Layout from '../layouts/Layout.astro'
+import '$lib/styles/app.css'
+---
+<Layout>
+    <Landing client:only="svelte" />
+</Layout>
