@@ -15,7 +15,7 @@
 	<span class="mr-2 size-4 shrink-0 opacity-50">{@html Search}</span>
 	<CommandPrimitive.Input
 		class={cn(
-			"placeholder:text-muted-foreground flex h-10 w-full rounded-md bg-transparent py-3 text-base outline-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
+			"placeholder:text-muted-foreground flex h-10 w-full rounded-md bg-transparent py-3 lg:text-base text-xs outline-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
 			className
 		)}
 		bind:ref

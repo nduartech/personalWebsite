@@ -1,6 +1,6 @@
 <script lang="ts">
-  import Header from "$lib/components/header.svelte";
-  import Command from "$lib/components/landingCommand.svelte";
+  import Header from "../header.svelte";
+  import Command from "$lib/components/landing/landingCommand.svelte";
 </script>
 
 <div id="landing" class="h-full w-full bg-white dark:bg-black">
