@@ -1,11 +1,19 @@
 <script lang="ts">
- import * as Command from "../ui/command";
+    import * as Command from "../ui/command";
 
- let open = $state(false);
+    let open = $state(false);
+    let selectedValue = $state("");
+    let searchContent = $state("");
+    let searchBox = null;
+
+    function onSelect() {
+        console.log("Clicked value", selectedValue);
+        setTimeout(()=>{open=false;searchContent = "";selectedValue = "";document.activeElement.blur()},500);
+    }
 </script>
 
-<svelte:window onkeydown|preventDefault={(e: KeyboardEvent) => {
- if (e.key === "Escape") open = false;
+<svelte:window onkeydown={(e: KeyboardEvent) => {
+ if (e.key === "Escape") {setTimeout(()=>{open=false;searchContent = "";selectedValue = "";document.activeElement.blur()},500);return;}
  if (e.key === "k" && (e.metaKey||e.ctrlKey)) {
   e.preventDefault();
   open = true;
@@ -17,31 +25,46 @@
   return;
  }
  if (e.key === "b" && (e.metaKey||e.ctrlKey)) {
- e.preventDefault();
- console.log("Open blog");
- return;
+  e.preventDefault();
+  console.log("Open blog");
+  return;
  }
-}} />
-<div class="flex w-full py-5" onmouseleave={()=>open=false} onpointerleave={()=>open=false} onmouseenter={()=>open=true} onmousedown={()=>open=true} onpointerenter={()=>open=true} onpointerdown={()=>open=true}>
-<Command.Root>
- <div class="flex flex-row w-full justify-between items-center"><Command.Input placeholder="Type a command or search..."/><Command.Shortcut>{open?'Esc':'⌘K'}</Command.Shortcut></div>
- <Command.List class={open?"":"hidden"}>
-  <Command.Empty>No results found.</Command.Empty>
-  <Command.Group heading="Pages">
-   <Command.Item>
-    <span>Work & Projects</span>
-    <Command.Shortcut>⌘P</Command.Shortcut>
-   </Command.Item>
-   <Command.Item>
-    <span>Technical Blog</span>
-    <Command.Shortcut>⌘B</Command.Shortcut>
-   </Command.Item>
-  </Command.Group>
-  <Command.Separator />
-  <Command.Group heading="Articles">
-   <!-- TODO: Add links to articles -->
-   <Command.Item>Link to each article</Command.Item>
-  </Command.Group>
- </Command.List>
-</Command.Root>
+ if (e.key === "Enter" && open && !selectedValue) {
+    console.log("Enter pressed without selection",searchContent);
+    setTimeout(()=>{open=false;searchContent = "";selectedValue = "";document.activeElement.blur()},500);
+ }
+}}/>
+
+<div class="flex w-full py-5"
+     onmouseleave={()=>{
+         if (document.activeElement === searchBox) return;
+         setTimeout(()=>{open=false;searchContent = "";selectedValue = "";document.activeElement.blur()},500);
+     }}>
+    <Command.Root id="command-root" bind:value={selectedValue}>
+        <div class="flex flex-row w-full justify-between items-center" onmouseenter={()=>{open=true}}
+             onmousedown={()=>{open=true}}
+             onclick={()=>{open=true}} role="combobox" tabindex="0" aria-controls="command-root" aria-expanded="false"
+             aria-label="Search work, projects, and articles">
+            <Command.Input bind:value={searchContent} bind:ref={searchBox} placeholder="Search or Ask a Question..."/>
+            <Command.Shortcut>{open ? 'Esc' : '⌘K'}</Command.Shortcut>
+        </div>
+        <Command.List class={open?"":"hidden"} onclick={onSelect}>
+            <Command.Empty>Ask an AI</Command.Empty>
+            <Command.Group heading="Pages">
+                <Command.Item value="work &and projects">
+                    <span>Work & Projects</span>
+                    <Command.Shortcut>⌘P</Command.Shortcut>
+                </Command.Item>
+                <Command.Item value="technical blog">
+                    <span>Technical Blog</span>
+                    <Command.Shortcut>⌘B</Command.Shortcut>
+                </Command.Item>
+            </Command.Group>
+            <Command.Separator/>
+            <Command.Group heading="Articles">
+                <!-- TODO: Add links to articles -->
+                <Command.Item value="articles">Link to each article</Command.Item>
+            </Command.Group>
+        </Command.List>
+    </Command.Root>
 </div>
