@@ -69,61 +69,93 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
   h1 {
-    @apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl
+    @apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl;
   }
+
   h2 {
-      @apply scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0
+    @apply scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0;
   }
+
   h3 {
-      @apply scroll-m-20 text-2xl font-semibold tracking-tight
+    @apply scroll-m-20 text-2xl font-semibold tracking-tight;
   }
+
   h4 {
-      @apply scroll-m-20 text-xl font-semibold tracking-tight
+    @apply scroll-m-20 text-xl font-semibold tracking-tight;
   }
+
   h5 {
-      @apply scroll-m-20 text-lg font-semibold tracking-tight
+    @apply scroll-m-20 text-lg font-semibold tracking-tight;
   }
+
   h6 {
-      @apply scroll-m-20 font-semibold tracking-tight
+    @apply scroll-m-20 font-semibold tracking-tight;
   }
+
   p {
-    @apply leading-7 [&:not(:first-child)]:mt-6
+    @apply leading-7 [&:not(:first-child)]:mt-6;
   }
+
   blockquote {
-    @apply mt-6 border-l-2 pl-6 italic
+    @apply mt-6 border-l-2 pl-6 italic;
   }
+
   .table-container {
-    @apply mt-6 border-l-2 pl-6 italic
+    @apply mt-6 border-l-2 pl-6 italic;
   }
+
   table {
-    @apply w-full
+    @apply w-full;
   }
+
   tr {
-    @apply even:bg-muted m-0 border-t p-0
+    @apply even:bg-muted m-0 border-t p-0;
   }
-  th, td {
-    @apply border px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right
+
+  th,
+  td {
+    @apply border px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right;
   }
+
   ul {
-    @apply my-6 ml-6 list-disc [&>li]:mt-2
+    @apply my-6 ml-6 list-disc [&>li]:mt-2;
   }
+
   code {
-    @apply bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold
+    @apply bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold;
   }
+
   p.lead {
-    @apply text-muted-foreground text-xl
+    @apply text-muted-foreground text-xl;
   }
+
   .large {
-    @apply text-lg font-semibold
+    @apply text-lg font-semibold;
   }
+
   small {
-    @apply text-sm font-medium leading-none
+    @apply text-sm font-medium leading-none;
   }
+
   p.muted {
-    @apply text-muted-foreground text-sm
+    @apply text-muted-foreground text-sm;
+  }
+  .blog-content img.left {
+    @apply w-1/4 h-1/4 mt-7 mb-7 rounded-r-3xl float-start mr-7;
+  }
+  .blog-content img.right {
+    @apply w-1/4 h-1/4 mt-7 mb-7 rounded-l-3xl float-end ml-7;
+  }
+  .blog-content img {
+    @apply mt-7 mb-7 mx-auto;
+  }
+  .blog-content hr {
+    @apply mt-2 pb-4;
   }
 }

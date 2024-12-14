@@ -10,8 +10,6 @@
     "paths": {
       "$lib/*": ["./src/*"]
     },
-    "types": [
-      "unplugin-icons/types/astro",
-    ]
+    "types": ["unplugin-icons/types/astro"]
   }
 }

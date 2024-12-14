@@ -24,20 +24,14 @@
   "scripts": {
     "astro": "astro",
     "sync": "astro sync",
-    "build": "deno run fix && deno run -A astro build",
-    "check": "biome ci . && deno run -A astro check",
-    "check.format": "biome format .",
-    "check.lint": "biome check .",
+    "build": "deno run -A astro build",
+    "check": "deno run -A astro check",
     "dev": "astro dev",
-    "fix": "deno run lint && deno run format",
-    "format": "biome format --write .",
-    "lint": "biome check --apply-unsafe .",
     "preview": "deno run build && deno run serve",
     "prod": "deno run check && deno run build",
     "serve": "deno run -A ./dist/server/entry.mjs"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
     "@iconify-json/line-md": "^1.2.3",
     "bits-ui": "^1.0.0-next.71",
     "clsx": "^2.1.1",

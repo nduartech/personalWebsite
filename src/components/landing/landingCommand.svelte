@@ -1,14 +1,19 @@
 <script lang="ts">
-    import * as Command from "../ui/command";
-    let open = $state(false);
-    let selectedValue = $state("");
-    let searchContent = $state("");
-    let searchBox = null;
+import * as Command from '$lib/components/ui/command'
+let open = $state(false)
+let selectedValue = $state('')
+let searchContent = $state('')
+let searchBox = null
 
-    function onSelect() {
-        console.log("Clicked value", selectedValue);
-        setTimeout(()=>{open=false;searchContent = "";selectedValue = "";document.activeElement.blur()},200);
-    }
+function onSelect() {
+  console.log('Clicked value', selectedValue)
+  setTimeout(() => {
+    open = false
+    searchContent = ''
+    selectedValue = ''
+    document.activeElement.blur()
+  }, 200)
+}
 </script>
 
 <svelte:window onkeydown={(e: KeyboardEvent) => {

@@ -3,9 +3,9 @@ import sitemap from '@astrojs/sitemap'
 import svelte from '@astrojs/svelte'
 import tailwind from '@astrojs/tailwind'
 import deno from '@deno/astro-adapter'
-import Icons from 'unplugin-icons/vite'
 // @ts-check
 import { defineConfig } from 'astro/config'
+import Icons from 'unplugin-icons/vite'
 
 import expressiveCode from 'astro-expressive-code'
 
@@ -30,7 +30,7 @@ export default defineConfig({
   ],
   vite: {
     plugins: [
-        Icons({
+      Icons({
         compiler: 'astro',
       }),
     ],

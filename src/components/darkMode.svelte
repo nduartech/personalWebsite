@@ -1,10 +1,10 @@
 <script lang="ts">
-import Sun from '~icons/line-md/sunny-filled?raw';
-import Moon from '~icons/line-md/moon-filled?raw';
+import Moon from '~icons/line-md/moon-filled?raw'
+import Sun from '~icons/line-md/sunny-filled?raw'
 
-  import { resetMode, setMode } from "mode-watcher";
-  import { buttonVariants } from "$lib/components/ui/button/index.js";
-  import * as DropdownMenu from "$lib/components/ui/dropdown-menu/index.js";
+import { buttonVariants } from '$lib/components/ui/button/index.js'
+import * as DropdownMenu from '$lib/components/ui/dropdown-menu/index.js'
+import { resetMode, setMode } from 'mode-watcher'
 </script>
 
 <DropdownMenu.Root>
