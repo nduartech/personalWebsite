@@ -50,7 +50,7 @@ function onSelect() {
              onmousedown={()=>{open=true}}
              onclick={()=>{open=true}} role="combobox" tabindex="0" aria-controls="command-root" aria-expanded="false"
              aria-label="Search work, projects, and articles">
-            <Command.Input bind:value={searchContent} bind:ref={searchBox} bind:open={open} class="w-full" placeholder="Type a command or search..."/>
+            <Command.Input bind:value={searchContent} bind:ref={searchBox} bind:open={open} class="w-full" placeholder=""/>
         </div>
         <Command.List class={open?"":"hidden"} onclick={onSelect}>
             <Command.Empty>No results found</Command.Empty>
