@@ -1,0 +1,8 @@
+---
+import Layout from '$lib/layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+const blogEntries = await getCollection('blogPosts');
+---
+<Layout title="Some Thoughts">
+
+</Layout>

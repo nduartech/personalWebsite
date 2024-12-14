@@ -1,6 +1,7 @@
 <script lang="ts">
 import Header from '$lib/components/header.svelte'
 import Command from '$lib/components/landing/landingCommand.svelte'
+let {articles} = $props();
 </script>
 
 <div id="landing" class="h-full w-full bg-white dark:bg-black">
@@ -11,7 +12,7 @@ import Command from '$lib/components/landing/landingCommand.svelte'
             <h1 class="lg:text-6xl text-black dark:text-white">Hello, I'm Nathan</h1>
             <h3>Software Engineer</h3>
             <div class="flex w-full px-20">
-                <Command />
+                <Command articles={articles} />
             </div>
           </div>
         </div>
