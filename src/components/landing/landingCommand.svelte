@@ -3,7 +3,7 @@ import * as Command from '$lib/components/ui/command'
 let open = $state(false)
 let selectedValue = $state('')
 let searchContent = $state('')
-let searchBox = null
+let searchBox = $state(null)
 
 function onSelect() {
   console.log('Clicked value', selectedValue)
@@ -40,13 +40,20 @@ function onSelect() {
  }
 }}/>
 
-<div class="flex w-full py-5"
+<div class="flex w-full py-5" role="navigation"
      onmouseleave={()=>{
          if (document.activeElement === searchBox) return;
          setTimeout(()=>{open=false;searchContent = "";selectedValue = "";document.activeElement.blur()},200);
      }}>
     <Command.Root id="command-root" bind:value={selectedValue}>
-        <div class="flex flex-row w-full justify-between items-center" onmouseenter={()=>{open=true}}
+        <div class="flex flex-row w-full justify-between items-center" onkeydown={(e)=>{
+            if (e.key==="Enter"&&document.activeElement!==searchBox) {
+                e.preventDefault();
+                e.stopPropagation();
+                searchBox.focus();
+                open = true;
+            }
+        }} onmouseenter={()=>{open=true}}
              onmousedown={()=>{open=true}}
              onclick={()=>{open=true}} role="combobox" tabindex="0" aria-controls="command-root" aria-expanded="false"
              aria-label="Search work, projects, and articles">
