@@ -1,6 +1,7 @@
 ---
 import {ModeWatcher} from "mode-watcher";
 import '$lib/styles/app.css';
+const { title } = Astro.props;
 ---
 <!doctype html>
 <html lang="en">
@@ -10,7 +11,7 @@ import '$lib/styles/app.css';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<link rel="sitemap" href="/sitemap-index.xml" />
-		<title>Hi, I'm Nathan</title>
+		<title>{title}</title>
 	</head>
 	<body>
 		<script is:inline>

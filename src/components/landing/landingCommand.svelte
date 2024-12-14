@@ -50,11 +50,11 @@
         <Command.List class={open?"":"hidden"} onclick={onSelect}>
             <Command.Empty>No results found</Command.Empty>
             <Command.Group heading="Pages">
-                <Command.Item value="work &and projects">
+                <Command.Item value="experience work projects">
                     <span>Experience</span>
                     <Command.Shortcut>⌘P</Command.Shortcut>
                 </Command.Item>
-                <Command.Item value="technical blog">
+                <Command.Item value="technical blog writing thoughts opinions">
                     <span>Technical Blog</span>
                     <Command.Shortcut>⌘B</Command.Shortcut>
                 </Command.Item>
