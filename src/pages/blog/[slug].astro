@@ -1,0 +1,26 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection } from "astro:content";
+import type { Post } from "github-discussions-blog-loader";
+import Layout from "../../layouts/Layout.astro";
+
+export const prerender = true;
+export const getStaticPaths: GetStaticPaths = async () => {
+  const blogPosts = await getCollection("blogPosts");
+  return blogPosts.map((blogPost) => ({
+    params: {
+      slug: blogPost.data.slug,
+    },
+    props: { post: blogPost.data },
+  }));
+};
+
+type Props = { post: Post };
+
+const { post } = Astro.props;
+---
+
+<Layout title={post.title}>
+  <h1>{post.title}</h1>
+  <div set:html={post.body}></div>
+</Layout>
