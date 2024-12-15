@@ -8,10 +8,14 @@ let searchContent = $state('')
 let searchBox = $state(null);
 
 let {articles} = $props();
+let articleMap = $state(new Map());
 
 $effect(() => {
   if(articles){
-    console.log('Articles', articles);
+    articles.forEach((article: any) => {
+      articleMap.set(article.title+" "+article.description+" "+article.tags.join(" ")+(article.series?" "+article.series.id+" ":""),[article.title, article.published, article.slug]);
+    });
+    console.log('Articles', articleMap.get('Starting Out With EndeavourOS and Neovim Reimagining My Development Setup arch endeavouros neovim'));
   }
 });
 
@@ -36,12 +40,20 @@ function useSelectedValue() {
 }
 
 function navigateToPage(id: string|undefined) {
+  let url = null;
   if (id === 'experience work projects') {
     console.log('Navigate to experience page');
   } else if (id === 'technical blog writing thoughts opinions') {
     console.log('Navigate to technical blog page');
-  } else if (id === undefined) {
-    console.log('Navigating to article',selectedValue);
+    url = '/blog';
+  } else {
+    console.log('Navigating to article',articleMap.get(id));
+    url = `/blog/${articleMap.get(id)[2]}`;
+  }
+  if (url) {
+      let a = document.createElement('a');
+      a.href = url;
+      a.click();
   }
 }
 
@@ -105,7 +117,11 @@ function navigateToPage(id: string|undefined) {
             <Command.Separator/>
             <Command.Group heading="Articles">
                 <!-- TODO: Add links to articles -->
-                <Command.Item value="articles">Link to each article</Command.Item>
+                {#each articles as article}
+                    <Command.Item value={article.title+" "+article.description+" "+article.tags.join(" ")+(article.series?" "+article.series.id+" ":"")}>
+                        <span class="flex flex-row">{article.title}</span>
+                    </Command.Item>
+                {/each}
             </Command.Group>
         </Command.List>
     </Command.Root>
