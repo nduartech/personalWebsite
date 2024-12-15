@@ -2,7 +2,15 @@
 import Layout from '$lib/layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 const blogEntries = await getCollection('blogPosts');
+import Header from '$lib/components/header.svelte';
+import AllPosts from '$lib/components/blog/allPosts.svelte';
 ---
-<Layout title="Some Thoughts">
-
+<Layout title="Technical Blog">
+    <div class="h-full w-full bg-white dark:bg-black justify-center items-center">
+        <Header client:only="svelte" transition:persist />
+        <div class="flex flex-col justify-center items-center">
+          <h1 class="lg:text-6xl text-black dark:text-white">Blog</h1>
+            <AllPosts posts={blogEntries}></AllPosts>
+        </div>
+    </div>
 </Layout>

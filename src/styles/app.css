@@ -158,4 +158,7 @@
   .blog-content hr {
     @apply mt-2 pb-4;
   }
+  h1.post-title {
+    @apply text-center lg:px-0 px-3;
+  }
 }

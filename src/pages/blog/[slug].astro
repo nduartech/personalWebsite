@@ -8,17 +8,15 @@ export const prerender = true
 export const getStaticPaths: GetStaticPaths = async () => {
   const blogPosts = await getCollection('blogPosts')
   const replacements = {
-    'â€™': "'", // smart single quote
-    'â€"': '—', // em dash
-    'â€œ': '"', // smart opening double quote
-    'â€': '"', // smart closing double quote
-    'â€¦': '…', // ellipsis
-    'â€¢': '•', // bullet
-    'â€˜': "'", // smart opening single quote
-    Â: ' ', // non-breaking space
-    'â€‹': '‌', // zero-width space
-    'â€¨': '\n', // line separator
-    'â€©': '\n', // paragraph separator
+      "â€™": "'", // smart single quote
+    "â€\"": "—", // em dash
+    "â€œ": "\"", // smart opening double quote
+    "â€": "\"", // smart closing double quote
+    "â€¦": "…", // ellipsis
+    "â€¢": "•", // bullet
+    "â€˜": "'", // smart opening single quote
+    "â€¨": "\n", // line separator
+    "â€©": "\n", // paragraph separator
   }
 
   const pattern = new RegExp(Object.keys(replacements).join('|'), 'g')
@@ -54,9 +52,9 @@ const { post } = Astro.props
 </style>
 <Layout title={post.title}>
     <div class="h-full w-full bg-white dark:bg-black justify-center items-center">
-        <Header client:only="svelte"/>
+        <Header client:only="svelte" transition:persist />
         <div class="flex flex-col justify-center items-center">
-            <h1 class="pb-10">{post.title}</h1>
+            <h1 class="post-title">{post.title}</h1>
             <div class="blog-content" set:html={post.body}></div>
         </div>
     </div>

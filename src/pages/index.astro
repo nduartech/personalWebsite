@@ -1,18 +1,23 @@
 ---
 import Landing from '$lib/components/landing/landing.svelte'
 import Layout from '$lib/layouts/Layout.astro'
-import { getCollection } from 'astro:content';
+import Header from '$lib/components/header.svelte'
+import {getCollection} from 'astro:content';
 const blogEntries = await getCollection('blogPosts');
 ---
 <Layout title="Hello, I'm Nathan">
-<Landing client:only="svelte" articles={blogEntries.map((e)=>{
-    return {
-        title: e.data.title,
-        description: e.data.description,
-        tags: e.data.tags,
-        series: e.data.series,
-        published: e.data.published,
-        slug: e.data.slug
-    }
-})} />
+    <div id="landing" class="h-full w-full bg-white dark:bg-black">
+        <Header client:only="svelte" transition:persist />
+        <Landing client:only="svelte" articles={blogEntries.map((e) => {
+            return {
+                title: e.data.title,
+                description: e.data.description,
+                tags: e.data.tags,
+                series: e.data.series,
+                published: e.data.published,
+                slug: e.data.slug
+            }
+        }).sort((a, b) => new Date(a.published) - new Date(b.published))}/>
+    </div>
+
 </Layout>
