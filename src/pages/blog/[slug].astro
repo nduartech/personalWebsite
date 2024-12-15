@@ -4,6 +4,7 @@ import Header from '$lib/components/header.svelte'
 import Layout from '$lib/layouts/Layout.astro'
 import type { GetStaticPaths } from 'astro'
 import type { Post } from 'github-discussions-blog-loader'
+const currentPath = Astro.url.pathname;
 export const prerender = true
 export const getStaticPaths: GetStaticPaths = async () => {
   const blogPosts = await getCollection('blogPosts')
@@ -52,7 +53,7 @@ const { post } = Astro.props
 </style>
 <Layout title={post.title}>
     <div class="h-full w-full bg-white dark:bg-black justify-center items-center">
-        <Header client:only="svelte" transition:persist />
+        <Header client:only="svelte" pathname={currentPath} />
         <div class="flex flex-col justify-center items-center">
             <h1 class="post-title">{post.title}</h1>
             <div class="blog-content" set:html={post.body}></div>
