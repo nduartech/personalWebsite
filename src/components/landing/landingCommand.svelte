@@ -46,7 +46,7 @@ function navigateToPage(id: string|undefined) {
   } else if (id === 'technical blog writing thoughts opinions') {
     console.log('Navigate to technical blog page');
     url = '/blog';
-  } else {
+  } else if (id) {
     console.log('Navigating to article',articleMap.get(id));
     url = `/blog/${articleMap.get(id)[2]}`;
   }
