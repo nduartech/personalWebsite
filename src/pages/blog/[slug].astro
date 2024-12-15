@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content'
 import Header from '$lib/components/header.svelte'
+import PostMeta from '$lib/components/blog/post/postMeta.svelte'
 import Layout from '$lib/layouts/Layout.astro'
 import type { GetStaticPaths } from 'astro'
 import type { Post } from 'github-discussions-blog-loader'
@@ -54,8 +55,10 @@ const { post } = Astro.props
 <Layout title={post.title}>
     <div class="h-full w-full bg-white dark:bg-black justify-center items-center">
         <Header client:only="svelte" pathname={currentPath} />
-        <div class="flex flex-col justify-center items-center">
+        <div class="w-full flex flex-col justify-center items-center">
             <h1 class="post-title">{post.title}</h1>
+            <br />
+            <PostMeta id={post.id} description={post.description} published={post.published} tags={post.tags} series={post.series} />
             <div class="blog-content" set:html={post.body}></div>
         </div>
     </div>

@@ -158,6 +158,18 @@
   .blog-content hr {
     @apply mt-2 pb-4;
   }
+  .blog-content ul {
+    @apply block list-inside;
+  }
+  .blog-content ol {
+    @apply list-decimal list-inside;
+  }
+  .blog-content li {
+    @apply mt-6 -mb-2;
+  }
+  .blog-content li p {
+    @apply inline;
+  }
   h1.post-title {
     @apply text-center lg:px-0 px-3;
   }

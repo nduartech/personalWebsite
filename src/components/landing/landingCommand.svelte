@@ -13,9 +13,8 @@ let articleMap = $state(new Map());
 $effect(() => {
   if(articles){
     articles.forEach((article: any) => {
-      articleMap.set(article.title+" "+article.description+" "+article.tags.join(" ")+(article.series?" "+article.series.id+" ":""),[article.title, article.published, article.slug]);
+      articleMap.set(article.title,[article.title, article.published, article.slug]);
     });
-    console.log('Articles', articleMap.get('Starting Out With EndeavourOS and Neovim Reimagining My Development Setup arch endeavouros neovim'));
   }
 });
 
@@ -118,7 +117,7 @@ function navigateToPage(id: string|undefined) {
             <Command.Group heading="Articles">
                 <!-- TODO: Add links to articles -->
                 {#each articles as article}
-                    <Command.Item value={article.title+" "+article.description+" "+article.tags.join(" ")+(article.series?" "+article.series.id+" ":"")}>
+                    <Command.Item value={article.title}>
                         <span class="flex flex-row">{article.title}</span>
                     </Command.Item>
                 {/each}
