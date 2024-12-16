@@ -23,7 +23,7 @@
   "scripts": {
     "astro": "astro",
     "sync": "astro sync",
-    "build": "deno run -A astro build",
+    "build": "deno install --allow-scripts && deno run -A astro build",
     "check": "deno run -A astro check",
     "dev": "astro dev",
     "preview": "deno run build && deno run serve",
