@@ -142,16 +142,16 @@
             </Carousel.Root>
         </div>
     </div>
-    <div class="w-full h-2/6 bg-black dark:bg-white justify-center items-center py-3">
+    <div class="w-full h-2/6 bg-black dark:bg-[#1E293B] justify-center items-center py-3">
         <div class="flex flex-row w-10/12 mx-auto h-full flex-wrap space-x-2 space-y-0 overflow-y-scroll no-scrollbar justify-center items-center">
             {#if (index > 1)}
                 {#each techs as tech}
                     {#if contents[index-1].skillList.includes(tech[0])}
                         <a href={tech[1]?tech[1]:"#"} target="_blank" rel="noopener noreferrer"
-                           class={badgeVariants({ variant: "primary" })+" dark:border-slate-800 dark:bg-black dark:text-white border-slate-100 bg-white text-black"}>{tech[0]}</a>
+                           class={badgeVariants({ variant: "primary" })+" dark:border-white dark:bg-white dark:text-black border-slate-100 bg-white text-black"}>{tech[0]}</a>
                     {:else}
                         <a href={tech[1]?tech[1]:"#"} target="_blank" rel="noopener noreferrer"
-                           class={badgeVariants({ variant: "primary" })+" dark:border-slate-200 dark:bg-slate-300 dark:text-white border-slate-800 bg-slate-700 text-black"}>{tech[0]}</a>
+                           class={badgeVariants({ variant: "primary" })+" dark:border-slate-800 dark:bg-black dark:text-white border-slate-800 bg-slate-700 text-black"}>{tech[0]}</a>
                     {/if}
                 {/each}
             {/if}
