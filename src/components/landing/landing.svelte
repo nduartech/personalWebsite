@@ -2,14 +2,12 @@
 import Command from '$lib/components/landing/landingCommand.svelte'
 let {articles} = $props();
 </script>
-<main>
-    <div class="w-full h-full flex justify-center items-center">
-        <div class="flex flex-col w-full place-items-center space-y-8">
-            <h1 class="lg:text-6xl text-black dark:text-white">Hello, I'm Nathan</h1>
-            <h3>Software Engineer</h3>
-            <div class="flex w-full px-20">
-                <Command articles={articles}/>
-            </div>
+<main class="w-full h-[91.66vh] flex flex-col justify-center items-center">
+    <div class="flex flex-col h-full w-full justify-start items-center space-y-8 mt-[8.33vh]">
+        <h1 class="lg:text-6xl text-black dark:text-white">Hello, I'm Nathan</h1>
+        <h3>Software Engineer</h3>
+        <div class="flex w-full px-20">
+            <Command articles={articles}/>
         </div>
     </div>
 </main>

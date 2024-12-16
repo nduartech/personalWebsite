@@ -55,7 +55,7 @@ const { post } = Astro.props
 <Layout title={post.title}>
     <div class="h-full w-full bg-white dark:bg-black justify-center items-center">
         <Header client:only="svelte" pathname={currentPath} />
-        <div class="w-full flex flex-col justify-center items-center">
+        <div class="w-full flex flex-col h-full justify-center items-center mt-[8.33vh]">
             <h1 class="post-title">{post.title}</h1>
             <br />
             <PostMeta id={post.id} description={post.description} published={post.published} tags={post.tags} series={post.series} />
