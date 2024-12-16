@@ -24,7 +24,8 @@
     "sync": "astro sync",
     "build": "deno run -A npm:astro build",
     "check": "deno run -A npm:astro check",
-    "dev": "deno run -A npm:astro dev"
+    "dev": "deno run -A npm:astro dev",
+    "preview": "deno task build && deno run -A ./dist/server/entry.mjs"
   },
   "devDependencies": {
     "@iconify-json/line-md": "^1.2.3",
