@@ -1,0 +1,15 @@
+---
+import Layout from '$lib/layouts/Layout.astro';
+import Header from '$lib/components/header.svelte';
+import Xp from '$lib/components/xp/xp.svelte';
+const currentPath = Astro.url.pathname;
+---
+
+<Layout title="Experience">
+    <div class="h-screen w-screen flex flex-col bg-white dark:bg-black justify-center items-center">
+        <Header client:only="svelte" pathname={currentPath} />
+        <div class="w-full h-[91.66vh] flex flex-col justify-center items-center">
+            <Xp client:only="svelte" />
+        </div>
+    </div>
+</Layout>

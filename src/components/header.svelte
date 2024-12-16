@@ -17,7 +17,7 @@
     let lastElement = pathname.split('/').pop();
 </script>
 
-<div class="flex flex-row w-full justify-between p-10">
+<div class="flex flex-row w-full h-[8.33vh] justify-between p-10">
     <div class="flex flex-row w-full justify-start space-x-10">
         <Avatar.Root>
             <Avatar.Image src={me} alt="@me"/>
