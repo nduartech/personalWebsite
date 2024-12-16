@@ -5,7 +5,7 @@
     import * as Breadcrumb from "$lib/components/ui/breadcrumb/index.js"
 
     let {pathname} = $props();
-    let pathElements = pathname.split('/').slice(1, -1);
+    let pathElements = pathname.split('/').slice(1, -2);
     pathElements = pathElements.map((pathElement, j)=>{
         let path = "";
         for(let i = 0; i <= j; i++){
