@@ -14,7 +14,7 @@ export default defineConfig({
   site: 'https://nathanld.xyz',
   output: 'server',
   outDir: './dist',
-  adapter: netlify(),
+  adapter: deno(),
   integrations: [
     svelte(),
     tailwind({
