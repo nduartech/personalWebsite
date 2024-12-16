@@ -19,11 +19,12 @@
         <Card.Root>
             <Card.Header>
                 <Card.Title>{post.data.title}</Card.Title>
-                <Card.Description>{post.data.description} | Published on: {post.data.published.toLocaleDateString('en-GB', {
+                <Card.Description>{post.data.description}
+                    <p class="text-xs text-gray-400">Published on: {post.data.published.toLocaleDateString('en-GB', {
                     year: 'numeric',
                     month: '2-digit',
                     day: '2-digit'
-                })}</Card.Description>
+                    })}</p></Card.Description>
             </Card.Header>
             <Card.Content class="py-2 flex flex-row items-start w-full overflow-x-wrap">
                 <Label for={post.data.id} class="pt-1 pr-2 text-xs">tags:</Label>
