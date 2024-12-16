@@ -107,7 +107,7 @@
                                         <p>{content.blob}</p>
                                     {:else}
                                         <div class="w-full h-full flex flex-row md:flex-col justify-center items-center md:items-end top space-x-10 min-h-fit">
-                                            <a href="https://www.linkedin.com/in/nathanduarte"
+                                            <a href="https://www.linkedin.com/in/nathanduarte" target="_blank" rel="noopener noreferrer"
                                                class="cursor-pointer">
                                                 <div class="flex flex-row justify-center items-center">
                                                     <span id="linkedin" class="p-1">{@html Linkedin}</span>
