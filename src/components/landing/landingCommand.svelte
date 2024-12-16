@@ -42,6 +42,7 @@ function navigateToPage(id: string|undefined) {
   let url = null;
   if (id === 'experience work projects') {
     console.log('Navigate to experience page');
+    url = '/experience';
   } else if (id === 'technical blog writing thoughts opinions') {
     console.log('Navigate to technical blog page');
     url = '/blog';

@@ -115,7 +115,7 @@
                                                  </div>
                                              </a>
                                              <div class="flex flex-row justify-center items-center cursor-pointer"
-                                                  on:click={() => fetch('https://nathanldse.netlify.app/resume.pdf').then(resp => resp.blob()).then(blob => {
+                                                  on:click={() => fetch('https://raw.githubusercontent.com/nduartech/personalWebsite/refs/heads/back2basics/src/assets/resume.pdf').then(resp => resp.blob()).then(blob => {
                                                      const url = URL.createObjectURL(blob);
                                                      const a = document.createElement("a");
                                                      a.style.display = "none";
