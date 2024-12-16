@@ -9,15 +9,12 @@ import Icons from 'unplugin-icons/vite'
 
 import expressiveCode from 'astro-expressive-code'
 
-const isPreview =
-  process.argv.includes('preview') || process.env.PREVIEW === 'true'
-
 // https://astro.build/config
 export default defineConfig({
   site: 'https://nathanld.xyz',
   output: 'server',
   outDir: './dist',
-  adapter: isPreview ? deno() : netlify(),
+  adapter: netlify(),
   integrations: [
     svelte(),
     tailwind({
