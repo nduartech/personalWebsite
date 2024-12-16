@@ -97,7 +97,7 @@
                 <Carousel.Content>
                     {#each contents as content}
                         <Carousel.Item>
-                            <Card.Root class="w-full h-96 mx-auto overflow-y-scroll no-scrollbar">
+                            <Card.Root class="w-[95%] h-80 mx-auto overflow-y-scroll no-scrollbar">
                                 <Card.Header>
                                     <Card.Title>{content.title}</Card.Title>
                                     <Card.Description>{content.context}</Card.Description>
