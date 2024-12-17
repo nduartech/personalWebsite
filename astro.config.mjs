@@ -21,7 +21,7 @@ export default defineConfig({
     }),
     sitemap(),
     expressiveCode({
-      themes: ['tokyo-night', 'catppuccin-latte'], // If your site has a theme switcher that allows users to pick a theme, Expressive Code can generate CSS code to support it. By default, you can use the data-theme attribute to select a theme by name, both on the html element and individual code blocks.
+      themes: ['github-light', 'tokyo-night'], // If your site has a theme switcher that allows users to pick a theme, Expressive Code can generate CSS code to support it. By default, you can use the data-theme attribute to select a theme by name, both on the html element and individual code blocks.
     }),
   ],
   vite: {

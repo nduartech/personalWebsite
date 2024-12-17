@@ -13,7 +13,7 @@
     let lastElement = pathname.split('/').pop();
 </script>
 
-<div class="flex flex-row w-full flex-wrap mt-8 px-5">
+<div class="flex flex-row w-full flex-wrap mt-8 px-16">
     {#if pathname !== '/'}
             <Breadcrumb.Root>
                 <Breadcrumb.List>

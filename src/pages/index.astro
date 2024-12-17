@@ -4,6 +4,7 @@ import Layout from '$lib/layouts/Layout.astro'
 import Header from '$lib/components/header.svelte'
 import {getCollection} from 'astro:content';
 const blogEntries = await getCollection('blogPosts');
+import { Code } from 'astro-expressive-code/components';
 const currentPath = Astro.url.pathname;
 ---
 <Layout title="Hello, I'm Nathan">
@@ -18,7 +19,9 @@ const currentPath = Astro.url.pathname;
                 published: e.data.published,
                 slug: e.data.slug
             }
-        }).sort((a, b) => new Date(a.published) - new Date(b.published))}/>
+        }).sort((a, b) => new Date(a.published) - new Date(b.published))}>
+            <Code frame="none" code="npx nathan" lang="shell" />
+        </Landing>
     </div>
 
 </Layout>
