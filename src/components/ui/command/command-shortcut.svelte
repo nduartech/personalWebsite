@@ -7,12 +7,16 @@
 		ref = $bindable(null),
 		class: className,
 		children,
+		onShortcutClick = () => {},
 		...restProps
-	}: WithElementRef<HTMLAttributes<HTMLSpanElement>> = $props();
+	}: WithElementRef<HTMLAttributes<HTMLSpanElement>> & {
+        onShortcutClick?: () => void
+    } = $props();
 </script>
 
 <span
-	class={cn("text-muted-foreground ml-auto text-xs tracking-widest", className)}
+	class={cn("text-muted-foreground ml-auto text-xs tracking-widest cursor-pointer", className)}
+	on:click|stopPropagation={onShortcutClick}
 	{...restProps}
 	bind:this={ref}
 >

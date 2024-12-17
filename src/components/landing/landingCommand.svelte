@@ -100,7 +100,7 @@ function navigateToPage(id: string|undefined) {
              onmousedown={()=>{openCommandMenu()}}
              onclick={()=>{openCommandMenu()}} role="combobox" tabindex="0" aria-controls="command-root" aria-expanded="false"
              aria-label="Search work, projects, and articles">
-            <Command.Input bind:value={searchContent} bind:ref={searchBox} bind:open={open} class="w-full" placeholder=""/>
+            <Command.Input bind:value={searchContent} bind:ref={searchBox} bind:open={open} onClose={closeCommandMenu} class="w-full" placeholder=""/>
         </div>
         <Command.List class={open?"no-scrollbar":"hidden"} onclick={useSelectedValue}>
             <Command.Empty>No results found</Command.Empty>

@@ -9,8 +9,11 @@
 		class: className,
 		value = $bindable(""),
 		open = $bindable(false),
+        onClose = () => {},
 		...restProps
-	}: CommandPrimitive.InputProps = $props();
+	}: CommandPrimitive.InputProps & {
+        onClose?: () => void,
+    } = $props();
 </script>
 
 <div class="flex items-center border w-full px-3" data-command-input-wrapper="">
@@ -24,5 +27,5 @@
 		bind:value
 		{...restProps}
 	/>
-	<Shortcut>{open ? 'Esc' : '⌘K'}</Shortcut>
+	<Shortcut onShortcutClick={open ? onClose : ()=>{}}>{open ? 'Esc' : '⌘K'}</Shortcut>
 </div>
