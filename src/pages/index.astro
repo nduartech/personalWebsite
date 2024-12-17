@@ -8,7 +8,7 @@ const blogEntries = await getCollection('blogPosts');
 const currentPath = Astro.url.pathname;
 ---
 <Layout title="Hello, I'm Nathan">
-    <div id="landing" class="h-full w-full min-h-100vh bg-white dark:bg-black">
+    <div id="landing" class="h-full w-full h-full bg-white dark:bg-black pb-20">
         <Header client:only="svelte" pathname={currentPath}/>
         <Landing client:only="svelte" articles={blogEntries.map((e) => {
             return {
