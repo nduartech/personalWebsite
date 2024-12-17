@@ -9,5 +9,6 @@ let {articles} = $props();
         <div class="flex flex-row w-full px-20">
             <Command articles={articles}/>
         </div>
+        <slot />
     </div>
 </main>
