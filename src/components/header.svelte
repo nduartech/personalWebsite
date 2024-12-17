@@ -2,48 +2,26 @@
     import me from '$lib/assets/me.png?url'
     import ModeToggle from '$lib/components/darkMode.svelte'
     import * as Avatar from '$lib/components/ui/avatar/index.js'
-    import * as Breadcrumb from "$lib/components/ui/breadcrumb/index.js"
+    import Github from '~icons/line-md/github-twotone?raw';
+    import {buttonVariants} from '$lib/components/ui/button/index.js'
+    import NavCrumbs from '$lib/components/nav/navCrumbs.svelte'
 
     let {pathname} = $props();
-    let pathElements = pathname.split('/').slice(1, -2);
-    pathElements = pathElements.map((pathElement, j)=>{
-        let path = "";
-        for(let i = 0; i <= j; i++){
-            path += "/"+pathElements[i];
-        }
-        if (pathElement === "blog") return ["Technical Blog",path];
-        return [pathElement,path];
-    });
-    let lastElement = pathname.split('/').pop();
 </script>
 
-<div class="flex flex-row w-full h-[8.33vh] justify-between p-10">
-    <div class="flex flex-row w-full justify-start space-x-10">
-        <Avatar.Root>
-            <Avatar.Image src={me} alt="@me"/>
-            <Avatar.Fallback>ND</Avatar.Fallback>
-        </Avatar.Root>
-        {#if pathname !== '/'}
-            <Breadcrumb.Root>
-                <Breadcrumb.List>
-                    <Breadcrumb.Item>
-                        <Breadcrumb.Link href="/">Home</Breadcrumb.Link>
-                    </Breadcrumb.Item>
-                    {#if pathElements.length > 0}
-                        {#each pathElements as pathElement}
-                            <Breadcrumb.Separator/>
-                            <Breadcrumb.Item>
-                                <Breadcrumb.Link href={pathElement[1]}>{pathElement[0]}</Breadcrumb.Link>
-                            </Breadcrumb.Item>
-                        {/each}
-                    {/if}
-                    <Breadcrumb.Separator/>
-                    <Breadcrumb.Item>
-                        <Breadcrumb.Page>{document.title}</Breadcrumb.Page>
-                    </Breadcrumb.Item>
-                </Breadcrumb.List>
-            </Breadcrumb.Root>
-        {/if}
+<div class="w-full h-fit flex flex-col items-center justify-center">
+    <div class="flex flex-row w-full min-h-[8.33vh] justify-between pt-8 px-5">
+        <div class="flex flex-row w-3/12 justify-start pr-10">
+            <Avatar.Root>
+                <Avatar.Image src={me} alt="@me"/>
+                <Avatar.Fallback>ND</Avatar.Fallback>
+            </Avatar.Root>
+        </div>
+        <div class="flex flex-row min-w-5/12 max-w-9/12 space-x-2 items-center">
+            <a href="https://github.com/nduartech" class={buttonVariants({ variant: "outline", size: "icon" })}
+               target="_blank" rel="noopener noreferrer"><span>{@html Github}</span></a>
+            <ModeToggle/>
+        </div>
     </div>
-    <ModeToggle/>
+    <NavCrumbs pathname={pathname}/>
 </div>

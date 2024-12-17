@@ -104,7 +104,7 @@
                                 </Card.Header>
                                 <Card.Content>
                                     {#if content.blob}
-                                        <p>{content.blob}</p>
+                                        <small>{content.blob}</small>
                                     {:else}
                                         <div class="w-full h-full flex flex-row md:flex-col justify-center items-center md:items-end top space-x-10 min-h-fit">
                                             <a href="https://www.linkedin.com/in/nathanduarte" target="_blank" rel="noopener noreferrer"
@@ -148,7 +148,7 @@
                 {#each techs as tech}
                     {#if contents[index-1].skillList.includes(tech[0])}
                         <a href={tech[1]?tech[1]:"#"} target="_blank" rel="noopener noreferrer"
-                           class={badgeVariants({ variant: "secondary" })+" dark:border-white dark:bg-white dark:text-black"}>{tech[0]}</a>
+                           class={badgeVariants({ variant: "secondary" })+" border-slate-500 bg-black text-white dark:border-white dark:bg-white dark:text-black"}>{tech[0]}</a>
                     {:else}
                         <a href={tech[1]?tech[1]:"#"} target="_blank" rel="noopener noreferrer"
                            class={badgeVariants({ variant: "primary" })+" dark:border-slate-800 dark:bg-black dark:text-white"}>{tech[0]}</a>
