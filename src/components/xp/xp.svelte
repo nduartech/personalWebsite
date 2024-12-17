@@ -91,13 +91,13 @@
 </script>
 
 <div class="flex flex-col w-full h-full justify-center items-center">
-    <div class="flex flex-col w-full h-4/6 justify-center items-center">
+    <div class="flex flex-col w-full h-5/6 justify-center items-center">
         <div class="flex flex-col w-4/6 flow-root">
             <Carousel.Root setApi={(emblaApi) => (api = emblaApi)}>
                 <Carousel.Content>
                     {#each contents as content}
                         <Carousel.Item>
-                            <Card.Root class="w-[95%] h-80 mx-auto overflow-y-scroll no-scrollbar">
+                            <Card.Root class="w-[95%] h-96 mx-auto overflow-y-scroll no-scrollbar">
                                 <Card.Header>
                                     <Card.Title>{content.title}</Card.Title>
                                     <Card.Description>{content.context}</Card.Description>
@@ -142,16 +142,14 @@
             </Carousel.Root>
         </div>
     </div>
-    <div class="w-full h-2/6 bg-gray-200 dark:bg-gray-900 justify-center items-center py-3">
-        <div class="flex flex-row w-10/12 mx-auto h-full flex-wrap space-x-2 space-y-0 overflow-y-scroll no-scrollbar justify-center items-center">
+    <div class="w-full h-1/6 bg-black dark:bg-white justify-center items-center py-3">
+        <div class="flex flex-row w-11/12 mx-auto h-full flex-wrap space-x-2 space-y-0 overflow-y-scroll no-scrollbar justify-center items-center">
             {#if (index > 1)}
                 {#each techs as tech}
                     {#if contents[index-1].skillList.includes(tech[0])}
-                        <a href={tech[1]?tech[1]:"#"} target="_blank" rel="noopener noreferrer"
-                           class={badgeVariants({ variant: "secondary" })+" border-slate-500 bg-black text-white dark:border-white dark:bg-white dark:text-black"}>{tech[0]}</a>
+                        <a href={tech[1]?tech[1]:null} target="_blank" rel="noopener noreferrer"
+                           class={badgeVariants({ variant: "secondary" })}>{tech[0]}</a>
                     {:else}
-                        <a href={tech[1]?tech[1]:"#"} target="_blank" rel="noopener noreferrer"
-                           class={badgeVariants({ variant: "primary" })+" dark:border-slate-800 dark:bg-black dark:text-white"}>{tech[0]}</a>
                     {/if}
                 {/each}
             {/if}
