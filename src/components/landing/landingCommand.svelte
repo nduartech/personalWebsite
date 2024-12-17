@@ -102,7 +102,7 @@ function navigateToPage(id: string|undefined) {
              aria-label="Search work, projects, and articles">
             <Command.Input bind:value={searchContent} bind:ref={searchBox} bind:open={open} class="w-full" placeholder=""/>
         </div>
-        <Command.List class={open?"":"hidden"} onclick={useSelectedValue}>
+        <Command.List class={open?"no-scrollbar":"hidden"} onclick={useSelectedValue}>
             <Command.Empty>No results found</Command.Empty>
             <Command.Group heading="Pages">
                 <Command.Item value="experience work projects">
