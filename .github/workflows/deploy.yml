@@ -9,8 +9,6 @@ jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
-    env:
-      PUBLIC_GITHUB_AUTH_TOKEN: ${{ secrets.PUBLIC_GITHUB_AUTH_TOKEN }}
 
     permissions:
       id-token: write # Needed for auth with Deno Deploy
@@ -34,8 +32,6 @@ jobs:
         run: "deno install --allow-scripts"
 
       - name: Build step
-        env:
-          PUBLIC_GITHUB_AUTH_TOKEN: ${{ secrets.PUBLIC_GITHUB_AUTH_TOKEN }}
         run: "deno task build"
 
       - name: Upload to Deno Deploy
