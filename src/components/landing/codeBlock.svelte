@@ -33,7 +33,7 @@
 
     let copied = $state(false);
     let timeoutId: ReturnType<typeof setTimeout>;
-    const cid = crypto.randomUUID().toString();
+    const cid = Math.random().toString();
 
     async function initializeHighlighting() {
         if (!languages[type]) {
