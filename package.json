@@ -6,7 +6,6 @@
     "@astrojs/sitemap": "^3.2.1",
     "@astrojs/svelte": "^7.0.1",
     "@astrojs/tailwind": "5.1.3",
-    "@deno/astro-adapter": "^0.2.0",
     "astro": "^5.0.5",
     "github-discussions-blog-loader": "^1.0.1",
     "gray-matter": "^4.0.3",
@@ -20,15 +19,16 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "scripts": {
-    "astro": "astro",
+    "astro": "bunx --bun astro",
     "sync": "astro sync",
-    "build": "deno run -A npm:astro build",
-    "check": "deno run -A npm:astro check",
-    "dev": "deno run -A npm:astro dev",
-    "preview": "deno task build && deno run -A ./dist/server/entry.mjs"
+    "build": "astro build",
+    "check": "astro check",
+    "dev": "astro dev",
+    "preview": "astro preview"
   },
   "devDependencies": {
     "@iconify-json/line-md": "^1.2.3",
+    "@types/bun": "^1.1.14",
     "bits-ui": "^1.0.0-next.71",
     "clsx": "^2.1.1",
     "embla-carousel-svelte": "^8.5.1",

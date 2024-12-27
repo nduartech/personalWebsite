@@ -1,7 +1,8 @@
 <script lang="ts">
     import * as Breadcrumb from "$lib/components/ui/breadcrumb/index.js"
+    const isDev = import.meta.env.DEV;
     let {pathname} = $props();
-    let pathElements = pathname.split('/').slice(1, -2);
+    let pathElements = isDev?pathname.split('/').slice(1,-1):pathname.split('/').slice(1, -2);
     pathElements = pathElements.map((pathElement, j)=>{
         let path = "";
         for(let i = 0; i <= j; i++){

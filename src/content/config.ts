@@ -1,7 +1,7 @@
 import { defineCollection } from 'astro:content'
 import { githubDiscussionsBlogLoader } from 'github-discussions-blog-loader'
 // @ts-ignore
-const auth = Deno.env.get('PUBLIC_GITHUB_AUTH_TOKEN');
+const auth = process.env.PUBLIC_GITHUB_AUTH_TOKEN;
 
 const blogPosts = defineCollection({
   loader: githubDiscussionsBlogLoader({
