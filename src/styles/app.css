@@ -170,6 +170,11 @@
   .blog-content li p {
     @apply inline;
   }
+
+  .blog-content h2,h3,h4,h5,h6 {
+    @apply pt-5;
+  }
+
   h1.post-title {
     @apply text-center lg:px-0 px-3;
   }
