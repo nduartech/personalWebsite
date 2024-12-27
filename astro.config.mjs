@@ -5,6 +5,7 @@ import tailwind from '@astrojs/tailwind'
 import { defineConfig, envField } from 'astro/config'
 import Icons from 'unplugin-icons/vite'
 
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://nathanld.xyz',
@@ -17,6 +18,7 @@ export default defineConfig({
     }),
     sitemap()
   ],
+
   vite: {
     plugins: [
       Icons({
@@ -28,5 +30,5 @@ export default defineConfig({
         strict: false,
       },
     },
-  },
+  }
 })
