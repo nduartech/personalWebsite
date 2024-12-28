@@ -175,6 +175,10 @@
     @apply pt-5;
   }
 
+  .blog-content a {
+    text-decoration: underline;
+  }
+
   h1.post-title {
     @apply text-center lg:px-0 px-3;
   }
