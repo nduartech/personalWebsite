@@ -18,7 +18,7 @@
             </Avatar.Root>
         </div>
         <div class="flex flex-row min-w-5/12 max-w-9/12 space-x-2 items-center">
-            <a href="https://github.com/nduartech" class={buttonVariants({ variant: "outline", size: "icon" })}
+            <a href="https://github.com/nduartech" aria-label="Github Profile" class={buttonVariants({ variant: "outline", size: "icon" })}
                target="_blank" rel="noopener noreferrer"><span>{@html Github}</span></a>
             <ModeToggle/>
         </div>
