@@ -100,7 +100,7 @@ function navigateToPage(id: string|undefined) {
              onmousedown={()=>{openCommandMenu()}}
              onclick={()=>{openCommandMenu()}} role="combobox" tabindex="0" aria-controls="command-root" aria-autocomplete="list" aria-haspopup="menu" aria-level="3" aria-multiline="false" aria-multiselectable="false" aria-orientation="horizontal" aria-readonly="false" aria-required="false" aria-sort="ascending" aria-pressed={open?"true":"false"} aria-selected={open?"true":"false"} aria-expanded={open?"true":"false"}
              aria-label="Search work, projects, and articles">
-            <Command.Input bind:value={searchContent} bind:ref={searchBox} bind:open={open} onClose={closeCommandMenu} class="w-full" placeholder=""/>
+            <Command.Input bind:value={searchContent} bind:ref={searchBox} bind:open={open} aria-label="Search work, projects, and articles" onClose={closeCommandMenu} class="w-full" placeholder=""/>
         </div>
         <Command.List class={open?"no-scrollbar":"hidden"} onclick={useSelectedValue}>
             <Command.Empty>No results found</Command.Empty>
