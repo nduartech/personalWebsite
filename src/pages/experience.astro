@@ -6,9 +6,9 @@ const currentPath = Astro.url.pathname;
 ---
 
 <Layout title="Experience">
-    <div class="h-screen w-screen flex flex-col bg-white dark:bg-black justify-center items-center">
+    <div class="h-full w-screen flex flex-col bg-white dark:bg-black justify-center items-center">
         <Header client:only="svelte" pathname={currentPath} />
-        <div class="w-full h-[91.66vh] flex flex-col justify-center items-center">
+        <div class="w-full h-full flex flex-col justify-center items-center">
             <Xp client:only="svelte" />
         </div>
     </div>

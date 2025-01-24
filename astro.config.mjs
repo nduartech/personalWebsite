@@ -1,6 +1,7 @@
 import sitemap from '@astrojs/sitemap'
 import svelte from '@astrojs/svelte'
-import tailwind from '@astrojs/tailwind'
+// import tailwind from '@astrojs/tailwind'
+import tailwindcss from '@tailwindcss/vite';
 // @ts-check
 import { defineConfig, envField } from 'astro/config'
 import Icons from 'unplugin-icons/vite'
@@ -13,14 +14,15 @@ export default defineConfig({
   outDir: './dist',
   integrations: [
     svelte(),
-    tailwind({
-      applyBaseStyles: false,
-    }),
+    // tailwind({
+    //   applyBaseStyles: false,
+    // }),
     sitemap()
   ],
 
   vite: {
     plugins: [
+      tailwindcss(),
       Icons({
         compiler: 'astro',
       }),

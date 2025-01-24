@@ -10,14 +10,14 @@
 </script>
 
 <div class="w-full h-fit flex flex-col items-center justify-center">
-    <div class="flex flex-row w-full min-h-[8.33vh] justify-between pt-8 px-5">
+    <div class="flex flex-row w-full h-fit md:min-h-[8.33vh] justify-between portrait:pt-8 md:landscape:pt-8 px-5">
         <div class="flex flex-row w-3/12 justify-start pr-10">
             <Avatar.Root>
                 <Avatar.Image src={me} alt="@me"/>
                 <Avatar.Fallback>ND</Avatar.Fallback>
             </Avatar.Root>
         </div>
-        <div class="flex flex-row min-w-5/12 max-w-9/12 space-x-2 items-center">
+        <div class="flex flex-row min-w-5/12 max-w-9/12 space-x-2 items-center justify-end">
             <a href="https://github.com/nduartech" aria-label="Github Profile" class={buttonVariants({ variant: "outline", size: "icon" })}
                target="_blank" rel="noopener noreferrer"><span>{@html Github}</span></a>
             <ModeToggle/>

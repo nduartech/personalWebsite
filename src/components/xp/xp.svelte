@@ -90,14 +90,14 @@
     });
 </script>
 
-<div class="flex flex-col w-full h-full justify-center items-center">
+<div class="flex flex-col w-full h-full justify-center items-center flow-root">
     <div class="flex flex-col w-full h-5/6 justify-center items-center">
-        <div class="flex flex-col w-4/6 flow-root">
+        <div class="flex flex-col w-4/6 flow-root py-10">
             <Carousel.Root setApi={(emblaApi) => (api = emblaApi)}>
                 <Carousel.Content>
                     {#each contents as content}
                         <Carousel.Item>
-                            <Card.Root class="w-[95%] h-96 mx-auto overflow-y-scroll no-scrollbar">
+                            <Card.Root class="w-[95%] landscape:h-64 portrait:h-96 lg:landscape:h-96 mx-auto overflow-y-scroll no-scrollbar">
                                 <Card.Header>
                                     <Card.Title>{content.title}</Card.Title>
                                     <Card.Description>{content.context}</Card.Description>
@@ -106,7 +106,7 @@
                                     {#if content.blob}
                                         <small>{content.blob}</small>
                                     {:else}
-                                        <div class="w-full h-full flex flex-row md:flex-col justify-center items-center md:items-end top space-x-10 min-h-fit">
+                                        <div class="w-full h-full flex flex-row md:flex-col justify-center items-center md:items-end top space-x-5 md:space-x-0 min-h-fit">
                                             <a href="https://www.linkedin.com/in/nathanduarte" target="_blank" rel="noopener noreferrer"
                                                class="cursor-pointer">
                                                 <div class="flex flex-row justify-center items-center">
@@ -143,12 +143,12 @@
         </div>
     </div>
     <div class="w-full h-1/6 bg-black dark:bg-white justify-center items-center py-3">
-        <div class="flex flex-row w-11/12 mx-auto h-full flex-wrap space-x-2 space-y-0 overflow-y-scroll no-scrollbar justify-center items-center">
+        <div class="flex flex-row w-11/12 mx-auto min-h-8 flex-wrap space-x-2 space-y-0 overflow-y-scroll no-scrollbar justify-center items-center">
             {#if (index > 1)}
                 {#each techs as tech}
                     {#if contents[index-1].skillList.includes(tech[0])}
                         <a href={tech[1]?tech[1]:null} target="_blank" rel="noopener noreferrer"
-                           class={badgeVariants({ variant: "secondary" })}>{tech[0]}</a>
+                           class={badgeVariants({ variant: "secondary" })+" my-1"}>{tech[0]}</a>
                     {:else}
                     {/if}
                 {/each}
