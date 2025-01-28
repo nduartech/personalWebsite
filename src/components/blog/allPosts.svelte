@@ -20,7 +20,7 @@
             <Card.Header>
                 <Card.Title>{post.data.title}</Card.Title>
                 <Card.Description>{post.data.description}
-                    <p class="text-xs text-gray-400">Published on: {post.data.published.toLocaleDateString('en-GB', {
+                    <p class="text-xs text-gray-400">Published on: {post.data.published.toLocaleDateString('en-US', {
                     year: 'numeric',
                     month: '2-digit',
                     day: '2-digit'
